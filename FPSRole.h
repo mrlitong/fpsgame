@@ -32,5 +32,18 @@ protected:
 	float					m_fSudNowCoolingTime;
 	float					m_fEmitCoolingTime;//发射子弹冷却时间
 	float					m_fEmitNowCoolingTime;
+
+	CUtilStr					m_strMuzzleBone;
+	int						m_nMuzzleBone;
+	CObjectMeshSkinned*		m_pArmsMesh;
+
+	void						UpdateFire(float ifps);
+	virtual void				OnFire(float fCoolingTime);
+	void						UpdateMuzzleTransform();
+	CUtilStr					m_strBulletName;
+	CObjectParticles*			m_pBulletParticle;
+	CUtilStr					m_strMuzzleEffect;
+	CWorldEffect*				m_pMuzzleEffect;
+	mat4						m_matMuzzleTransform;
 };
 
