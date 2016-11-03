@@ -16,7 +16,13 @@ public:
 	virtual int  Init(int nRoleID, const char* strCharFile);
 	virtual void	Update(float ifps);
 
-
+	void    SetMuzzleSpinU_D(float vValue);
+	void    SetMuzzleSpinL_R(float vValue);
+	void    SetPaceAnimationF_B(int nF_B);
+	void    SetPaceAnimationL_R(int nF_B);
+	void    OpenFire() { m_nFire = 1; }
+	void    CloseFire() { m_nFire = 0; }
+	int     SetupArms(int nAssembly, int nBody);
 protected:
 	virtual void		OnKeyFrame(_ActionCallback_KeyFrame* pKeyInfo);
 	virtual void		OnActionComplete(_ActionCallback_Complete* pActInfo);
