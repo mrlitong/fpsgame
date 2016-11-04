@@ -47,6 +47,26 @@ class CActorBase
     void SetMaxVelocity(float velocity);
     float GetMaxVelocity() const;
 
+	// acceleration 加速度
+    void SetAcceleration(float acceleration);
+    float GetAcceleration() const;
+        
+    // damping	倾斜
+    void SetDamping(float damping);
+    float GetDamping() const;
+        
+    // jumping 跳跃
+    void SetJumping(float jumping);
+    float GetJumping() const;
+  
+    // view direction 视线朝向
+    void SetViewDirection(const MathLib::vec3 &direction);
+    const MathLib::vec3 &GetViewDirection() const;
+    //position 位置
+    void SetPosition( const MathLib::vec3 & pos );
+    const MathLib::vec3& GetPosition() const;
+	
+
 
 
 	enum {            //状态
@@ -59,6 +79,7 @@ class CActorBase
 		STATE_RUN,
 		NUM_STATES,
 	};
+
 
 
 };
