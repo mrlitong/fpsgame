@@ -7,6 +7,7 @@
 
 class CActorBase
 {    
+public:
 	CActorBase();
 	virtual ~CActorBase();
 
@@ -79,7 +80,40 @@ class CActorBase
 		STATE_RUN,
 		NUM_STATES,
 	};
+	    // state status		//状态是否可用，状态开始及结束
+    enum {
+        STATE_DISABLED = 0,
+        STATE_ENABLED,
+        STATE_BEGIN,
+        STATE_END,
+    };
 
+	    // current state
+    int GetState(int state) const;
+    float GetStateTime(int state) const;
+        
+    // contacts
+    int GetNumContacts() const;
+    const CShape::Contact &GetContact(int num) const;
+        
+    // ground flag	//能移动到多低的位置标志
+    void SetGround(int ground);
+    int GetGround() const;
+        
+    // ceiling flag	//能移动到多高的位置标志
+    void SetCeiling(int ceiling);
+    int GetCeiling() const;
+        
+    // bounds 约束
+    virtual const CBoundBox &GetBoundBox() const;
+    virtual const CBoundSphere &GetBoundSphere() const;
+    //同上
+    virtual const CWorldBoundBox &GetWorldBoundBox() const;
+    virtual const CWorldBoundSphere &GetWorldBoundSphere() const;
+
+    virtual void  RenderVisualizer();
+private:
+	
 
 
 };
