@@ -19,6 +19,36 @@ class CActorBase
 	void SetIntersectionMask(int mask);
 	int GetIntersectionMask() const;
 
+	    // collision
+    void SetCollision(int collision);
+    int GetCollision() const;
+        
+    // collision mask
+    void SetCollisionMask(int mask);
+    int GetCollisionMask() const;
+        
+    // collision radius
+    void SetCollisionRadius(float radius);
+    float GetCollisionRadius() const;
+        
+    // collision height
+    void SetCollisionHeight(float height);
+    float GetCollisionHeight() const;
+        
+    // maximum friction	最大摩擦力值
+    void SetFriction(float friction);
+    float GetFriction() const;
+        
+    // minimum velocity	最小速度
+    void SetMinVelocity(float velocity);
+    float GetMinVelocity() const;
+        
+    // maximum velocity 最大速度
+    void SetMaxVelocity(float velocity);
+    float GetMaxVelocity() const;
+
+
+
 	enum {            //状态
 		STATE_FORWARD = 0,
 		STATE_BACKWARD,
