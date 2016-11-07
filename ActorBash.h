@@ -4,7 +4,18 @@
 
 #include "Shape.h"
 #include "Bounds.h"
+#include "Player.h"
+/*
+ */
+class CBRObject;
+class CBodyDummy;
+class CBodyRigid;
+class CObjectDummy;
+class CShapeCapsule;
 
+/*
+ *包括碰撞及碰撞半径，碰撞高度等，交互，
+ */
 class CActorBase
 {    
 public:
