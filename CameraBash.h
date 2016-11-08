@@ -61,6 +61,13 @@ public:
 private:
 	void Update_Controls(float ifps);
 	void Update_HMD(float ifps);
+	// update bounds
+	void Update_Bounds();
+
+	// update transformation
+	virtual void Update_Transform();
+
+	float m_fRadius;
 }
 
 #endif
