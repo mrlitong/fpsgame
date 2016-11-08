@@ -34,6 +34,30 @@ public:
 	// turning
 	void SetTurning(float turning);
 	float GetTurning() const;
+	// phi angle
+	void SetPhiAngle(float angle);
+	float GetPhiAngle() const;
+
+	// theta angle
+	void SetThetaAngle(float angle);
+	float GetThetaAngle() const;
+
+	// view direction
+	void SetViewDirection(const MathLib::vec3 &direction);
+	const MathLib::vec3 &GetViewDirection() const;
+
+	// update
+	virtual void UpdateControls(float ifps);
+
+	// flush
+	virtual void FlushTransform();
+
+	// bounds
+	virtual const CBoundBox &GetBoundBox() const;
+	virtual const CBoundSphere &GetBoundSphere() const;
+
+	void SetFlush(int nFlush) { m_nFlush = nFlush; }
+	void SetMouseControls(int nEnable) { m_nEnabelMouse = nEnable; }
 
 }
 
