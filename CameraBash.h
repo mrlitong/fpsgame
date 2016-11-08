@@ -68,6 +68,24 @@ private:
 	virtual void Update_Transform();
 
 	float m_fRadius;
+	float m_fMinThetaAngle;             // minimum theta angle
+	float m_fMaxThetaAngle;             // maximum theta angle
+	float m_fAcceleration;              // acceleration
+	float m_fTurning;                   // turning
+
+	int m_nFlush;                       // flush flag
+	MathLib::Vec3 m_vPosition;          // position
+	MathLib::vec3 m_vDirection;         // direction
+	float m_fPhiAngle;                  // phi angle
+	float m_fThetaAngle;                // theta angle
+
+	CBoundBox m_BoundBox;               // bounding box
+	CBoundSphere m_BoundSphere;         // bounding sphere
+
+	CPlayer *m_pLastPlayer;
+
+	int m_nHMDEnable;
+	int m_nEnabelMouse;
 }
 
 #endif
