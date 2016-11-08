@@ -58,7 +58,9 @@ public:
 
 	void SetFlush(int nFlush) { m_nFlush = nFlush; }
 	void SetMouseControls(int nEnable) { m_nEnabelMouse = nEnable; }
-
+private:
+	void Update_Controls(float ifps);
+	void Update_HMD(float ifps);
 }
 
 #endif
