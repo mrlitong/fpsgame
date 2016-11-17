@@ -16,12 +16,17 @@ CCommon::~CCommon(void)
 
 vec3 CCommon::GetTransformDirection(const mat4& matTransform, const vec3& vUP)
 {
-	
+	return MakeRotationFromYZ(matTransform.getColumn3(1), vUP) * vec3(0.0f, -1.0f, 0.0f);
 }
 
 int CCommon::GetIntersectionPosition(vec3& vRetPoint, const vec3& p0, const vec3& p1, int nMask /*= 2|4*/)
 {
+	vec3 n;
+	int s;
 
+	g_Engine.pWorld->GetIntersection(p0, p1, nMask, vRetPoint, n, s);
+
+	return s >= 0;
 }
 
 int CCommon::GetIntersectionObject(CBRObject** vRetObject, const vec3& p0, const vec3& p1, int nMask /*= 2|4*/)
