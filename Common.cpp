@@ -33,6 +33,7 @@ int CCommon::GetIntersectionObject(CBRObject** vRetObject, const vec3& p0, const
 {
 	vec3 p, n;
 	int s;
+	vRetObject = NULL;
 	*vRetObject = g_Engine.pWorld->GetIntersection(p0, p1, nMask, p, n, s);
 
 	return s >= 0;
