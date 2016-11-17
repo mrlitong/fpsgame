@@ -1,7 +1,8 @@
 #include "Common.h"
 #include "Engine.h"
 
-
+#include "Game.h"
+#include "World.h"
 
 CCommon::CCommon(void)
 {
