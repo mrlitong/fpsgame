@@ -1,18 +1,15 @@
 #include "Common.h"
 #include "Engine.h"
-
 #include "Game.h"
 #include "World.h"
 
 CCommon::CCommon(void)
 {
-
 }
 
 
 CCommon::~CCommon(void)
 {
-
 }
 
 vec3 CCommon::GetTransformDirection(const mat4& matTransform, const vec3& vUP)
@@ -34,7 +31,8 @@ int CCommon::GetIntersectionObject(CBRObject** vRetObject, const vec3& p0, const
 {
 	vec3 p, n;
 	int s;
-	vRetObject = NULL;
+
+	*vRetObject = NULL;
 	*vRetObject = g_Engine.pWorld->GetIntersection(p0, p1, nMask, p, n, s);
 
 	return s >= 0;
