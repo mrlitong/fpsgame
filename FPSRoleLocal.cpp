@@ -21,7 +21,7 @@ CFPSRoleLocal::CFPSRoleLocal(void)
 }
 
 
-int CFPSRoleLocal::Init(int nRoleID,char* strCharFile)
+int CFPSRoleLocal::Init(int nRoleID,const char* strCharFile)
 {
 	CFPSRole::Init(nRoleID, strCharFile);
 
