@@ -20,3 +20,10 @@ CFPSRoleLocal::CFPSRoleLocal(void)
 	m_nUpdateMove = 0;
 }
 
+
+int CFPSRoleLocal::Init(int nRoleID,char* strCharFile)
+{
+	CFPSRole::Init(nRoleID, strCharFile);
+
+	return 0;
+}
