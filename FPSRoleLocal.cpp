@@ -25,5 +25,8 @@ int CFPSRoleLocal::Init(int nRoleID,const char* strCharFile)
 {
 	CFPSRole::Init(nRoleID, strCharFile);
 
-	return 0;
+	m_pCreature->SetupBody(1, 1);
+
+
+	return 1;
 }
