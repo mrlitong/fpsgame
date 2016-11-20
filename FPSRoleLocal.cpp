@@ -29,8 +29,17 @@ int CFPSRoleLocal::Init(int nRoleID,const char* strCharFile)
 
 	m_pCreature->SetHighShadow(1);
 	SetupArms(2, 0);
+	//m_vCameraOffset = vec3(0.0f, 0.0f, 1.8f);
 
 	m_pActorBase = new CActorBase();
 	m_pActorBase->SetEnabled(1);
+	m_vCameraOffset = vec3(0.0f, 0.0f, 1.8f);
+	m_vCameraOffset = vec3(0.0f, 0.0f, 1.8f);		
+													
+	m_vGunOffset = vec3(0.2, 0.2, 0.2f);
+	//m_vRotateOffset = vec3(-0.076326f, 0.018540f, -1.725809f); // gua dian  weizhi);
+	m_vRotateOffset = vec3(-0.076326f, 0.018540f, -1.725809f); // gua dian  weizhi);
+
+
 	return 1;
 }
