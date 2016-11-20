@@ -27,6 +27,10 @@ int CFPSRoleLocal::Init(int nRoleID,const char* strCharFile)
 
 	m_pCreature->SetupBody(1, 1);
 
+	m_pCreature->SetHighShadow(1);
+	SetupArms(2, 0);
 
+	m_pActorBase = new CActorBase();
+	m_pActorBase->SetEnabled(1);
 	return 1;
 }
