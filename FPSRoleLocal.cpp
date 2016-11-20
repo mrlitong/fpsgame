@@ -53,7 +53,7 @@ int CFPSRoleLocal::Init(int nRoleID, const char* strCharFile)
 
 void CFPSRoleLocal::Update(float ifps)
 {
-	if (m_pFire[0])
+	if (m_pFire[0] && m_pFire[1])
 	{
 		if (g_Engine.pApp->GetMouseButtonState(CApp::BUTTON_LEFT) || g_Engine.pApp->GetMouseButtonState(CApp::BUTTON_LDCLICK))
 			if (g_Engine.pInput->IsLBDownPress() || g_Engine.pInput->IsLBDBDown())
@@ -69,3 +69,8 @@ void CFPSRoleLocal::Update(float ifps)
 	CRayControl::Instance().Update(m_matMuzzleTransform, vec3(0.0f, 0.5f, -0.03f));
 }
 
+
+void CFPSRoleLocal::OnFire(float fCoolingTime)
+{
+	CFPSRole::OnFire(fCoolingTime);
+}
