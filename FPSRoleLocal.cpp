@@ -1,6 +1,10 @@
 #include "FPSRoleLocal.h"
 #include "Creature.h"
 
+
+#include "RayControl.h"
+#include "Common.h"
+#include "ControlsApp.h"
 CFPSRoleLocal::CFPSRoleLocal(void)
 {
 	m_nCharMode = 0;
@@ -42,4 +46,22 @@ int CFPSRoleLocal::Init(int nRoleID,const char* strCharFile)
 
 
 	return 1;
+}
+
+
+
+
+void CFPSRoleLocal::Update(float ifps)
+{
+	if (m_pFire[0])
+	{
+		if (g_Engine.pApp->GetMouseButtonState(CApp::BUTTON_LEFT) || g_Engine.pApp->GetMouseButtonState(CApp::BUTTON_LDCLICK))
+		{
+			OpenFire();		//Êó±êµ¥»÷
+		}
+		else
+		{
+			CloseFire();
+		}
+	}
 }
