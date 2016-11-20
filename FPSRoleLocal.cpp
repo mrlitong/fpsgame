@@ -25,7 +25,7 @@ CFPSRoleLocal::CFPSRoleLocal(void)
 }
 
 
-int CFPSRoleLocal::Init(int nRoleID,const char* strCharFile)
+int CFPSRoleLocal::Init(int nRoleID, const char* strCharFile)
 {
 	CFPSRole::Init(nRoleID, strCharFile);
 
@@ -38,8 +38,8 @@ int CFPSRoleLocal::Init(int nRoleID,const char* strCharFile)
 	m_pActorBase = new CActorBase();
 	m_pActorBase->SetEnabled(1);
 	m_vCameraOffset = vec3(0.0f, 0.0f, 1.8f);
-	m_vCameraOffset = vec3(0.0f, 0.0f, 1.8f);		
-													
+	m_vCameraOffset = vec3(0.0f, 0.0f, 1.8f);
+
 	m_vGunOffset = vec3(0.2, 0.2, 0.2f);
 	//m_vRotateOffset = vec3(-0.076326f, 0.018540f, -1.725809f); // gua dian  weizhi);
 	m_vRotateOffset = vec3(-0.076326f, 0.018540f, -1.725809f); // gua dian  weizhi);
@@ -56,12 +56,16 @@ void CFPSRoleLocal::Update(float ifps)
 	if (m_pFire[0])
 	{
 		if (g_Engine.pApp->GetMouseButtonState(CApp::BUTTON_LEFT) || g_Engine.pApp->GetMouseButtonState(CApp::BUTTON_LDCLICK))
-		{
-			OpenFire();		//鼠标单击
-		}
-		else
-		{
-			CloseFire();
-		}
+			if (g_Engine.pInput->IsLBDownPress() || g_Engine.pInput->IsLBDBDown())
+			{
+				OpenFire();		//鼠标单击
+			}
+			else
+			{
+				CloseFire();
+			}
 	}
+	CFPSRole::Update(ifps);
+	CRayControl::Instance().Update(m_matMuzzleTransform, vec3(0.0f, 0.5f, -0.03f));
 }
+
