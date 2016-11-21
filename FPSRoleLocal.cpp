@@ -75,3 +75,22 @@ void CFPSRoleLocal::UpdateTransform( const MathLib::mat4 & matRotate )
 	m_pCreature->GetMainObjectMesh()->SetWorldTransform(m);
 }
 
+void CFPSRoleLocal::SetActorPosition( const vec3& vPosition )
+{
+	m_pActorBase->SetPosition(vPosition);
+}
+
+void CFPSRoleLocal::SetActorDirection( const vec3& vDirection )
+{
+	m_pActorBase->SetViewDirection(vDirection);
+}
+
+MathLib::vec3 CFPSRoleLocal::GetActorPosition()
+{
+	return m_pActorBase->GetPosition();
+}
+
+void CFPSRoleLocal::UpdateActor( float ifps )
+{
+	m_pActorBase->Update(ifps);
+}
