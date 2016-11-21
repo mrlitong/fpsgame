@@ -68,3 +68,9 @@ void CFPSRoleLocal::OnFire( float fCoolingTime )
 {
 	CFPSRole::OnFire(fCoolingTime);
 }
+
+void CFPSRoleLocal::UpdateTransform( const MathLib::mat4 & matRotate )
+{
+	mat4 m = Translate(m_pActorBase->GetPosition()+ m_vCameraOffset) * Translate(m_vGunOffset) * matRotate * Translate(m_vRotateOffset);
+
+}
