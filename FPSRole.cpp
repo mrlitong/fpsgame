@@ -41,7 +41,7 @@ int CFPSRole::Init( int nRoleID,const char* strCharFile )
 
 		m_pBulletParticle = (CObjectParticles*)g_Engine.pGame->LoadNode(m_strBulletName);
 		m_pBulletParticle->GetTracker(TRACKER_CUSTOM)->SetTrackValue(0,0.0f,vec4(1.0f,1.0f,1.0f,0.8f));
-
+		m_pBulletParticle->SetName(CUtilStr::Format("%f",m_nRoleID));
 
 	}
 	return 1;//always return 1;
