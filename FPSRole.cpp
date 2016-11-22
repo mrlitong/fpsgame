@@ -29,12 +29,14 @@ int CFPSRole::Init( int nRoleID,const char* strCharFile )
 		m_pRun[1] = (CAnimationBlendDual*)m_pCreature->GetAnimationBlend("run_v");
 
 
-
-
+		m_fAniNowCoolingTime = 0.0f;
+		m_fAniCoolingTime = 1.0f / m_pFire[0]->GetTriggerSpeed();
 		m_fEmitNowCoolingTime = 0;
 		m_fSudNowCoolingTime = 0;
 
-
+		
+		m_fSudCoolingTime = m_fAniCoolingTime  * 4.0f; //≤‚ ‘÷µ
+		m_fEmitCoolingTime = m_fAniCoolingTime * 3.0f;//≤‚ ‘÷µ
 
 
 
