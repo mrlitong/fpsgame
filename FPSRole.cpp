@@ -30,3 +30,8 @@ int CFPSRole::Init( int nRoleID,const char* strCharFile )
 	}
 	return 1;//always return 1;
 }
+
+void CFPSRole::OnKeyFrame( _ActionCallback_KeyFrame* pKeyInfo )
+{
+	//I will finish this function later.
+}
