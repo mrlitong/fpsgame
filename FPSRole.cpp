@@ -39,7 +39,7 @@ int CFPSRole::Init( int nRoleID,const char* strCharFile )
 		m_fEmitCoolingTime = m_fAniCoolingTime * 3.0f;//²âÊÔÖµ
 
 
-
+		m_pBulletParticle = (CObjectParticles*)g_Engine.pGame->LoadNode(m_strBulletName);
 	}
 	return 1;//always return 1;
 }
