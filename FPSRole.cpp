@@ -46,7 +46,8 @@ int CFPSRole::Init( int nRoleID,const char* strCharFile )
 		m_pMuzzleEffect = (CWorldEffect*)g_Engine.pGame->LoadNode(m_strMuzzleEffect);
 		m_pMuzzleEffect->Stop();
 
-
+		m_pMuzzleEffect->SetLoop(0);
+		m_pMuzzleEffect->SetLoopCount(1);
 
 	}
 	return 1;//always return 1;
