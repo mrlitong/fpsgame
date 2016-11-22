@@ -35,3 +35,8 @@ void CFPSRole::OnKeyFrame( _ActionCallback_KeyFrame* pKeyInfo )
 {
 	//I will finish this function later.
 }
+
+void CFPSRole::OnActionComplete( _ActionCallback_Complete* pActInfo )
+{
+	return CRoleBase::OnActionComplete(pActInfo);
+}
