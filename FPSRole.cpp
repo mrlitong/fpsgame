@@ -102,4 +102,9 @@ void CFPSRole::UpdateMuzzleTransform()
 	m_pStand[0]->LockFrame(2.3f);
 	m_pStand[1]->LockFrame(2.3f);
 
+	m_pArmsMesh->UpdateLink_Bone();
+	m_pArmsMesh->SetTransform(m_pArmsMesh->GetTransform());
+
+	m_matMuzzleTransform = m_pArmsMesh->GetWorldBoneTransform(m_nMuzzleBone);
+
 }
