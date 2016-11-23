@@ -79,16 +79,13 @@ void CFPSRole::SetPaceAnimationF_B( int nF_B )
 	switch(nF_B)
 	{
 	case 0:
-		{
-			m_pRun[0]->CloseBlend();
-		}break;
-	case 1:
-		{
-			m_pRun[0]->PlayAnimationA();
-		}break;
+		m_pRun[0]->CloseBlend();
+		break;
+	case 1:	
+		m_pRun[0]->PlayAnimationA();
+		break;
 	case 2:
-		{
-			m_pRun[0]->PlayAnimationB();
-		}break;
+		m_pRun[0]->PlayAnimationB();
+		break;
 	}
 }
