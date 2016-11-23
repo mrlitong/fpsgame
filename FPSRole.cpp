@@ -89,3 +89,8 @@ void CFPSRole::SetPaceAnimationF_B( int nF_B )
 		break;
 	}
 }
+
+void CFPSRole::OnFire( float fCoolingTime )
+{
+
+}
