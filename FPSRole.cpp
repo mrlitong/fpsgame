@@ -94,3 +94,12 @@ void CFPSRole::OnFire( float fCoolingTime )
 {
 
 }
+
+void CFPSRole::UpdateMuzzleTransform()
+{
+	m_pFire[0]->LockFrame(2.3f);
+	m_pFire[1]->LockFrame(2.3f);
+	m_pStand[0]->LockFrame(2.3f);
+	m_pStand[1]->LockFrame(2.3f);
+
+}
