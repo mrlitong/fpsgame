@@ -23,6 +23,7 @@ CFPSRole::CFPSRole(void)
 }
 CFPSRole::~CFPSRole(void)
 {
+	g_Engine.pGame->RemoveNode(m_pBulletParticle);
 	g_Engine.pGame->RemoveNode(m_pMuzzleEffect);
 }
 
@@ -70,4 +71,24 @@ void CFPSRole::OnKeyFrame( _ActionCallback_KeyFrame* pKeyInfo )
 void CFPSRole::OnActionComplete( _ActionCallback_Complete* pActInfo )
 {
 	return CRoleBase::OnActionComplete(pActInfo);
+}
+
+
+void CFPSRole::SetPaceAnimationF_B( int nF_B )
+{
+	switch(nF_B)
+	{
+	case 0:
+		{
+			m_pRun[0]->CloseBlend();
+		}break;
+	case 1:
+		{
+			m_pRun[0]->PlayAnimationA();
+		}break;
+	case 2:
+		{
+			m_pRun[0]->PlayAnimationB();
+		}break;
+	}
 }
