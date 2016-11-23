@@ -11,6 +11,15 @@ CFPSRole::CFPSRole(void)
 	m_fAniNowCoolingTime = 0;
 	m_fSudCoolingTime = 0;	
 	m_fEmitCoolingTime = 0;
+
+	m_fEmitNowCoolingTime = 0;
+	m_fSudNowCoolingTime = 0;
+
+	m_strMuzzleBone = "";
+	m_pArmsMesh = NULL;
+	m_pBulletParticle = NULL;
+	m_strBulletName = "";
+	m_strMuzzleEffect  = "";
 }
 CFPSRole::~CFPSRole(void)
 {
