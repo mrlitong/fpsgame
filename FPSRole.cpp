@@ -132,3 +132,8 @@ void CFPSRole::SetMuzzleSpinL_R( float vValue )
 }
 
 
+void CFPSRole::SetMuzzleSpinU_D( float vValue )
+{
+	m_pStand[0]->SetRotateSpin(vValue);
+	m_pFire[0]->SetRotateSpin(vValue);
+}
