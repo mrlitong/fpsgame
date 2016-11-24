@@ -124,3 +124,11 @@ void CFPSRole::UpdateMuzzleTransform()
 	m_matMuzzleTransform = m_pArmsMesh->GetWorldBoneTransform(m_nMuzzleBone);
 
 }
+
+void CFPSRole::SetMuzzleSpinL_R( float vValue )
+{
+	m_pStand[1]->SetRotateSpin(vValue);
+	m_pFire[1]->SetRotateSpin(vValue);
+}
+
+
