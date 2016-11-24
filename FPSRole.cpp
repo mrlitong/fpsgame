@@ -15,11 +15,11 @@ CFPSRole::CFPSRole(void)
 	m_fEmitNowCoolingTime = 0;
 	m_fSudNowCoolingTime = 0;
 
-	m_strMuzzleBone = "";
+	m_strMuzzleBone = "wuqi02";
 	m_pArmsMesh = NULL;
 	m_pBulletParticle = NULL;
-	m_strBulletName = "";
-	m_strMuzzleEffect  = "";
+	m_strBulletName = "data/effect/particle/zgfwq_sj_02.node";
+	m_strMuzzleEffect  = "data/effect/particle/zgfwq_sj_01.node";
 }
 CFPSRole::~CFPSRole(void)
 {
