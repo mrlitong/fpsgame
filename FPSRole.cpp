@@ -147,3 +147,21 @@ void CFPSRole::Update( float ifps )
 	UpdateFire(ifps);
 	CRoleBase::Update(ifps);
 }
+void CFPSRole::SetPaceAnimationL_R( int nF_B )
+{
+	switch(nF_B)
+	{
+	case 0:
+		{
+			m_pRun[1]->CloseBlend();
+		}break;
+	case 1:
+		{
+			m_pRun[1]->PlayAnimationA();
+		}break;
+	case 2:
+		{
+			m_pRun[1]->PlayAnimationB();
+		}break;
+	}
+}
