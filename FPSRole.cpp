@@ -198,3 +198,21 @@ void CFPSRole::UpdateFire( float ifps )
 		}
 	}
 }
+
+int CFPSRole::SetupArms( int nAssembly,int nBody )
+{
+	int nRet = m_pCreature->SetupBody(nAssembly,nBody);
+	if(!nRet)
+	{
+		return 0;
+	}
+
+	CNode* pNode = GetAssemblyNode(nAssembly);
+	if(pNode->GetType() == CNode::OBJECT_MESH_SKINNED)
+	{
+		m_pArmsMesh = (CObjectMeshSkinned*)pNode;
+		m_nMuzzleBone = m_pArmsMesh->FindBone(m_strMuzzleBone);
+	}
+
+	return 1;
+}
