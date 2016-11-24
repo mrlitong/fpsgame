@@ -138,3 +138,12 @@ void CFPSRole::SetMuzzleSpinU_D( float vValue )
 	m_pFire[0]->SetRotateSpin(vValue);
 }
 
+void CFPSRole::Update( float ifps )
+{
+	UpdateMuzzleTransform();		
+	m_pBulletParticle->SetWorldTransform(m_matMuzzleTransform);
+	m_pMuzzleEffect->SetWorldTransform(m_matMuzzleTransform*Scale(0.4f,1.0f,0.5f));
+
+	UpdateFire(ifps);
+	CRoleBase::Update(ifps);
+}
