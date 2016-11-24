@@ -165,3 +165,36 @@ void CFPSRole::SetPaceAnimationL_R( int nF_B )
 		}break;
 	}
 }
+
+void CFPSRole::UpdateFire( float ifps )
+{
+	m_fAniNowCoolingTime -= ifps;
+	m_fSudNowCoolingTime -= ifps;
+	m_fEmitNowCoolingTime -= ifps;
+
+	if(m_nFire)
+	{
+		//后坐力
+		if(m_fAniNowCoolingTime < EPSILON)
+		{
+			m_fAniNowCoolingTime = m_fAniCoolingTime;
+			m_pFire[0]->OnJumpFrame();
+			m_pFire[1]->OnJumpFrame();
+		}
+
+		//声音
+		if(m_fSudNowCoolingTime < EPSILON)
+		{
+			m_fSudNowCoolingTime = m_fSudCoolingTime;
+			m_pMuzzleEffect->Play();
+		}
+
+		//发射子弹
+		if(m_fEmitNowCoolingTime < EPSILON)
+		{
+			m_fEmitNowCoolingTime = m_fEmitCoolingTime;
+			m_pBulletParticle->FireBullet();
+			OnFire(m_fEmitCoolingTime);
+		}
+	}
+}
