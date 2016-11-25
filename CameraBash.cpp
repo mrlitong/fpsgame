@@ -52,3 +52,9 @@ void CCameraBase::SetEnabled(int nEnable)
         }
 	}
 }
+
+
+int CCameraBase::IsEnabled() const
+{
+    return CPlayer::IsEnabled();
+}
