@@ -34,3 +34,16 @@ CCameraBase::~CCameraBase()
 {
     Leave();
 }
+
+void CCameraBase::SetEnabled(int nEnable)
+{
+	if(nEnable)
+	{
+		m_pLastPlayer =  g_Engine.pGame->GetPlayer();
+        CPlayer::SetEnabled(nEnable);
+	}
+	else
+	{
+
+	}
+}
