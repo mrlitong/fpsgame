@@ -58,3 +58,7 @@ int CCameraBase::IsEnabled() const
 {
     return CPlayer::IsEnabled();
 }
+void CCameraBase::SetHMDEnabled(int nEnable)
+{
+    m_nHMDEnable = nEnable;
+}
