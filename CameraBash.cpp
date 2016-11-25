@@ -41,9 +41,14 @@ void CCameraBase::SetEnabled(int nEnable)
 	{
 		m_pLastPlayer =  g_Engine.pGame->GetPlayer();
         CPlayer::SetEnabled(nEnable);
+
 	}
 	else
 	{
-
+		if (m_pLastPlayer)
+        {
+            g_Engine.pGame->SetPlayer(m_pLastPlayer);
+            CPlayer::SetEnabled(nEnable);
+        }
 	}
 }
