@@ -3,6 +3,10 @@
 #include "Creature.h"
 #include "AnimationBlend.h"
 #include "WorldEffect.h"
+#include "ObjectMeshSkinned.h"
+#include "Game.h"
+#include "ObjectParticles.h"
+
 
 CFPSRole::CFPSRole(void)
 {
