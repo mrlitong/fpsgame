@@ -21,5 +21,11 @@ public:
 	static int  KeyPress(unsigned int nKey);
 	static int  KeyRelease(unsigned int nKey);
 
+protected:
+	CFPSRoleLocal*	m_pRole;
+	CSkillSystem*		m_pSkillSystem;
+	CCameraBase*		m_pCameraBase;
+	CStarControl*		m_pStarControl;
+	CRayControl*		m_pRayControl;
 
 };
