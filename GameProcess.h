@@ -27,5 +27,7 @@ protected:
 	CCameraBase*		m_pCameraBase;
 	CStarControl*		m_pStarControl;
 	CRayControl*		m_pRayControl;
+private:
+
 
 };
