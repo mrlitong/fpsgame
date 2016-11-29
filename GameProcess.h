@@ -6,5 +6,7 @@
 
 class CGameProcess : public CMessageBase
 {
-
+public:
+	CGameProcess(void);
+	virtual ~CGameProcess(void);
 };
