@@ -4,6 +4,12 @@
 #include "RoleBase.h"
 #include "Vector.h"
 
+
+class CFPSRoleLocal;
+class CCameraBase;
+class CActorBase;
+class CStarControl;
+class CRayControl;
 class CGameProcess : public CMessageBase
 {
 public:
