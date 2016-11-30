@@ -10,7 +10,7 @@ using namespace MathLib;
 #define new new(__FILE__, __LINE__) 
 #endif // MEMORY_INFO
 
-
+#define CAMERA_BASE_CLAMP            89.9f
 
 
 CCameraBase::CCameraBase(): CPlayer(PLAYER_SPECTATOR) 
