@@ -1,4 +1,7 @@
 #include "CameraBase.h"
+#include "sys/SysControl.h"
+#include "HMDWrapper.h"
+
 
 using namespace MathLib;
 
