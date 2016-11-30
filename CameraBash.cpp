@@ -71,3 +71,13 @@ int CCameraBase::IsHMDEnabled() const
 {
     return m_nHMDEnable;
 }
+
+void CCameraBase::SetRadius(float r)
+{
+    m_fRadius = r;
+}
+
+float CCameraBase::GetRadius() const
+{
+    return m_fRadius;
+}
