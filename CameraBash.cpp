@@ -44,6 +44,7 @@ void CCameraBase::SetEnabled(int nEnable)
 	{
 		m_pLastPlayer =  g_Engine.pGame->GetPlayer();
         CPlayer::SetEnabled(nEnable);
+		g_Engine.pGame->SetPlayer(this);
 
 	}
 	else
@@ -64,4 +65,9 @@ int CCameraBase::IsEnabled() const
 void CCameraBase::SetHMDEnabled(int nEnable)
 {
     m_nHMDEnable = nEnable;
+}
+
+int CCameraBase::IsHMDEnabled() const
+{
+    return m_nHMDEnable;
 }
