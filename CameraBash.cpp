@@ -101,3 +101,8 @@ void CCameraBase::SetMinThetaAngle(float angle)
 {
     m_fMinThetaAngle = Clamp(angle,-CAMERA_BASE_CLAMP,CAMERA_BASE_CLAMP);
 }
+
+float CCameraBase::GetMinThetaAngle() const
+{
+    return m_fMinThetaAngle;
+}
