@@ -1,7 +1,8 @@
 #include "CameraBase.h"
 #include "sys/SysControl.h"
 #include "HMDWrapper.h"
-
+#include "Engine.h"
+#include "Game.h"
 
 using namespace MathLib;
 
