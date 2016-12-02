@@ -90,3 +90,14 @@ float CCameraBase::GetRadius() const
 
 /*
  */
+void CCameraBase::Update_Bounds() 
+{
+    m_BoundSphere.Set(vec3_zero,m_fRadius);
+    m_BoundBox.Set(m_BoundSphere);
+    Update_World_Position();
+}
+
+void CCameraBase::SetMinThetaAngle(float angle)
+{
+    m_fMinThetaAngle = Clamp(angle,-CAMERA_BASE_CLAMP,CAMERA_BASE_CLAMP);
+}
