@@ -129,3 +129,9 @@ void CCameraBase::SetPhiAngle(float angle)
 
 	FlushTransform();
 }
+
+
+float CCameraBase::GetPhiAngle() const
+{
+	return m_fPhiAngle;
+}
