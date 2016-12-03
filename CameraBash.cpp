@@ -117,3 +117,7 @@ float CCameraBase::GetMaxThetaAngle() const
 {
 	return m_fMaxThetaAngle;
 }
+float CCameraBase::GetTurning() const
+{
+	return m_fTurning;
+}
