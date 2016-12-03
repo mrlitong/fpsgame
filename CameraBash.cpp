@@ -125,6 +125,7 @@ void CCameraBase::SetPhiAngle(float angle)
 {
 	angle = angle - m_fPhiAngle;
 	m_vDirection = quat(m_vUp, angle) * m_vDirection;
+	m_fPhiAngle += angle;
 
 	FlushTransform();
 }
