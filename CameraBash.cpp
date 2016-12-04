@@ -155,3 +155,12 @@ float CCameraBase::GetThetaAngle() const
 /*
 *
 */
+
+
+
+
+
+const vec3 &CCameraBase::GetViewDirection() const
+{
+	return m_vDirection;
+}
