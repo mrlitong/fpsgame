@@ -151,3 +151,7 @@ float CCameraBase::GetThetaAngle() const
 {
 	return m_fThetaAngle;
 }
+
+/*
+*
+*/
