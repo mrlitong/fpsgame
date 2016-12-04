@@ -156,7 +156,11 @@ float CCameraBase::GetThetaAngle() const
 *
 */
 
-
+void CCameraBase::SetViewDirection(const vec3 &d)
+{
+	m_vDirection = Normalize(d);
+	FlushTransform();
+}
 
 
 
