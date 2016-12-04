@@ -135,3 +135,10 @@ float CCameraBase::GetPhiAngle() const
 {
 	return m_fPhiAngle;
 }
+
+void CCameraBase::SetThetaAngle(float angle)		
+{
+
+
+	FlushTransform();
+}
