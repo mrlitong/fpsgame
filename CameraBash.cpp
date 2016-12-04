@@ -167,6 +167,7 @@ void CCameraBase::SetViewDirection(const vec3 &d)
 	// decompose direction
 	m_fPhiAngle = CMathCore::ATan2(Dot(m_vDirection, tangent), Dot(m_vDirection, binormal)) * RAD2DEG;
 	m_fThetaAngle = CMathCore::ACos(Clamp(Dot(m_vDirection, m_vUp), -1.0f, 1.0f)) * RAD2DEG - 90.0f;
+	m_fThetaAngle = Clamp(m_fThetaAngle, m_fMinThetaAngle, m_fMaxThetaAngle);
 
 
 
