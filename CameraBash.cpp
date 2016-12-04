@@ -139,6 +139,8 @@ float CCameraBase::GetPhiAngle() const
 void CCameraBase::SetThetaAngle(float angle)		
 {
 	angle = Clamp(angle, m_fMinThetaAngle, m_fMaxThetaAngle) - m_fThetaAngle;	
+	m_vDirection = quat(Cross(m_vUp, m_vDirection), angle) * m_vDirection;
+	m_fThetaAngle += angle;
 
 
 	FlushTransform();
