@@ -145,3 +145,9 @@ void CCameraBase::SetThetaAngle(float angle)
 
 	FlushTransform();
 }
+
+
+float CCameraBase::GetThetaAngle() const
+{
+	return m_fThetaAngle;
+}
