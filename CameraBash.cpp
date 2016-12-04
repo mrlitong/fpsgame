@@ -164,6 +164,9 @@ void CCameraBase::SetViewDirection(const vec3 &d)
 	vec3 tangent, binormal;
 	OrthoBasis(m_vUp, tangent, binormal);
 
+	// decompose direction
+	m_fPhiAngle = CMathCore::ATan2(Dot(m_vDirection, tangent), Dot(m_vDirection, binormal)) * RAD2DEG;
+
 	FlushTransform();
 }
 
