@@ -173,10 +173,12 @@ void CCameraBase::SetViewDirection(const vec3 &d)
 
 	FlushTransform();
 }
-
-
-
 const vec3 &CCameraBase::GetViewDirection() const
 {
 	return m_vDirection;
+}
+
+void CCameraBase::UpdateControls(float ifps)
+{
+		
 }
