@@ -180,5 +180,12 @@ const vec3 &CCameraBase::GetViewDirection() const
 
 void CCameraBase::UpdateControls(float ifps)
 {
-		
+	if (g_pHMD->GetUseHMD() && m_nHMDEnable)
+	{
+		Update_HMD(ifps);
+	}
+	else
+	{
+
+	}
 }
