@@ -186,6 +186,7 @@ void CCameraBase::UpdateControls(float ifps)
 	}
 	else
 	{
-
+		Update_Controls(ifps);
 	}
 }
+
