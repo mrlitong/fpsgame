@@ -10,5 +10,7 @@ using namespace MathLib;
 
 class CSysControlLocal : public CSysControl
 {
-
+public:
+	    CSysControlLocal();
+    virtual ~CSysControlLocal();
 }
