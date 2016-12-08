@@ -106,3 +106,93 @@ float CCameraBase::GetMinThetaAngle() const
 {
     return m_fMinThetaAngle;
 }
+
+/*
+*/
+void CCameraBase::SetMaxThetaAngle(float angle)
+{
+	m_fMaxThetaAngle = Clamp(angle, -CAMERA_BASE_CLAMP, CAMERA_BASE_CLAMP);
+}
+float CCameraBase::GetMaxThetaAngle() const
+{
+	return m_fMaxThetaAngle;
+}
+float CCameraBase::GetTurning() const
+{
+	return m_fTurning;
+}
+void CCameraBase::SetPhiAngle(float angle)
+{
+	angle = angle - m_fPhiAngle;
+	m_vDirection = quat(m_vUp, angle) * m_vDirection;
+	m_fPhiAngle += angle;
+
+	FlushTransform();
+}
+
+
+float CCameraBase::GetPhiAngle() const
+{
+	return m_fPhiAngle;
+}
+
+void CCameraBase::SetThetaAngle(float angle)		
+{
+	angle = Clamp(angle, m_fMinThetaAngle, m_fMaxThetaAngle) - m_fThetaAngle;	
+	m_vDirection = quat(Cross(m_vUp, m_vDirection), angle) * m_vDirection;
+	m_fThetaAngle += angle;
+
+
+	FlushTransform();
+}
+
+
+float CCameraBase::GetThetaAngle() const
+{
+	return m_fThetaAngle;
+}
+
+/*
+*
+*/
+
+void CCameraBase::SetViewDirection(const vec3 &d)
+{
+	m_vDirection = Normalize(d);
+
+	// ortho basis
+	vec3 tangent, binormal;
+	OrthoBasis(m_vUp, tangent, binormal);
+
+	// decompose direction
+	m_fPhiAngle = CMathCore::ATan2(Dot(m_vDirection, tangent), Dot(m_vDirection, binormal)) * RAD2DEG;
+	m_fThetaAngle = CMathCore::ACos(Clamp(Dot(m_vDirection, m_vUp), -1.0f, 1.0f)) * RAD2DEG - 90.0f;
+	m_fThetaAngle = Clamp(m_fThetaAngle, m_fMinThetaAngle, m_fMaxThetaAngle);
+
+
+
+	FlushTransform();
+}
+const vec3 &CCameraBase::GetViewDirection() const
+{
+	return m_vDirection;
+}
+
+void CCameraBase::UpdateControls(float ifps)
+{
+	if (g_pHMD->GetUseHMD() && m_nHMDEnable)
+	{
+		Update_HMD(ifps);
+	}
+	else
+	{
+		Update_Controls(ifps);
+	}
+}
+
+
+/******************************************************************************\
+*
+* Flush
+*
+\******************************************************************************/
