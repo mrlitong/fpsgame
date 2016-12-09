@@ -25,5 +25,9 @@ public:
 	virtual float GetMouseDX();
 	virtual float GetMouseDY();
 
+	virtual void SetMouseGrab(int g);		//设置是否显示鼠标
+	virtual int GetMouseGrab();			//获取鼠标状态，是显示呢还是不显示的状态。
+
+
 
 }
