@@ -33,6 +33,6 @@ public:
 	virtual ControlMode GetControlMode() const;				//获取控制模式
 
 private:
-
+	void Update_Mouse(float ifps);
 
 }
