@@ -35,4 +35,6 @@ public:
 private:
 	void Update_Mouse(float ifps);
 	void Update_Keyboard(float ifps);
+	void Update_XPad360(float ifps);
+
 }
