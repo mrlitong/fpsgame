@@ -29,5 +29,9 @@ public:
 	virtual int GetMouseGrab();			//获取鼠标状态，是显示呢还是不显示的状态。
 
 
+	virtual void SetControlMode(ControlMode mode);			//控制模式
+	virtual ControlMode GetControlMode() const;				//获取控制模式
+
+
 
 }
