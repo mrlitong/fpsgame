@@ -34,5 +34,5 @@ public:
 
 private:
 	void Update_Mouse(float ifps);
-
+	void Update_Keyboard(float ifps);
 }
