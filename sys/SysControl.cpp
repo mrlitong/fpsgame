@@ -19,7 +19,11 @@ public:
 	virtual void Update(float ifps);
 	virtual void Shutdown();
 
+	virtual int GetState(int state);		//鼠标状态，键盘状态，人物状态，子弹状态等等。
+	virtual int ClearState(int state);
 
+	virtual float GetMouseDX();
+	virtual float GetMouseDY();
 
 
 }
