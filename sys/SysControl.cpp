@@ -32,6 +32,7 @@ public:
 	virtual void SetControlMode(ControlMode mode);			//控制模式
 	virtual ControlMode GetControlMode() const;				//获取控制模式
 
+private:
 
 
 }
