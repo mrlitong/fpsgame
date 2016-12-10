@@ -49,4 +49,13 @@ private:
 	CWidgetLabel        *m_pTestMessageLabel;
 
 
+
+
+};
+
+
+
+CSysControlLocal::CSysControlLocal()
+{
+
 }
