@@ -45,7 +45,8 @@ private:
 	int                 m_nOldMouseX;			//上一个鼠标坐标X
 	int                 m_nOldMouseY;			//上一个鼠标坐标Y
 
-
+	CObjectGui          *m_pTest3DUI;
+	CWidgetLabel        *m_pTestMessageLabel;
 
 
 }
