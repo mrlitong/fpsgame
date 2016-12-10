@@ -59,3 +59,8 @@ CSysControlLocal::CSysControlLocal()
 {
 
 }
+CSysControlLocal::~CSysControlLocal()
+{
+
+}
+
