@@ -64,3 +64,8 @@ CSysControlLocal::~CSysControlLocal()
 
 }
 
+void CSysControlLocal::Init()
+{
+	m_pControlsApp = new CControlsApp;
+	m_pControlsXPad360 = new CControlsXPad360(0);
+}
