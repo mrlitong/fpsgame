@@ -41,4 +41,10 @@ private:
 	CControlsApp        *m_pControlsApp;		//控制游戏中移动
 	CControlsXPad360    *m_pControlsXPad360;
 
+	int                 m_nOldMouseX;			//上一个鼠标坐标X
+	int                 m_nOldMouseY;			//上一个鼠标坐标Y
+
+
+
+
 }
