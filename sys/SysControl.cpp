@@ -37,4 +37,8 @@ private:
 	void Update_Keyboard(float ifps);
 	void Update_XPad360(float ifps);
 
+
+	CControlsApp        *m_pControlsApp;		//控制游戏中移动
+	CControlsXPad360    *m_pControlsXPad360;
+
 }
