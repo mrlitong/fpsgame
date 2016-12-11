@@ -73,6 +73,9 @@ void CSysControlLocal::Init()
 	m_pControlsXPad360 = new CControlsXPad360(0);
 
 
+	g_Engine.pApp->SetMouseGrab(0);
+	g_Engine.pApp->SetMouseShow(0);			//是否在游戏的时候显示鼠标，这里是否
+
 	m_nOldMouseX = 0;
 	m_nOldMouseY = 0;
 }
