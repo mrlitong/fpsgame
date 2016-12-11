@@ -85,6 +85,7 @@ void CSysControlLocal::Init()
 
 	m_pTest3DUI->SetScreenSize(800, 400);
 	m_pTest3DUI->SetControlDistance(1000.0f);	
+	m_pTest3DUI->CreateMaterial("gui_base");	 //show in game	
 
 
 	m_nOldMouseX = 0;
