@@ -83,6 +83,9 @@ void CSysControlLocal::Init()
 	m_pTest3DUI->SetBackground(1);		
 	m_pTest3DUI->SetBackgroundColor(vec4(1.0f, 0.0f, 0.0f, 1.0f));
 
+	m_pTest3DUI->SetScreenSize(800, 400);
+
+
 	m_nOldMouseX = 0;
 	m_nOldMouseY = 0;
 }
