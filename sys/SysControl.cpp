@@ -74,7 +74,14 @@ void CSysControlLocal::Init()
 
 
 	g_Engine.pApp->SetMouseGrab(0);
-	g_Engine.pApp->SetMouseShow(0);			//是否在游戏的时候显示鼠标，这里是否
+	g_Engine.pApp->SetMouseShow(0);			
+
+	SetControlMode(CONTROL_KEYBORAD_MOUSE);
+
+	m_pTest3DUI = new CObjectGui(2.0f, 1.0f, "data/core/gui/");
+	m_pTest3DUI->SetMouseShow(0);		
+	m_pTest3DUI->SetBackground(1);		
+	m_pTest3DUI->SetBackgroundColor(vec4(1.0f, 0.0f, 0.0f, 1.0f));
 
 	m_nOldMouseX = 0;
 	m_nOldMouseY = 0;
