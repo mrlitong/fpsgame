@@ -95,6 +95,11 @@ void CSysControlLocal::Init()
 	m_pTestMessageLabel->SetFontColor(vec4(0.0f, 0.0f, 0.0f, 1.0f));
 
 
+
+	m_pTestMessageLabel->SetFontSize(80);		//设置字体大小
+	m_pTestMessageLabel->SetFontOutline(1);		//设置字体轮廓
+	m_pTestMessageLabel->SetText("两个黄鹂鸣翠柳\n一行白鹭上青天\n窗含西岭千秋雪\n门泊东吴万里船");
+
 	m_nOldMouseX = 0;
 	m_nOldMouseY = 0;
 }
