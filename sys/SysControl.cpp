@@ -112,5 +112,9 @@ void CSysControlLocal::Init()
 	m_nOldMouseX = 0;
 	m_nOldMouseY = 0;
 }
-
+void CSysControlLocal::Shutdown()	
+{
+	g_Engine.pApp->SetMouseGrab(0);
+	g_Engine.pApp->SetMouseShow(0);
+}
 
