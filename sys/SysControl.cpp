@@ -120,7 +120,10 @@ void CSysControlLocal::Shutdown()
 	m_pControlsApp = NULL;
 	delete m_pControlsXPad360;
 	m_pControlsXPad360 = NULL;
-
+	delete m_pTestMessageLabel;
+	m_pTestMessageLabel = NULL;
+	delete m_pTest3DUI;
+	m_pTest3DUI = NULL;
 
 }
 
