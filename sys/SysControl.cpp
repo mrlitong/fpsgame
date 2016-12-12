@@ -116,5 +116,11 @@ void CSysControlLocal::Shutdown()
 {
 	g_Engine.pApp->SetMouseGrab(0);
 	g_Engine.pApp->SetMouseShow(0);
+	delete m_pControlsApp;
+	m_pControlsApp = NULL;
+	delete m_pControlsXPad360;
+	m_pControlsXPad360 = NULL;
+
+
 }
 
