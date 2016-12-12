@@ -90,7 +90,9 @@ void CSysControlLocal::Init()
 
 	m_pTest3DUI->SetWorldTransform(Translate(0.0f, 0.0f, 2.0f) * MakeRotationFromZY(vec3(0.0f, -1.0f, 0.0f), vec3(0.0f, 0.0f, 1.0f)));
 
-
+	m_pTestMessageLabel = new CWidgetLabel(m_pTest3DUI->GetGui());	//初始化文字标签
+	m_pTest3DUI->GetGui()->AddChild(m_pTestMessageLabel, CGui::ALIGN_CENTER);
+	m_pTestMessageLabel->SetFontColor(vec4(0.0f, 0.0f, 0.0f, 1.0f));
 
 
 	m_nOldMouseX = 0;
