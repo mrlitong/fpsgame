@@ -88,6 +88,11 @@ void CSysControlLocal::Init()
 	m_pTest3DUI->CreateMaterial("gui_base");	 //show in game	
 
 
+	m_pTest3DUI->SetWorldTransform(Translate(0.0f, 0.0f, 2.0f) * MakeRotationFromZY(vec3(0.0f, -1.0f, 0.0f), vec3(0.0f, 0.0f, 1.0f)));
+
+
+
+
 	m_nOldMouseX = 0;
 	m_nOldMouseY = 0;
 }
