@@ -100,6 +100,15 @@ void CSysControlLocal::Init()
 	m_pTestMessageLabel->SetFontOutline(1);		//设置字体轮廓
 	m_pTestMessageLabel->SetText("两个黄鹂鸣翠柳\n一行白鹭上青天\n窗含西岭千秋雪\n门泊东吴万里船");
 
+
+	void CSysControlLocal::Update(float ifps)
+	{
+		Update_Mouse(ifps);
+		Update_Keyboard(ifps);
+		Update_XPad360(ifps);
+	}
+
+
 	m_nOldMouseX = 0;
 	m_nOldMouseY = 0;
 }
