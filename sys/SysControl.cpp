@@ -152,3 +152,8 @@ void CSysControlLocal::SetMouseGrab(int g)
     g_Engine.pApp->SetMouseGrab(g);
     g_Engine.pGui->SetMouseShow(!g);
 }
+int CSysControlLocal::GetMouseGrab()
+{
+    return g_Engine.pApp->GetMouseGrab();
+}
+
