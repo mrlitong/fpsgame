@@ -142,3 +142,8 @@ float CSysControlLocal::GetMouseDX()
 {
     return m_pControlsApp->GetMouseDX();
 }
+
+float CSysControlLocal::GetMouseDY()
+{
+    return m_pControlsApp->GetMouseDY();
+}
