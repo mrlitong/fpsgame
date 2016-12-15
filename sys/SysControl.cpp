@@ -147,3 +147,8 @@ float CSysControlLocal::GetMouseDY()
 {
     return m_pControlsApp->GetMouseDY();
 }
+void CSysControlLocal::SetMouseGrab(int g)
+{
+    g_Engine.pApp->SetMouseGrab(g);
+    g_Engine.pGui->SetMouseShow(!g);
+}
