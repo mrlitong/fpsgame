@@ -5,7 +5,7 @@
 #include "App.h"
 
 
-//½â¾ö¿çÆ½Ì¨×Ö·û¼¯¼æÈİÎÊÌâ
+//è§£å†³è·¨å¹³å°å­—ç¬¦é›†å…¼å®¹é—®é¢˜
 #ifdef _WIN32
 #pragma execution_character_set("utf-8")
 #endif
@@ -18,22 +18,22 @@ public:
 	CSysControlLocal();
     virtual ~CSysControlLocal();
 
-	virtual void Init();	//½ÇÉ«Òª³õÊ¼»¯£¬×ÅÉ«Æ÷Òª³õÊ¼»¯£¬
+	virtual void Init();	//è§’è‰²è¦åˆå§‹åŒ–ï¼Œç€è‰²å™¨è¦åˆå§‹åŒ–ï¼Œ
 	virtual void Update(float ifps);
 	virtual void Shutdown();
 
-	virtual int GetState(int state);		//Êó±ê×´Ì¬£¬¼üÅÌ×´Ì¬£¬ÈËÎï×´Ì¬£¬×Óµ¯×´Ì¬µÈµÈ¡£
+	virtual int GetState(int state);		//é¼ æ ‡çŠ¶æ€ï¼Œé”®ç›˜çŠ¶æ€ï¼Œäººç‰©çŠ¶æ€ï¼Œå­å¼¹çŠ¶æ€ç­‰ç­‰ã€‚
 	virtual int ClearState(int state);
 
 	virtual float GetMouseDX();
 	virtual float GetMouseDY();
 
-	virtual void SetMouseGrab(int g);		//ÉèÖÃÊÇ·ñÏÔÊ¾Êó±ê
-	virtual int GetMouseGrab();			//»ñÈ¡Êó±ê×´Ì¬£¬ÊÇÏÔÊ¾ÄØ»¹ÊÇ²»ÏÔÊ¾µÄ×´Ì¬¡£
+	virtual void SetMouseGrab(int g);		//è®¾ç½®æ˜¯å¦æ˜¾ç¤ºé¼ æ ‡
+	virtual int GetMouseGrab();			//è·å–é¼ æ ‡çŠ¶æ€ï¼Œæ˜¯æ˜¾ç¤ºå‘¢è¿˜æ˜¯ä¸æ˜¾ç¤ºçš„çŠ¶æ€ã€‚
 
 
-	virtual void SetControlMode(ControlMode mode);			//¿ØÖÆÄ£Ê½
-	virtual ControlMode GetControlMode() const;				//»ñÈ¡¿ØÖÆÄ£Ê½
+	virtual void SetControlMode(ControlMode mode);			//æ§åˆ¶æ¨¡å¼
+	virtual ControlMode GetControlMode() const;				//è·å–æ§åˆ¶æ¨¡å¼
 
 private:
 	void Update_Mouse(float ifps);
@@ -41,12 +41,12 @@ private:
 	void Update_XPad360(float ifps);
 
 
-	CControlsApp        *m_pControlsApp;		//¿ØÖÆÓÎÏ·ÖĞÒÆ¶¯
+	CControlsApp        *m_pControlsApp;		//æ§åˆ¶æ¸¸æˆä¸­ç§»åŠ¨
 	CControlsXPad360    *m_pControlsXPad360;
-	ControlMode         m_nControlMode;			//¿ØÖÆÄ£Ê½
+	ControlMode         m_nControlMode;			//æ§åˆ¶æ¨¡å¼
 	
-	int                 m_nOldMouseX;			//ÉÏÒ»¸öÊó±ê×ø±êX
-	int                 m_nOldMouseY;			//ÉÏÒ»¸öÊó±ê×ø±êY
+	int                 m_nOldMouseX;			//ä¸Šä¸€ä¸ªé¼ æ ‡åæ ‡X
+	int                 m_nOldMouseY;			//ä¸Šä¸€ä¸ªé¼ æ ‡åæ ‡Y
 
 	CObjectGui          *m_pTest3DUI;
 	CWidgetLabel        *m_pTestMessageLabel;
@@ -90,15 +90,15 @@ void CSysControlLocal::Init()
 
 	m_pTest3DUI->SetWorldTransform(Translate(0.0f, 0.0f, 2.0f) * MakeRotationFromZY(vec3(0.0f, -1.0f, 0.0f), vec3(0.0f, 0.0f, 1.0f)));
 
-	m_pTestMessageLabel = new CWidgetLabel(m_pTest3DUI->GetGui());	//³õÊ¼»¯ÎÄ×Ö±êÇ©
+	m_pTestMessageLabel = new CWidgetLabel(m_pTest3DUI->GetGui());	//åˆå§‹åŒ–æ–‡å­—æ ‡ç­¾
 	m_pTest3DUI->GetGui()->AddChild(m_pTestMessageLabel, CGui::ALIGN_CENTER);
 	m_pTestMessageLabel->SetFontColor(vec4(0.0f, 0.0f, 0.0f, 1.0f));
 
 
 
-	m_pTestMessageLabel->SetFontSize(80);		//ÉèÖÃ×ÖÌå´óĞ¡
-	m_pTestMessageLabel->SetFontOutline(1);		//ÉèÖÃ×ÖÌåÂÖÀª
-	m_pTestMessageLabel->SetText("Á½¸ö»Æğ¿Ãù´äÁø\nÒ»ĞĞ°×ğØÉÏÇàÌì\n´°º¬Î÷ÁëÇ§ÇïÑ©\nÃÅ²´¶«ÎâÍòÀï´¬");
+	m_pTestMessageLabel->SetFontSize(80);		//è®¾ç½®å­—ä½“å¤§å°
+	m_pTestMessageLabel->SetFontOutline(1);		//è®¾ç½®å­—ä½“è½®å»“
+	m_pTestMessageLabel->SetText("ä¸¤ä¸ªé»„é¹‚é¸£ç¿ æŸ³\nä¸€è¡Œç™½é¹­ä¸Šé’å¤©\nçª—å«è¥¿å²­åƒç§‹é›ª\né—¨æ³Šä¸œå´ä¸‡é‡Œèˆ¹");
 
 
 	void CSysControlLocal::Update(float ifps)
@@ -127,3 +127,8 @@ void CSysControlLocal::Shutdown()
 
 }
 
+int CSysControlLocal::GetState(int state)
+{
+
+    return m_pControlsApp->GetState(state);
+}
