@@ -138,4 +138,7 @@ int CSysControlLocal::ClearState(int state)
     return m_pControlsApp->ClearState(state);
 }
 
-
+float CSysControlLocal::GetMouseDX()
+{
+    return m_pControlsApp->GetMouseDX();
+}
