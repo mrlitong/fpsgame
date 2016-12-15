@@ -132,3 +132,10 @@ int CSysControlLocal::GetState(int state)
 
     return m_pControlsApp->GetState(state);
 }
+
+int CSysControlLocal::ClearState(int state)
+{
+    return m_pControlsApp->ClearState(state);
+}
+
+
