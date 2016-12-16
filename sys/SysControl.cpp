@@ -3,7 +3,8 @@
 #include "ControlsXPad360.h"
 #include "Engine.h"
 #include "App.h"
-
+#include "Engine.h"
+#include "App.h"
 
 //解决跨平台字符集兼容问题
 #ifdef _WIN32
