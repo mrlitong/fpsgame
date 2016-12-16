@@ -174,4 +174,12 @@ void CSysControlLocal::Update_Mouse(float ifps)
 {
 	float dx = (g_Engine.pApp->GetMouseX() - m_nOldMouseX) * g_Engine.pControls->GetMouseSensitivity() * 0.1f;//0.1f这个数值越大，鼠标移动越快
 	float dy = (g_Engine.pApp->GetMouseY() - m_nOldMouseY) * g_Engine.pControls->GetMouseSensitivity() * 0.1f;//0.1这个数值越小，鼠标移动越慢
+
+	m_pControlsApp->SetMouseDX(dx);
+	m_pControlsApp->SetMouseDY(dy);
+
+	if (g_Engine.pApp->GetMouseGrab() && g_Engine.pApp->GetActive())
+	{
+		g_Engine.pApp->SetMouse(g_Engine.pApp->GetWidth() / 2, g_Engine.pApp->GetHeight() / 2);
+	}
 }
