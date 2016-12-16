@@ -164,3 +164,8 @@ void CSysControlLocal::SetControlMode(ControlMode mode)
 {
 	m_nControlMode = mode;
 }
+
+CSysControl::ControlMode CSysControlLocal::GetControlMode() const
+{
+	return m_nControlMode;
+}
