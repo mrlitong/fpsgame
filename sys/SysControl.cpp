@@ -160,3 +160,7 @@ int CSysControlLocal::GetMouseGrab()
     return g_Engine.pApp->GetMouseGrab();
 }
 
+void CSysControlLocal::SetControlMode(ControlMode mode)
+{
+	m_nControlMode = mode;
+}
