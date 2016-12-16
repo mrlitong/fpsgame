@@ -95,7 +95,9 @@ void CSysControlLocal::Init()
 	m_pTest3DUI->GetGui()->AddChild(m_pTestMessageLabel, CGui::ALIGN_CENTER);
 	m_pTestMessageLabel->SetFontColor(vec4(0.0f, 0.0f, 0.0f, 1.0f));
 
-
+	m_pTestMessageLabel = new CWidgetLabel(m_pTest3DUI->GetGui());	//初始化文字标签
+	m_pTest3DUI->GetGui()->AddChild(m_pTestMessageLabel, CGui::ALIGN_CENTER);
+	m_pTestMessageLabel->SetFontColor(vec4(0.0f, 0.0f, 0.0f, 1.0f));
 
 	m_pTestMessageLabel->SetFontSize(80);		//设置字体大小
 	m_pTestMessageLabel->SetFontOutline(1);		//设置字体轮廓
