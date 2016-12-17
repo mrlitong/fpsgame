@@ -45,6 +45,14 @@ public:
 		CONTROL_KEYBORAD_MOUSE,
 		CONTROL_XPAD360,
 	};
+	CSysControl() {};
+	virtual ~CSysControl() {};
+
+	virtual void Init() = 0;	//初始化
+	virtual void Update(float ifps) = 0;	
+	virtual void Shutdown() = 0;	//关闭
+	virtual int GetState(int state) = 0;	//获取状态
+	virtual int ClearState(int state) = 0;		//清除状态
 
 private:
 
