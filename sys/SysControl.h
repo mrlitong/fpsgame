@@ -45,6 +45,7 @@ public:
 		CONTROL_KEYBORAD_MOUSE,
 		CONTROL_XPAD360,
 	};
+
 private:
 
 }
