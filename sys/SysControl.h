@@ -1,0 +1,2 @@
+#ifndef __SYS_CONTROL_H__
+#define __SYS_CONTROL_H__
