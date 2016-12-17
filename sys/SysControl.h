@@ -40,7 +40,11 @@ public:
 		STATE_AUX_F,
 		NUM_STATES,			
 	};
-
+	enum ControlMode		//控制模式，只有键鼠和pad两种方式
+	{
+		CONTROL_KEYBORAD_MOUSE,
+		CONTROL_XPAD360,
+	};
 private:
 
 }
