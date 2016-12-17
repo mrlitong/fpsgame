@@ -53,7 +53,14 @@ public:
 	virtual void Shutdown() = 0;	//关闭
 	virtual int GetState(int state) = 0;	//获取状态
 	virtual int ClearState(int state) = 0;		//清除状态
+	virtual float GetMouseDX() = 0;	//取得鼠标坐标X
+	virtual float GetMouseDY() = 0;	//取得鼠标坐标Y
 
+	virtual void SetMouseGrab(int g) = 0;
+	virtual int GetMouseGrab() = 0;
+
+	virtual void SetControlMode(ControlMode mode) = 0;		//设置控制模式
+	virtual ControlMode GetControlMode() const = 0;				//获取控制模式
 private:
 
 }
