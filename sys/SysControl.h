@@ -5,7 +5,7 @@ class CSysControl	//虚基类
 {
 public:
 	// 状态
-	enum {					//这个枚举体为什么没有枚举名
+	enum {					
 		STATE_FORWARD = 0,	//向前
 		STATE_BACKWARD,		//向后
 		STATE_MOVE_LEFT,	//向左移动
@@ -17,7 +17,7 @@ public:
 		STATE_CROUCH,		//蹲
 		STATE_JUMP,			//跳
 		STATE_RUN,			//跑
-		STATE_USE,			//使用物品？
+		STATE_USE,			
 		STATE_FIRE,			//开火
 		STATE_SAVE,			//保存
 		STATE_RESTORE,		//恢复
@@ -38,8 +38,9 @@ public:
 		STATE_AUX_D,
 		STATE_AUX_E,
 		STATE_AUX_F,
-		NUM_STATES,			//这个应该是数字键的那个小键盘是否可用的标志
+		NUM_STATES,			
 	};
+
 private:
 
 }
