@@ -206,4 +206,9 @@ void CSysControlLocal::Update_Keyboard(float ifps)		//键盘按键响应wsad
 	if (g_Engine.pInput->IsKeyDown('d'))		
 		m_pControlsApp->SetState(CControls::STATE_MOVE_RIGHT, 1);
 
+	if (g_Engine.pInput->IsKeyUp('w'))
+		m_pControlsApp->SetState(CControls::STATE_FORWARD, 0);
+	else if (g_Engine.pInput->IsKeyUp('s'))
+		m_pControlsApp->SetState(CControls::STATE_BACKWARD, 0);
+
 }
