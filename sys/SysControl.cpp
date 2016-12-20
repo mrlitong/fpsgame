@@ -190,4 +190,7 @@ void CSysControlLocal::Update_Mouse(float ifps)
 	{
 		g_Engine.pApp->SetMouse(g_Engine.pApp->GetWidth() / 2, g_Engine.pApp->GetHeight() / 2);
 	}
+
+	m_nOldMouseX = g_Engine.pApp->GetMouseX();
+	m_nOldMouseY = g_Engine.pApp->GetMouseY();
 }
