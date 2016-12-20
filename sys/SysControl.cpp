@@ -174,6 +174,10 @@ CSysControl::ControlMode CSysControlLocal::GetControlMode() const
 	return m_nControlMode;
 }
 
+CSysControl::ControlMode CSysControlLocal::GetControlMode() const
+{
+	return m_nControlMode;
+}
 void CSysControlLocal::Update_Mouse(float ifps)
 {
 	float dx = (g_Engine.pApp->GetMouseX() - m_nOldMouseX) * g_Engine.pControls->GetMouseSensitivity() * 0.1f;//0.1f这个数值越大，鼠标移动越快
