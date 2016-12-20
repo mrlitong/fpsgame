@@ -215,5 +215,8 @@ void CSysControlLocal::Update_Keyboard(float ifps)		//键盘按键响应wsad
 		m_pControlsApp->SetState(CControls::STATE_MOVE_LEFT, 0);
 	else if (g_Engine.pInput->IsKeyUp('d'))
 		m_pControlsApp->SetState(CControls::STATE_MOVE_RIGHT, 0);
-
+	if (g_Engine.pInput->IsKeyDown(' '))		//空格跳跃
+		m_pControlsApp->SetState(CControls::STATE_JUMP, 1);
+	else
+		m_pControlsApp->SetState(CControls::STATE_JUMP, 0);
 }
