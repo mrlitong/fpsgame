@@ -194,3 +194,16 @@ void CSysControlLocal::Update_Mouse(float ifps)
 	m_nOldMouseX = g_Engine.pApp->GetMouseX();
 	m_nOldMouseY = g_Engine.pApp->GetMouseY();
 }
+
+void CSysControlLocal::Update_Keyboard(float ifps)		//键盘按键响应wsad
+{
+	if (g_Engine.pInput->IsKeyDown('w'))		
+		m_pControlsApp->SetState(CControls::STATE_FORWARD, 1);
+	if (g_Engine.pInput->IsKeyDown('s'))		
+		m_pControlsApp->SetState(CControls::STATE_BACKWARD, 1);
+	if (g_Engine.pInput->IsKeyDown('a'))		
+		m_pControlsApp->SetState(CControls::STATE_MOVE_LEFT, 1);
+	if (g_Engine.pInput->IsKeyDown('d'))		
+		m_pControlsApp->SetState(CControls::STATE_MOVE_RIGHT, 1);
+
+}
