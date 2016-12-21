@@ -197,6 +197,10 @@ void CSysControlLocal::Update_Mouse(float ifps)
 
 void CSysControlLocal::Update_Keyboard(float ifps)		//键盘按键响应wsad
 {
+	if (g_Engine.pInput->IsKeyDown('w'))	
+		m_pControlsApp->SetState(CControls::STATE_FORWARD, 1);
+
+
 	if (g_Engine.pInput->IsKeyDown('w'))		
 		m_pControlsApp->SetState(CControls::STATE_FORWARD, 1);
 	if (g_Engine.pInput->IsKeyDown('s'))		
