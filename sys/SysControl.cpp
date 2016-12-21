@@ -224,5 +224,6 @@ void CSysControlLocal::Update_Keyboard(float ifps)		//键盘按键响应wsad
 }
 void CSysControlLocal::Update_XPad360(float ifps)	
 {
+	m_pControlsXPad360->UpdateEvents();
 
 }
