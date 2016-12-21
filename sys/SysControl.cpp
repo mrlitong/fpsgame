@@ -21,7 +21,7 @@ class CSysControlLocal : public CSysControl
 {
 public:
 	CSysControlLocal();
-    virtual ~CSysControlLocal();
+	virtual ~CSysControlLocal();
 
 	virtual void Init();	//角色要初始化，着色器要初始化，
 	virtual void Update(float ifps);
@@ -49,7 +49,7 @@ private:
 	CControlsApp        *m_pControlsApp;		//控制游戏中移动
 	CControlsXPad360    *m_pControlsXPad360;
 	ControlMode         m_nControlMode;			//控制模式
-	
+
 	int                 m_nOldMouseX;			//上一个鼠标坐标X
 	int                 m_nOldMouseY;			//上一个鼠标坐标Y
 
@@ -79,17 +79,17 @@ void CSysControlLocal::Init()
 
 
 	g_Engine.pApp->SetMouseGrab(0);
-	g_Engine.pApp->SetMouseShow(0);			
+	g_Engine.pApp->SetMouseShow(0);
 
 	SetControlMode(CONTROL_KEYBORAD_MOUSE);
 
 	m_pTest3DUI = new CObjectGui(2.0f, 1.0f, "data/core/gui/");
-	m_pTest3DUI->SetMouseShow(0);		
-	m_pTest3DUI->SetBackground(1);		
+	m_pTest3DUI->SetMouseShow(0);
+	m_pTest3DUI->SetBackground(1);
 	m_pTest3DUI->SetBackgroundColor(vec4(1.0f, 0.0f, 0.0f, 1.0f));
 
 	m_pTest3DUI->SetScreenSize(800, 400);
-	m_pTest3DUI->SetControlDistance(1000.0f);	
+	m_pTest3DUI->SetControlDistance(1000.0f);
 	m_pTest3DUI->CreateMaterial("gui_base");	 //show in game	
 
 
@@ -119,7 +119,7 @@ void CSysControlLocal::Init()
 	m_nOldMouseX = 0;
 	m_nOldMouseY = 0;
 }
-void CSysControlLocal::Shutdown()	
+void CSysControlLocal::Shutdown()
 {
 	g_Engine.pApp->SetMouseGrab(0);
 	g_Engine.pApp->SetMouseShow(0);
@@ -137,31 +137,31 @@ void CSysControlLocal::Shutdown()
 int CSysControlLocal::GetState(int state)
 {
 
-    return m_pControlsApp->GetState(state);
+	return m_pControlsApp->GetState(state);
 }
 
 int CSysControlLocal::ClearState(int state)
 {
-    return m_pControlsApp->ClearState(state);
+	return m_pControlsApp->ClearState(state);
 }
 
 float CSysControlLocal::GetMouseDX()
 {
-    return m_pControlsApp->GetMouseDX();
+	return m_pControlsApp->GetMouseDX();
 }
 
 float CSysControlLocal::GetMouseDY()
 {
-    return m_pControlsApp->GetMouseDY();
+	return m_pControlsApp->GetMouseDY();
 }
 void CSysControlLocal::SetMouseGrab(int g)
 {
-    g_Engine.pApp->SetMouseGrab(g);
-    g_Engine.pGui->SetMouseShow(!g);
+	g_Engine.pApp->SetMouseGrab(g);
+	g_Engine.pGui->SetMouseShow(!g);
 }
 int CSysControlLocal::GetMouseGrab()
 {
-    return g_Engine.pApp->GetMouseGrab();
+	return g_Engine.pApp->GetMouseGrab();
 }
 
 void CSysControlLocal::SetControlMode(ControlMode mode)
@@ -199,13 +199,13 @@ void CSysControlLocal::Update_Keyboard(float ifps)		//键盘按键响应wsad
 {
 
 
-	if (g_Engine.pInput->IsKeyDown('w'))		
+	if (g_Engine.pInput->IsKeyDown('w'))
 		m_pControlsApp->SetState(CControls::STATE_FORWARD, 1);
-	if (g_Engine.pInput->IsKeyDown('s'))		
+	if (g_Engine.pInput->IsKeyDown('s'))
 		m_pControlsApp->SetState(CControls::STATE_BACKWARD, 1);
-	if (g_Engine.pInput->IsKeyDown('a'))		
+	if (g_Engine.pInput->IsKeyDown('a'))
 		m_pControlsApp->SetState(CControls::STATE_MOVE_LEFT, 1);
-	if (g_Engine.pInput->IsKeyDown('d'))		
+	if (g_Engine.pInput->IsKeyDown('d'))
 		m_pControlsApp->SetState(CControls::STATE_MOVE_RIGHT, 1);
 
 	if (g_Engine.pInput->IsKeyUp('w'))
@@ -222,8 +222,14 @@ void CSysControlLocal::Update_Keyboard(float ifps)		//键盘按键响应wsad
 	else
 		m_pControlsApp->SetState(CControls::STATE_JUMP, 0);
 }
-void CSysControlLocal::Update_XPad360(float ifps)	
+void CSysControlLocal::Update_XPad360(float ifps)
 {
 	m_pControlsXPad360->UpdateEvents();
+	CUtilStr strMessage;
+	strMessage = CUtilStr("测试3D UI\n"),
+	strMessage += CUtilStr(m_pControlsXPad360->GetName()) + "\n";
+
+
+
 
 }
