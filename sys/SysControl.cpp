@@ -230,6 +230,7 @@ void CSysControlLocal::Update_XPad360(float ifps)
 	strMessage += CUtilStr(m_pControlsXPad360->GetName()) + "\n";
 
 
+	strMessage += CUtilStr::Format("\n手柄测试\n");
 
 
 }
