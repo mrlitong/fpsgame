@@ -231,6 +231,9 @@ void CSysControlLocal::Update_XPad360(float ifps)
 
 
 	strMessage += CUtilStr::Format("\n手柄测试\n");
-
+	strMessage += CUtilStr::Format("LeftX:  %5.2f\n", m_pControlsXPad360->GetLeftX());
+	strMessage += CUtilStr::Format("LeftY:  %5.2f\n", m_pControlsXPad360->GetLeftY());
+	strMessage += CUtilStr::Format("RightX: %5.2f\n", m_pControlsXPad360->GetRightX());
+	strMessage += CUtilStr::Format("RightY: %5.2f\n", m_pControlsXPad360->GetRightY());
 
 }
