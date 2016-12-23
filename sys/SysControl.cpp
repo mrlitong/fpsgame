@@ -260,5 +260,9 @@ void CSysControlLocal::Update_XPad360(float ifps)
 		m_pControlsApp->SetState(CControls::STATE_FORWARD, 1);
 	else if (m_pControlsXPad360->GetLeftY() < -fPadThreshold)
 		m_pControlsApp->SetState(CControls::STATE_BACKWARD, 1);
-
+	else
+	{
+		m_pControlsApp->SetState(CControls::STATE_FORWARD, 0);
+		m_pControlsApp->SetState(CControls::STATE_BACKWARD, 0);
+	}
 }
