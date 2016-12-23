@@ -244,5 +244,6 @@ void CSysControlLocal::Update_XPad360(float ifps)
 	{
 		strMessage += CUtilStr::Format("%d ", m_pControlsXPad360->GetButton(i));
 	}
+	m_pTestMessageLabel->SetText(strMessage.Get());
 
 }
