@@ -246,4 +246,9 @@ void CSysControlLocal::Update_XPad360(float ifps)
 	}
 	m_pTestMessageLabel->SetText(strMessage.Get());
 
+	const float fPadThreshold = 0.5f;
+	if (m_pControlsXPad360->GetLeftX() > fPadThreshold)
+		m_pControlsApp->SetState(CControls::STATE_MOVE_RIGHT, 1);
+
+
 }
