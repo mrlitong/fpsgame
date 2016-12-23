@@ -238,6 +238,11 @@ void CSysControlLocal::Update_XPad360(float ifps)
 	strMessage += "\nTriggers:\n";
 	strMessage += CUtilStr::Format("Left:   %5.2f\n", m_pControlsXPad360->GetLeftTrigger());
 	strMessage += CUtilStr::Format("Right:  %5.2f\n", m_pControlsXPad360->GetRightTrigger());
+
 	strMessage += CUtilStr::Format("\nButtons:\n");
+	for (int i = 0; i < CControlsXPad360::NUM_BUTTONS; ++i)
+	{
+		strMessage += CUtilStr::Format("%d ", m_pControlsXPad360->GetButton(i));
+	}
 
 }
