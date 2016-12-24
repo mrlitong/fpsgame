@@ -269,5 +269,7 @@ void CSysControlLocal::Update_XPad360(float ifps)
 		m_pControlsApp->SetState(CControls::STATE_JUMP, 1);
 	else
 		m_pControlsApp->SetState(CControls::STATE_JUMP, 0);
+	//update jump
+	// LT RT
 
 }
