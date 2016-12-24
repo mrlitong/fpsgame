@@ -225,64 +225,67 @@ void CSysControlLocal::Update_Keyboard(float ifps)		//键盘按键响应wsad
 void CSysControlLocal::Update_XPad360(float ifps)
 {
 	m_pControlsXPad360->UpdateEvents();
-	CUtilStr strMessage;
-	strMessage = CUtilStr("测试3D UI\n"),
-	strMessage += CUtilStr(m_pControlsXPad360->GetName()) + "\n";
+	if ()
+	{
+		CUtilStr strMessage;
+		strMessage = CUtilStr("测试3D UI\n"),
+			strMessage += CUtilStr(m_pControlsXPad360->GetName()) + "\n";
 
 
-	strMessage += CUtilStr::Format("\n手柄测试\n");
-	strMessage += CUtilStr::Format("LeftX:  %5.2f\n", m_pControlsXPad360->GetLeftX());
-	strMessage += CUtilStr::Format("LeftY:  %5.2f\n", m_pControlsXPad360->GetLeftY());
-	strMessage += CUtilStr::Format("RightX: %5.2f\n", m_pControlsXPad360->GetRightX());
-	strMessage += CUtilStr::Format("RightY: %5.2f\n", m_pControlsXPad360->GetRightY());
-	strMessage += "\nTriggers:\n";
-	strMessage += CUtilStr::Format("Left:   %5.2f\n", m_pControlsXPad360->GetLeftTrigger());
-	strMessage += CUtilStr::Format("Right:  %5.2f\n", m_pControlsXPad360->GetRightTrigger());
+		strMessage += CUtilStr::Format("\n手柄测试\n");
+		strMessage += CUtilStr::Format("LeftX:  %5.2f\n", m_pControlsXPad360->GetLeftX());
+		strMessage += CUtilStr::Format("LeftY:  %5.2f\n", m_pControlsXPad360->GetLeftY());
+		strMessage += CUtilStr::Format("RightX: %5.2f\n", m_pControlsXPad360->GetRightX());
+		strMessage += CUtilStr::Format("RightY: %5.2f\n", m_pControlsXPad360->GetRightY());
+		strMessage += "\nTriggers:\n";
+		strMessage += CUtilStr::Format("Left:   %5.2f\n", m_pControlsXPad360->GetLeftTrigger());
+		strMessage += CUtilStr::Format("Right:  %5.2f\n", m_pControlsXPad360->GetRightTrigger());
 
-	strMessage += CUtilStr::Format("\nButtons:\n");
-	for (int i = 0; i < CControlsXPad360::NUM_BUTTONS; ++i)
-	{
-		strMessage += CUtilStr::Format("%d ", m_pControlsXPad360->GetButton(i));
-	}
-	m_pTestMessageLabel->SetText(strMessage.Get());
+		strMessage += CUtilStr::Format("\nButtons:\n");
+		for (int i = 0; i < CControlsXPad360::NUM_BUTTONS; ++i)
+		{
+			strMessage += CUtilStr::Format("%d ", m_pControlsXPad360->GetButton(i));
+		}
+		m_pTestMessageLabel->SetText(strMessage.Get());
 
-	const float fPadThreshold = 0.5f;
-	if (m_pControlsXPad360->GetLeftX() > fPadThreshold)
-		m_pControlsApp->SetState(CControls::STATE_MOVE_RIGHT, 1);
-	else if (m_pControlsXPad360->GetLeftX() < -fPadThreshold)
-		m_pControlsApp->SetState(CControls::STATE_MOVE_LEFT, 1);
-	else
-	{
-		m_pControlsApp->SetState(CControls::STATE_MOVE_LEFT, 0);
-		m_pControlsApp->SetState(CControls::STATE_MOVE_RIGHT, 0);
-	}
-	if (m_pControlsXPad360->GetLeftY() > fPadThreshold)
-		m_pControlsApp->SetState(CControls::STATE_FORWARD, 1);
-	else if (m_pControlsXPad360->GetLeftY() < -fPadThreshold)
-		m_pControlsApp->SetState(CControls::STATE_BACKWARD, 1);
-	else
-	{
-		m_pControlsApp->SetState(CControls::STATE_FORWARD, 0);
-		m_pControlsApp->SetState(CControls::STATE_BACKWARD, 0);
-	}
-	if (m_pControlsXPad360->GetButton(CControlsXPad360::BUTTON_SHOULDER_LEFT) || m_pControlsXPad360->GetButton(CControlsXPad360::BUTTON_SHOULDER_RIGHT))
-		m_pControlsApp->SetState(CControls::STATE_JUMP, 1);
-	else
-		m_pControlsApp->SetState(CControls::STATE_JUMP, 0);
-	//update jump
-	// LT RT
-	if (m_pControlsXPad360->GetRightTrigger() > fPadThreshold || m_pControlsXPad360->GetLeftTrigger() > fPadThreshold)
-	{
-		m_pControlsApp->SetState(CControls::STATE_FIRE, 1);
-		//震动
-		m_pControlsXPad360->SetLeftMotor(0.3f);
-		m_pControlsXPad360->SetRightMotor(0.3f);
-	else if (m_pControlsXPad360->GetRightTrigger() < fPadThreshold && m_pControlsXPad360->GetLeftTrigger() < fPadThreshold)
-	{
-		m_pControlsApp->SetState(CControls::STATE_FIRE, 0);
+		const float fPadThreshold = 0.5f;
+		if (m_pControlsXPad360->GetLeftX() > fPadThreshold)
+			m_pControlsApp->SetState(CControls::STATE_MOVE_RIGHT, 1);
+		else if (m_pControlsXPad360->GetLeftX() < -fPadThreshold)
+			m_pControlsApp->SetState(CControls::STATE_MOVE_LEFT, 1);
+		else
+		{
+			m_pControlsApp->SetState(CControls::STATE_MOVE_LEFT, 0);
+			m_pControlsApp->SetState(CControls::STATE_MOVE_RIGHT, 0);
+		}
+		if (m_pControlsXPad360->GetLeftY() > fPadThreshold)
+			m_pControlsApp->SetState(CControls::STATE_FORWARD, 1);
+		else if (m_pControlsXPad360->GetLeftY() < -fPadThreshold)
+			m_pControlsApp->SetState(CControls::STATE_BACKWARD, 1);
+		else
+		{
+			m_pControlsApp->SetState(CControls::STATE_FORWARD, 0);
+			m_pControlsApp->SetState(CControls::STATE_BACKWARD, 0);
+		}
+		if (m_pControlsXPad360->GetButton(CControlsXPad360::BUTTON_SHOULDER_LEFT) || m_pControlsXPad360->GetButton(CControlsXPad360::BUTTON_SHOULDER_RIGHT))
+			m_pControlsApp->SetState(CControls::STATE_JUMP, 1);
+		else
+			m_pControlsApp->SetState(CControls::STATE_JUMP, 0);
+		//update jump
+		// LT RT
+		if (m_pControlsXPad360->GetRightTrigger() > fPadThreshold || m_pControlsXPad360->GetLeftTrigger() > fPadThreshold)
+		{
+			m_pControlsApp->SetState(CControls::STATE_FIRE, 1);
+			//震动
+			m_pControlsXPad360->SetLeftMotor(0.3f);
+			m_pControlsXPad360->SetRightMotor(0.3f);
+		}
+		else if (m_pControlsXPad360->GetRightTrigger() < fPadThreshold && m_pControlsXPad360->GetLeftTrigger() < fPadThreshold)
+		{
+			m_pControlsApp->SetState(CControls::STATE_FIRE, 0);
 
-		m_pControlsXPad360->SetLeftMotor(0.0f);
-		m_pControlsXPad360->SetRightMotor(0.0f);
-	}
+			m_pControlsXPad360->SetLeftMotor(0.0f);
+			m_pControlsXPad360->SetRightMotor(0.0f);
+		}
 	}
 }
