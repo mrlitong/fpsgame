@@ -225,11 +225,11 @@ void CSysControlLocal::Update_Keyboard(float ifps)		//键盘按键响应wsad
 void CSysControlLocal::Update_XPad360(float ifps)
 {
 	m_pControlsXPad360->UpdateEvents();
-	if ()
+	if (m_pControlsXPad360->IsAvailable())
 	{
 		CUtilStr strMessage;
 		strMessage = CUtilStr("测试3D UI\n"),
-			strMessage += CUtilStr(m_pControlsXPad360->GetName()) + "\n";
+		strMessage += CUtilStr(m_pControlsXPad360->GetName()) + "\n";
 
 
 		strMessage += CUtilStr::Format("\n手柄测试\n");
