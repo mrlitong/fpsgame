@@ -273,6 +273,7 @@ void CSysControlLocal::Update_XPad360(float ifps)
 	// LT RT
 	if (m_pControlsXPad360->GetRightTrigger() > fPadThreshold || m_pControlsXPad360->GetLeftTrigger() > fPadThreshold)
 	{
+		m_pControlsApp->SetState(CControls::STATE_FIRE, 1);
 
 	}
 }
