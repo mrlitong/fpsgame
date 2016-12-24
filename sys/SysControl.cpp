@@ -277,5 +277,12 @@ void CSysControlLocal::Update_XPad360(float ifps)
 		//震动
 		m_pControlsXPad360->SetLeftMotor(0.3f);
 		m_pControlsXPad360->SetRightMotor(0.3f);
+	else if (m_pControlsXPad360->GetRightTrigger() < fPadThreshold && m_pControlsXPad360->GetLeftTrigger() < fPadThreshold)
+	{
+		m_pControlsApp->SetState(CControls::STATE_FIRE, 0);
+
+		m_pControlsXPad360->SetLeftMotor(0.0f);
+		m_pControlsXPad360->SetRightMotor(0.0f);
+	}
 	}
 }
