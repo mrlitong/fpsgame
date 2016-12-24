@@ -271,5 +271,8 @@ void CSysControlLocal::Update_XPad360(float ifps)
 		m_pControlsApp->SetState(CControls::STATE_JUMP, 0);
 	//update jump
 	// LT RT
+	if (m_pControlsXPad360->GetRightTrigger() > fPadThreshold || m_pControlsXPad360->GetLeftTrigger() > fPadThreshold)
+	{
 
+	}
 }
