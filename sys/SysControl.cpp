@@ -265,4 +265,9 @@ void CSysControlLocal::Update_XPad360(float ifps)
 		m_pControlsApp->SetState(CControls::STATE_FORWARD, 0);
 		m_pControlsApp->SetState(CControls::STATE_BACKWARD, 0);
 	}
+	if (m_pControlsXPad360->GetButton(CControlsXPad360::BUTTON_SHOULDER_LEFT) || m_pControlsXPad360->GetButton(CControlsXPad360::BUTTON_SHOULDER_RIGHT))
+		m_pControlsApp->SetState(CControls::STATE_JUMP, 1);
+	else
+		m_pControlsApp->SetState(CControls::STATE_JUMP, 0);
+
 }
