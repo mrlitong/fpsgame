@@ -289,3 +289,6 @@ void CSysControlLocal::Update_XPad360(float ifps)
 		}
 	}
 }
+
+CSysControlLocal local;
+CSysControl *g_pSysControl = &local;
