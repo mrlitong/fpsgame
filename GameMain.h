@@ -6,5 +6,5 @@ public:
 	CGameMain(void);
 	virtual ~CGameMain(void); 
 public:
-
+	int        Init();
 }
