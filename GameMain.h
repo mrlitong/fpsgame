@@ -4,5 +4,7 @@ class CGameMain
 {
 public:
 	CGameMain(void);
-	virtual ~CGameMain(void);
+	virtual ~CGameMain(void); 
+public:
+
 }
