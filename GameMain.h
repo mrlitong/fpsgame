@@ -7,4 +7,7 @@ public:
 	virtual ~CGameMain(void); 
 public:
 	int        Init();
+	int        ShutDown();
+	int        Update();
+	int        Render();
 }
