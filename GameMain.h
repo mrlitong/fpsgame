@@ -9,5 +9,6 @@ public:
 	int        Init();
 	int        ShutDown();
 	int        Update();
-	int        Render();
+	int        Render();	
+	CGameProcess*		m_pGameProcess;
 }
