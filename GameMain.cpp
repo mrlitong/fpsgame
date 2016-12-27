@@ -6,3 +6,7 @@ CGameMain::CGameMain(void)
 
 }
 
+CGameMain::~CGameMain(void)
+{
+
+}
