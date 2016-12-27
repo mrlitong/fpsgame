@@ -1,7 +1,8 @@
 #include "GameMain.h"
 #include "GameProcess.h"
 #include "sys/SysControl.h"
-
+#include "Engine.h"
+#include "Game.h"
 
 CGameMain::CGameMain(void)
 {
