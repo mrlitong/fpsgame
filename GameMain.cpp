@@ -22,5 +22,5 @@ int CGameMain::ShutDown()
 	g_pSysControl->Shutdown();
 	m_pGameProcess->ShutDown();
 	delete m_pGameProcess;
-	return 0;
+	return 1;
 }
