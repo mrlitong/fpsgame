@@ -16,3 +16,7 @@ int CGameMain::Init()
 	m_pGameProcess = new CGameProcess();
 	return m_pGameProcess->Init();
 }
+int CGameMain::ShutDown()
+{
+
+}
