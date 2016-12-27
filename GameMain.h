@@ -11,4 +11,4 @@ public:
 	int        Update();
 	int        Render();	
 	CGameProcess*		m_pGameProcess;
-}
+};
