@@ -34,6 +34,4 @@ protected:
 	CStarControl*		m_pStarControl;
 	CRayControl*		m_pRayControl;
 private:
-
-
 };
