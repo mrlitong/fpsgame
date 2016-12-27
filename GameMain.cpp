@@ -16,7 +16,11 @@ int CGameMain::Init()
 	m_pGameProcess = new CGameProcess();
 	return m_pGameProcess->Init();
 }
+
 int CGameMain::ShutDown()
 {
-
+	g_pSysControl->Shutdown();
+	m_pGameProcess->ShutDown();
+	delete m_pGameProcess;
+	return 0;
 }
