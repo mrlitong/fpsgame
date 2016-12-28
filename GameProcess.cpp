@@ -17,5 +17,5 @@ int CGameProcess::Init()
 {
 	g_Engine.pFileSystem->CacheFilesFormExt("char");
 	g_Engine.pFileSystem->CacheFilesFormExt("node");
-
+	g_Engine.pFileSystem->CacheFilesFormExt("smesh");
 }
