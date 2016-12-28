@@ -21,4 +21,5 @@ int CGameProcess::Init()
 	g_Engine.pFileSystem->CacheFilesFormExt("sanim");
 
 	g_Engine.pWorld->LoadWorld("data/scene/terrain/test/test.world");
+	//g_Engine.pWorld->LoadWorld("data/scene/terrain/cj/cj.world"); 
 }
