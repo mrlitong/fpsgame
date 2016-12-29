@@ -2,6 +2,8 @@
 #include "Object.h"
 #include "Engine.h"
 #include "World.h"
+#include "Engine.h"
+#include "World.h"
 using namespace MathLib;
 
 CGameProcess::CGameProcess(void)
