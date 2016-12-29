@@ -3,6 +3,11 @@
 #include "Engine.h"
 #include "World.h"
 #include "App.h"
+#include "ToolsCamera.h"
+
+
+
+
 using namespace MathLib;
 
 CGameProcess::CGameProcess(void)
@@ -23,4 +28,5 @@ int CGameProcess::Init()
 
 	g_Engine.pWorld->LoadWorld("data/scene/terrain/test/test.world");
 	//g_Engine.pWorld->LoadWorld("data/scene/terrain/cj/cj.world"); 
+	g_Engine.pControls->SetKeyPressFunc(KeyPress);
 }
