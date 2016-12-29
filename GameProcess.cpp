@@ -29,4 +29,7 @@ int CGameProcess::Init()
 	g_Engine.pWorld->LoadWorld("data/scene/terrain/test/test.world");
 	//g_Engine.pWorld->LoadWorld("data/scene/terrain/cj/cj.world"); 
 	g_Engine.pControls->SetKeyPressFunc(KeyPress);
+	g_Engine.pControls->SetKeyReleaseFunc(KeyRelease);
+
+
 }
