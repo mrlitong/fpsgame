@@ -33,5 +33,6 @@ int CGameProcess::Init()
 	g_Engine.pControls->SetKeyReleaseFunc(KeyRelease);
 
 	m_pRole = new CFPSRoleLocal();
+	m_pRole->Init(10001, "data/role/hero/FpsRole/fps.char");		//加载角色资源
 
 }
