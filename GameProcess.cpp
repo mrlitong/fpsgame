@@ -46,3 +46,11 @@ int CGameProcess::Init()
 
 	return 1;
 }
+
+int CGameProcess::ShutDown()			//关闭游戏进程
+{
+	delete m_pRole;
+	delete m_pSkillSystem;
+	delete m_pCameraBase;
+
+}
