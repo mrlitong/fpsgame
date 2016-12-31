@@ -35,4 +35,7 @@ int CGameProcess::Init()
 	m_pRole = new CFPSRoleLocal();
 	m_pRole->Init(10001, "data/role/hero/FpsRole/fps.char");		//加载角色资源
 
+	m_pRole->SetActorPosition(vec3(0, 0, 0));	//设置角色初始位置。以门处作为原点，三维坐标系vec3是向量
+	m_pSkillSystem = new CSkillSystem(this);
+
 }
