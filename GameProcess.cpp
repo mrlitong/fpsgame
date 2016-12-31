@@ -52,5 +52,5 @@ int CGameProcess::ShutDown()			//关闭游戏进程
 	delete m_pRole;
 	delete m_pSkillSystem;
 	delete m_pCameraBase;
-
+	delete m_pStarControl;
 }
