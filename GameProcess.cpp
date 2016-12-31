@@ -43,4 +43,6 @@ int CGameProcess::Init()
 
 	m_pStarControl = new CStarControl();
 	m_pRayControl = new CRayControl();
+
+	return 1;
 }
