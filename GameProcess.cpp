@@ -32,5 +32,6 @@ int CGameProcess::Init()
 	g_Engine.pControls->SetKeyPressFunc(KeyPress);
 	g_Engine.pControls->SetKeyReleaseFunc(KeyRelease);
 
+	m_pRole = new CFPSRoleLocal();
 
 }
