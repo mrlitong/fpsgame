@@ -39,7 +39,6 @@ int CGameProcess::Init()
 	m_pSkillSystem = new CSkillSystem(this);
 	m_pCameraBase = new CCameraBase();
 	m_pCameraBase->SetEnabled(1);
-
-
+	g_pSysControl->SetMouseGrab(1);
 
 }
