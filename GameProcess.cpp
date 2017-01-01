@@ -41,4 +41,6 @@ int CGameProcess::Init()
 	m_pCameraBase->SetEnabled(1);
 	g_pSysControl->SetMouseGrab(1);
 
+	m_pStarControl = new CStarControl();
+
 }
