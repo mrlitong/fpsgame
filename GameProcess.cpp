@@ -42,5 +42,5 @@ int CGameProcess::Init()
 	g_pSysControl->SetMouseGrab(1);
 
 	m_pStarControl = new CStarControl();
-
+	m_pRayControl = new CRayControl();
 }
