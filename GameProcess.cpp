@@ -63,6 +63,7 @@ int CGameProcess::ShutDown()			//关闭游戏进程
 
 int CGameProcess::Update()
 {
-
+	float ifps = g_Engine.pGame->GetIFps();
+	
 	return 0;
 }
