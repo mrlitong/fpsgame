@@ -57,7 +57,7 @@ int CGameProcess::ShutDown()			//关闭游戏进程
 	delete m_pStarControl;
 	delete m_pRayControl;
 
-	DelAllListen(); 
+	DelAllListen();
 	return 0;
 }
 
@@ -67,6 +67,11 @@ int CGameProcess::Update()
 	if (g_Engine.pInput->IsKeyDown('1'))
 	{
 		CAction* pAction = m_pRole->OrceAction("attack02");
+		if (pAction)
+		{
+			pAction->SetupSkillThrow(vec3_zero, -1.0f, 2.0f);
+			m_pRole->StopMove();
+		}
 	}
 	return 0;
 }
