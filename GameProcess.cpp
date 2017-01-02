@@ -64,6 +64,7 @@ int CGameProcess::ShutDown()			//关闭游戏进程
 int CGameProcess::Update()
 {
 	float ifps = g_Engine.pGame->GetIFps();
+
 	if (g_Engine.pInput->IsKeyDown('1'))
 	{
 		CAction* pAction = m_pRole->OrceAction("attack02");
@@ -73,5 +74,13 @@ int CGameProcess::Update()
 			m_pRole->StopMove();
 		}
 	}
+	else if (g_Engine.pInput->IsKeyDown('2'))
+	{
+
+	}
+
+
 	return 0;
 }
+
+
