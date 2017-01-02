@@ -88,6 +88,8 @@ int CGameProcess::Update()
 		if (pAction)
 		{
 			m_pRole->StopMove();
+			CRoleBase* pTarget = NULL;
+
 		}
 	}
 
