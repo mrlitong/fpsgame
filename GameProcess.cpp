@@ -85,7 +85,10 @@ int CGameProcess::Update()
 	else if (g_Engine.pInput->IsKeyDown('3'))
 	{
 		CAction* pAction = m_pRole->OrceAction("skill02");
-
+		if (pAction)
+		{
+			m_pRole->StopMove();
+		}
 	}
 
 
