@@ -7,6 +7,8 @@
 #include "ControlsApp.h"
 #include "MathLib.h"
 #include "Game.h"
+#include "Editor.h"
+
 
 
 using namespace MathLib;
@@ -53,4 +55,7 @@ int CGameProcess::ShutDown()			//关闭游戏进程
 	delete m_pSkillSystem;
 	delete m_pCameraBase;
 	delete m_pStarControl;
+	delete m_pRayControl;
+
+
 }
