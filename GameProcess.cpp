@@ -64,6 +64,9 @@ int CGameProcess::ShutDown()			//关闭游戏进程
 int CGameProcess::Update()
 {
 	float ifps = g_Engine.pGame->GetIFps();
-	
+	if (g_Engine.pInput->IsKeyDown('1'))
+	{
+
+	}
 	return 0;
 }
