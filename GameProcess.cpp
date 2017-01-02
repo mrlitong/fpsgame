@@ -60,3 +60,9 @@ int CGameProcess::ShutDown()			//关闭游戏进程
 	DelAllListen(); 
 	return 0;
 }
+
+int CGameProcess::Update()
+{
+
+	return 0;
+}
