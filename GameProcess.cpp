@@ -104,6 +104,8 @@ int CGameProcess::Update()
 	}
 	if (pTarget)
 	{
+		CVector<int> vTarget;
+		vTarget.Append(pTarget->GetRoleID());
 
 	}
 
