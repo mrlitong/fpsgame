@@ -99,16 +99,17 @@ int CGameProcess::Update()
 					break;
 				}
 			}
+			if (pTarget)
+			{
+				CVector<int> vTarget;
+				vTarget.Append(pTarget->GetRoleID());
+				pAction->SetupSkillBulletTarget(vTarget);
+				m_pRole->SetDirection((pTarget->GetPosition() - m_pRole->GetPosition()).normalize(), 1);
+			}
 		}
 	}
 
-	if (pTarget)
-	{
-		CVector<int> vTarget;
-		vTarget.Append(pTarget->GetRoleID());
-		pAction->SetupSkillBulletTarget(vTarget);
-		m_pRole->SetDirection((pTarget->GetPosition() - m_pRole->GetPosition()).normalize(), 1);
-	}
+	
 
 	return 0;
 }
