@@ -102,6 +102,10 @@ int CGameProcess::Update()
 			break;
 		}
 	}
+	if (pTarget)
+	{
+
+	}
 
 	return 0;
 }
