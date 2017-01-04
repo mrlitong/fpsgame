@@ -106,6 +106,7 @@ int CGameProcess::Update()
 	{
 		CVector<int> vTarget;
 		vTarget.Append(pTarget->GetRoleID());
+		pAction->SetupSkillBulletTarget(vTarget);
 
 	}
 
