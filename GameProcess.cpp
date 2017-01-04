@@ -108,6 +108,10 @@ int CGameProcess::Update()
 			}
 		}
 	}
+	else if (g_Engine.pInput->IsKeyDown('4'))//¶à·¢×Óµ¯
+	{
+
+	}
 
 	
 
