@@ -8,7 +8,8 @@
 #include "MathLib.h"
 #include "Game.h"
 #include "Editor.h"
-
+#include "Input.h"
+#include "BlueRayUtils.h"
 
 
 using namespace MathLib;
