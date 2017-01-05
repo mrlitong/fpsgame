@@ -123,9 +123,17 @@ int CGameProcess::Update()
 					vTarget.Append(m_vAIList[i]->GetRoleID());
 				}
 			}
-
+			if (!vTarget.Empty())
+			{
+				pAction->SetupSkillBulletTarget(vTarget);
+			}
 		}
 	}
+	else if (g_Engine.pInput->IsKeyDown('5'))
+	{
+
+	}
+}
 
 
 
