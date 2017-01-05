@@ -114,6 +114,8 @@ int CGameProcess::Update()
 		if (pAction)
 		{
 			m_pRole->StopMove();
+			CVector<int> vTarget;
+
 		}
 	}
 
