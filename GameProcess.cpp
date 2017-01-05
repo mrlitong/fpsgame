@@ -123,6 +123,7 @@ int CGameProcess::Update()
 					vTarget.Append(m_vAIList[i]->GetRoleID());
 				}
 			}
+
 		}
 	}
 
