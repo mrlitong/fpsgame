@@ -136,7 +136,7 @@ int CGameProcess::Update()
 		CAction* pAction = m_pRole->OrceAction("skill03");
 		if (pAction)
 		{
-			m_pRole->StopMove(); 
+			m_pRole->StopMove();
 			CVector<vec3> vPos;
 			pAction->SetupSkillTargetPoint(vPos);
 		}
@@ -165,7 +165,12 @@ int CGameProcess::Update()
 		{
 			m_pRole->StopMove();
 			CVector<int> vTarget;
-
+			for (int i = 0; i < 20; i++)
+			{
+				float l = (m_vAIList[i]->GetPosition() - m_pRole->GetPosition()).length();
+				if (l > 5.0f && l < 20.0f)
+					vTarget.Append(m_vAIList[i]->GetRoleID());
+			}
 		}
 	}
 	return 0;
