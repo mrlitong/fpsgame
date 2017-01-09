@@ -158,7 +158,7 @@ int CGameProcess::Update()
 			pAction->SetupSkillTargetPoint(vPos);
 		}
 	}
-	else if ()
+	else if (g_Engine.pInput->IsKeyDown('7'))
 	{
 
 	}
