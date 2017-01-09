@@ -11,6 +11,8 @@
 #include "Input.h"
 #include "BlueRayUtils.h"
 #include "World.h"
+#include "Action.h"
+#include "FPSRoleLocal.h"
 
 using namespace MathLib;
 
@@ -153,7 +155,12 @@ int CGameProcess::Update()
 					vPos.Append(m_vAIList[i]->GetPosition());
 
 			}
+			pAction->SetupSkillTargetPoint(vPos);
 		}
+	}
+	else if ()
+	{
+
 	}
 	return 0;
 }
