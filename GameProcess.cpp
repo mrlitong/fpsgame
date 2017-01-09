@@ -134,7 +134,9 @@ int CGameProcess::Update()
 		CAction* pAction = m_pRole->OrceAction("skill03");
 		if (pAction)
 		{
-			m_pRole->StopMove();
+			m_pRole->StopMove(); 
+			CVector<vec3> vPos;
+			pAction->SetupSkillTargetPoint(vPos);
 		}
 
 	}
