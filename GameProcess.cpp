@@ -142,9 +142,11 @@ int CGameProcess::Update()
 	else if (g_Engine.pInput->IsKeyDown('6'))
 	{
 		CAction* pAction = m_pRole->OrceAction("skill06");
-		if ()
+		if (pAction)
 		{
-			
+			m_pRole->StopMove();
+			CVector<vec3> vPos;
+
 		}
 	}
 	return 0;
