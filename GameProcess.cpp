@@ -10,7 +10,7 @@
 #include "Editor.h"
 #include "Input.h"
 #include "BlueRayUtils.h"
-
+#include "World.h"
 
 using namespace MathLib;
 
@@ -131,6 +131,11 @@ int CGameProcess::Update()
 	}
 	else if (g_Engine.pInput->IsKeyDown('5'))
 	{
+		CAction* pAction = m_pRole->OrceAction("skill03");
+		if (pAction)
+		{
+			m_pRole->StopMove();
+		}
 
 	}
 }
