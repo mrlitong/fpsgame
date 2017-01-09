@@ -138,12 +138,15 @@ int CGameProcess::Update()
 			CVector<vec3> vPos;
 			pAction->SetupSkillTargetPoint(vPos);
 		}
-
 	}
-}
-
-
-
+	else if (g_Engine.pInput->IsKeyDown('6'))
+	{
+		CAction* pAction = m_pRole->OrceAction("skill06");
+		if ()
+		{
+			
+		}
+	}
 	return 0;
 }
 
