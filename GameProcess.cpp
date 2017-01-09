@@ -146,7 +146,13 @@ int CGameProcess::Update()
 		{
 			m_pRole->StopMove();
 			CVector<vec3> vPos;
+			for (int i = 0; i < 20; i++)
+			{
+				float l = (m_vAIList[i]->GetPosition() - m_pRole->GetPosition()).length();
+				if (l > 5.0f && l < 20.0f)
+					vPos.Append(m_vAIList[i]->GetPosition());
 
+			}
 		}
 	}
 	return 0;
