@@ -160,7 +160,11 @@ int CGameProcess::Update()
 	}
 	else if (g_Engine.pInput->IsKeyDown('7'))
 	{
+		CAction* pAction = m_pRole->OrceAction("skill05");
+		if (pAction)
+		{
 
+		}
 	}
 	return 0;
 }
