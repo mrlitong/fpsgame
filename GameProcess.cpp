@@ -188,9 +188,7 @@ int CGameProcess::Update()
 			{
 				float l = (m_vAIList[i]->GetPosition() - m_pRole->GetPosition()).length();
 				if (l > 5.0f && l < 20.0f)
-				{
 					vPos.Append(m_vAIList[i]->GetPosition());
-				}
 			}
 		}
 	}
