@@ -171,6 +171,10 @@ int CGameProcess::Update()
 				if (l > 5.0f && l < 20.0f)
 					vTarget.Append(m_vAIList[i]->GetRoleID());
 			}
+			if (!vTarget.Empty())
+			{
+				pAction->SetupSkillBulletTarget(vTarget);
+			}
 		}
 	}
 	return 0;
