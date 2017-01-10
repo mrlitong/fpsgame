@@ -203,6 +203,10 @@ int CGameProcess::Update()
 		}
 
 	}
+	else if (g_Engine.pInput->IsKeyUp(CInput::KEY_ESC))
+	{
+		g_Engine.pApp->Exit();
+	}
 	return 0;
 }
 
