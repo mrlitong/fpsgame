@@ -177,6 +177,14 @@ int CGameProcess::Update()
 			}
 		}
 	}
+	else if (g_Engine.pInput->IsKeyDown('8'))
+	{
+		CAction* pAction = m_pRole->OrceAction("skill07");
+		if (pAction)
+		{
+
+		}
+	}
 	return 0;
 }
 
