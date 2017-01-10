@@ -190,7 +190,12 @@ int CGameProcess::Update()
 				if (l > 5.0f && l < 20.0f)
 					vPos.Append(m_vAIList[i]->GetPosition());
 			}
+			pAction->SetupSkillBulletPosition(vPos);
 		}
+	}
+	else if (g_Engine.pInput->IsKeyDown('9'))
+	{
+
 	}
 	return 0;
 }
