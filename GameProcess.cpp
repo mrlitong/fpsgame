@@ -195,7 +195,10 @@ int CGameProcess::Update()
 	}
 	else if (g_Engine.pInput->IsKeyDown('9'))
 	{
-
+		CAction* pAction = m_pRole->OrceAction("skill08");
+		if (pAction)
+			m_pRole->StopMove();
+		pAction->SetupSkillBulletDirection(1);
 	}
 	return 0;
 }
