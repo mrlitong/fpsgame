@@ -38,9 +38,9 @@ int CGameProcess::Init()
 	g_Engine.pControls->SetKeyReleaseFunc(KeyRelease);
 
 	m_pRole = new CFPSRoleLocal();
-	m_pRole->Init(10001, "data/role/hero/FpsRole/fps.char");		//¼ÓÔØ½ÇÉ«×ÊÔ´
+	m_pRole->Init(10001, "data/role/hero/FpsRole/fps.char");		
 
-	m_pRole->SetActorPosition(vec3(0, 0, 0));	//ÉèÖÃ½ÇÉ«³õÊ¼Î»ÖÃ¡£ÒÔÃÅ´¦×÷ÎªÔ­µã£¬ÈýÎ¬×ø±êÏµvec3ÊÇÏòÁ¿
+	m_pRole->SetActorPosition(vec3(0, 0, 0));	//è®¾ç½®è§’è‰²åˆå§‹ä½ç½®ã€‚ä»¥é—¨å¤„ä½œä¸ºåŽŸç‚¹ï¼Œä¸‰ç»´åæ ‡ç³»vec3æ˜¯å‘é‡
 	m_pSkillSystem = new CSkillSystem(this);
 	m_pCameraBase = new CCameraBase();
 	m_pCameraBase->SetEnabled(1);
@@ -52,7 +52,7 @@ int CGameProcess::Init()
 	return 1;
 }
 
-int CGameProcess::ShutDown()			//¹Ø±ÕÓÎÏ·½ø³Ì
+int CGameProcess::ShutDown()			//å…³é—­æ¸¸æˆè¿›ç¨‹
 {
 	delete m_pRole;
 	delete m_pSkillSystem;
@@ -110,7 +110,7 @@ int CGameProcess::Update()
 			}
 		}
 	}
-	else if (g_Engine.pInput->IsKeyDown('4'))//¶à·¢×Óµ¯
+	else if (g_Engine.pInput->IsKeyDown('4'))//å¤šå‘å­å¼¹
 	{
 		CAction* pAction = m_pRole->OrceAction("skill02");
 		if (pAction)
