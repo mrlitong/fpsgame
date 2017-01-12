@@ -207,6 +207,19 @@ int CGameProcess::Update()
 	{
 		g_Engine.pApp->Exit();
 	}
+	if(g_Engine.pInput->IsLBDown())
+	{
+		vec3 p0,p1;
+		BlueRay::GetPlayerMouseDirection(p0,p1);
+		vec3 vRetPoint,vRetNormal;
+		int nS = -1;
+		g_Engine.pWorld->GetIntersection(p0,p1,CBRObject::MASK_SCENE,vRetPoint,vRetNormal,nS);
+
+		if(-1 != nS)
+		{
+			m_pRole->MoveToPath(vRetPoint);
+		}
+	}
 	return 0;
 }
 
