@@ -239,7 +239,8 @@ int CGameProcess::Update()
 	{
 		g_pSysControl->SetMouseGrab(0);
 	}
-
+	m_pCameraBase->SetMouseControls(g_pSysControl->GetMouseGrab());
+	m_pCameraBase->Update(ifps);
 	return 0;
 }
 
