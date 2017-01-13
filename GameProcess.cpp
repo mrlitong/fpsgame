@@ -230,11 +230,16 @@ int CGameProcess::Update()
 
 		m_vAIList[i]->Update(ifps);
 	}
-	if (g_Engine.pInput->IsLBDown())	
+	if (g_Engine.pInput->IsLBDown())	//shubiaozuojian
 	{
 		g_pSysControl->SetMouseGrab(1);
 		m_pStarControl->Click();
 	}
+	if (g_Engine.pInput->IsKeyDown(CInput::KEY_ESC))		
+	{
+		g_pSysControl->SetMouseGrab(0);
+	}
+
 	return 0;
 }
 
