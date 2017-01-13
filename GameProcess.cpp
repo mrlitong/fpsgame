@@ -244,6 +244,7 @@ int CGameProcess::Update()
 
 	m_pRole->SetActorDirection(m_pCameraBase->GetViewDirection());
 	m_pRole->UpdateActor(ifps);
+	m_pCameraBase->SetPosition(m_pRole->GetActorPosition() + m_pRole->GetCameraOffset());
 
 
 	return 0;
