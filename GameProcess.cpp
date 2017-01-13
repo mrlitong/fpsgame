@@ -220,6 +220,16 @@ int CGameProcess::Update()
 			m_pRole->MoveToPath(vRetPoint);
 		}
 	}
+	for(int i = 0;i < 20;i++)
+	{
+		if(!m_vAIList[i]->IsMoveing())
+		{
+			vec3 vPos = vec3(g_Engine.pGame->GetRandomFloat(-20.0f,20.0f),g_Engine.pGame->GetRandomFloat(-20.0f,20.0f),1.1f);
+			m_vAIList[i]->MoveToPath(vPos);
+		}
+
+		m_vAIList[i]->Update(ifps);
+	}
 	return 0;
 }
 
