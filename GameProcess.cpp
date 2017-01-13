@@ -241,6 +241,11 @@ int CGameProcess::Update()
 	}
 	m_pCameraBase->SetMouseControls(g_pSysControl->GetMouseGrab());
 	m_pCameraBase->Update(ifps);
+
+	m_pRole->SetActorDirection(m_pCameraBase->GetViewDirection());
+	m_pRole->UpdateActor(ifps);
+
+
 	return 0;
 }
 
