@@ -246,6 +246,9 @@ int CGameProcess::Update()
 	m_pRole->UpdateActor(ifps);
 	m_pCameraBase->SetPosition(m_pRole->GetActorPosition() + m_pRole->GetCameraOffset());
 
+	vec3 x = m_pCameraBase->GetModelview().getRow3(0);
+	vec3 y = m_pCameraBase->GetModelview().getRow3(1);
+	vec3 z = m_pCameraBase->GetModelview().getRow3(2);
 
 	return 0;
 }
