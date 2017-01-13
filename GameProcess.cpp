@@ -230,6 +230,11 @@ int CGameProcess::Update()
 
 		m_vAIList[i]->Update(ifps);
 	}
+	if (g_Engine.pInput->IsLBDown())	
+	{
+		g_pSysControl->SetMouseGrab(1);
+		m_pStarControl->Click();
+	}
 	return 0;
 }
 
