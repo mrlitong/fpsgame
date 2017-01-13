@@ -250,6 +250,8 @@ int CGameProcess::Update()
 	vec3 y = m_pCameraBase->GetModelview().getRow3(1);
 	vec3 z = m_pCameraBase->GetModelview().getRow3(2);
 
+	mat4 r = mat4_identity;
+
 	return 0;
 }
 
