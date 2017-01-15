@@ -260,6 +260,8 @@ int CGameProcess::Update()
 
 	m_pRole->UpdateTransform(r);
 
+	m_pRole->Update(ifps);
+	m_pSkillSystem->Update(ifps);
 
 
 	return 0;
