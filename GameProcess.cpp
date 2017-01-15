@@ -280,3 +280,12 @@ int CGameProcess::Render()
 	return 1;
 }
 
+int CGameProcess::KeyPress(unsigned int nKey)
+{
+	if (nKey == 'w')
+	{
+		//g_Engine.pControls->SetState(CControls::STATE_RESTORE, 1);
+		g_Engine.pControls->SetState(CControls::STATE_FORWARD, 1);
+	}
+	return 0;
+}
