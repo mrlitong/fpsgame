@@ -265,7 +265,7 @@ int CGameProcess::Update()
 
 	m_pStarControl->Update(m_pCameraBase->GetPosition(), m_pCameraBase->GetDirection());
 
-	return 0;
+	return 1;
 }
 
 
