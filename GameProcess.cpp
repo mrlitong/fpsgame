@@ -252,6 +252,12 @@ int CGameProcess::Update()
 	vec3 y = m_pCameraBase->GetModelview().getRow3(1);
 	vec3 z = m_pCameraBase->GetModelview().getRow3(2);
 
+	mat4 r = mat4_identity;
+
+	r.setColumn3(0, -x);	//
+	r.setColumn3(1, z);		//
+	r.setColumn3(2, y);		//
+
 	return 0;
 }
 
