@@ -268,4 +268,15 @@ int CGameProcess::Update()
 	return 1;
 }
 
+int CGameProcess::Render()
+{
+	////test
+	//m_pTestHero->Render();
+	//g_Engine.pVisualizer->RenderLine3D(vec3(0.0f,0.0f,1.0f), vec3(10.0f,0.0f,1.0f), vec4(1.0f,0.0f,0.0f,1.0f));
+	//g_Engine.pVisualizer->RenderLine3D(vec3(0.0f,0.0f,1.0f), vec3(0.0f,10.0f,1.0f), vec4(0.0f,1.0f,0.0f,1.0f));
+	//g_Engine.pVisualizer->RenderLine3D(vec3(0.0f,0.0f,1.0f), vec3(0.0f,0.0f,11.0f), vec4(0.0f,0.0f,1.0f,1.0f));
+	////~test
+
+	return 1;
+}
 
