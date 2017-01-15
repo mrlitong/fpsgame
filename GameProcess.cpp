@@ -258,6 +258,10 @@ int CGameProcess::Update()
 	r.setColumn3(1, z);		//
 	r.setColumn3(2, y);		//
 
+	m_pRole->UpdateTransform(r);
+
+
+
 	return 0;
 }
 
