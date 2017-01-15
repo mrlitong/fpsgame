@@ -263,6 +263,7 @@ int CGameProcess::Update()
 	m_pRole->Update(ifps);
 	m_pSkillSystem->Update(ifps);
 
+	m_pStarControl->Update(m_pCameraBase->GetPosition(), m_pCameraBase->GetDirection());
 
 	return 0;
 }
