@@ -156,8 +156,8 @@ float CCameraBase::GetThetaAngle() const
 *
 */
 
-void CCameraBase::SetViewDirection(const vec3 &d)
-{
+void CCameraBase::SetViewDirection(const vec3 &d)  //设置视角方位，参考三维坐标系
+{ 
 	m_vDirection = Normalize(d);
 
 	// ortho basis
