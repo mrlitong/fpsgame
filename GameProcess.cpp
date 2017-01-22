@@ -14,7 +14,7 @@
 #include "Action.h"
 #include "FPSRoleLocal.h"
 #include "StarControl.h"
-//#include "RayControl.h"
+#include "RayControl.h"
 
 using namespace MathLib;
 
