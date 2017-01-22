@@ -15,6 +15,9 @@
 #include "FPSRoleLocal.h"
 #include "StarControl.h"
 #include "RayControl.h"
+#include "CameraBase.h"
+#include "ActorBase.h"
+
 
 using namespace MathLib;
 
