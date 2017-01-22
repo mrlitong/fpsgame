@@ -309,6 +309,10 @@ int CGameProcess::KeyPress(unsigned int nKey)
 	{
 		g_Engine.pControls->SetState(CControls::STATE_JUMP, 1);
 	}
+	else if (nKey == 'e')
+	{
+		g_Engine.pControls->SetState(CControls::STATE_CROUCH, 1);
+	}
 
 	return 0;
 }
