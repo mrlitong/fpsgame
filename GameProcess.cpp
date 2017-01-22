@@ -313,6 +313,9 @@ int CGameProcess::KeyPress(unsigned int nKey)
 	{
 		g_Engine.pControls->SetState(CControls::STATE_CROUCH, 1);
 	}
-
+	else if (nKey == CApp::KEY_SHIFT)
+	{
+		g_Engine.pControls->SetState(CControls::STATE_RUN, 1);
+	}
 	return 0;
 }
