@@ -336,5 +336,11 @@ int CGameProcess::KeyRelease(unsigned int nKey)
 		g_Engine.pControls->SetState(CControls::STATE_RESTORE, 0);
 		g_Engine.pControls->SetState(CControls::STATE_BACKWARD, 0);
 	}
+	else if (nKey == 'a')
+	{
+		g_Engine.pControls->SetState(CControls::STATE_RESTORE, 0);
+		g_Engine.pControls->SetState(CControls::STATE_MOVE_LEFT, 0);
+	}
+
 	return 0;
 }
