@@ -320,5 +320,7 @@ int CGameProcess::KeyPress(unsigned int nKey)
 	{
 		g_Engine.pControls->SetState(CControls::STATE_RUN, 1);
 	}
-	return 0;
+	return 1;
+
+
 }
