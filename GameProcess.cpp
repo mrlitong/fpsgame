@@ -354,5 +354,10 @@ int CGameProcess::KeyRelease(unsigned int nKey)
 	{
 		g_Engine.pControls->SetState(CControls::STATE_CROUCH, 0);
 	}
+	else if (nKey == CApp::KEY_SHIFT)
+	{
+		g_Engine.pControls->SetState(CControls::STATE_RUN, 0);
+	}
+
 	return 0;
 }
