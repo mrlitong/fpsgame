@@ -17,7 +17,10 @@
 #include "RayControl.h"
 #include "CameraBase.h"
 #include "ActorBase.h"
-
+#include "sys/SysControl.h"
+#include "FileSystem.h"
+#include "RenderManager.h"
+#include "Texture.h"
 
 using namespace MathLib;
 
