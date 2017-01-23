@@ -350,6 +350,9 @@ int CGameProcess::KeyRelease(unsigned int nKey)
 	{
 		g_Engine.pControls->SetState(CControls::STATE_JUMP, 0);
 	}
-
+	else if (nKey == 'e')
+	{
+		g_Engine.pControls->SetState(CControls::STATE_CROUCH, 0);
+	}
 	return 0;
 }
