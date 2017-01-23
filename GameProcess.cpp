@@ -346,6 +346,10 @@ int CGameProcess::KeyRelease(unsigned int nKey)
 		g_Engine.pControls->SetState(CControls::STATE_RESTORE, 0);
 		g_Engine.pControls->SetState(CControls::STATE_MOVE_RIGHT, 0);
 	}
+	else if (nKey == 'q')
+	{
+		g_Engine.pControls->SetState(CControls::STATE_JUMP, 0);
+	}
 
 	return 0;
 }
