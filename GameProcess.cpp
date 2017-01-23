@@ -324,3 +324,7 @@ int CGameProcess::KeyPress(unsigned int nKey)
 
 
 }
+int CGameProcess::KeyRelease(unsigned int nKey)
+{
+	return 0;
+}
