@@ -326,5 +326,10 @@ int CGameProcess::KeyPress(unsigned int nKey)
 }
 int CGameProcess::KeyRelease(unsigned int nKey)
 {
+	if (nKey == 'w')
+	{
+		g_Engine.pControls->SetState(CControls::STATE_RESTORE, 0);
+		g_Engine.pControls->SetState(CControls::STATE_FORWARD, 0);
+	}
 	return 0;
 }
