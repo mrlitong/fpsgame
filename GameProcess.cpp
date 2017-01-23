@@ -359,5 +359,5 @@ int CGameProcess::KeyRelease(unsigned int nKey)
 		g_Engine.pControls->SetState(CControls::STATE_RUN, 0);
 	}
 
-	return 0;
+	return 1;
 }
