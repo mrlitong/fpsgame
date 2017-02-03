@@ -363,7 +363,14 @@ int CGameProcess::KeyRelease(unsigned int nKey)
 }
 
 CRoleBase* CGameProcess::GetRole(int nID)
-{
+{	
+	for(int i = 0;i < 20;i++)
+	{
+		if(m_vAIList[i]->GetRoleID() == nID)
+		{
+			return m_vAIList[i];
+		}
+	}
 
 	return NULL;
 }
