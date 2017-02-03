@@ -361,3 +361,9 @@ int CGameProcess::KeyRelease(unsigned int nKey)
 
 	return 1;
 }
+
+CRoleBase* CGameProcess::GetRole(int nID)
+{
+
+	return NULL;
+}
