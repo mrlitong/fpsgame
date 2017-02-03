@@ -376,6 +376,6 @@ CRoleBase* CGameProcess::GetRole(int nID)
 }
 CRoleBase* CGameProcess::GetRoleFormIndex(int nIndex)
 {
-	//return m_vAIList[nIndex];
+	return m_vAIList[nIndex];
 	return NULL;
 }
