@@ -66,7 +66,10 @@ CActorBase::CActorBase()
 	SetGround(0);
 	SetCeiling(0);
 
-
-
-
+}
+CActorBase::~CActorBase()
+{
+	m_pDummy->SetObject(NULL);
+	delete m_pObject;
+	delete m_pDummy;
 }
