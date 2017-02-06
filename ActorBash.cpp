@@ -66,4 +66,7 @@ CActorBase::CActorBase()
 	SetGround(0);
 	SetCeiling(0);
 
+
+
+
 }
