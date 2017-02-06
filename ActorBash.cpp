@@ -10,6 +10,8 @@
 #define new new(__FILE__, __LINE__) 
 #endif // MEMORY_INFO
 
+using namespace MathLib;
+
 CActorBase::CActorBase()
 {
 	m_vUp = vec3(0.0f, 0.0f, 1.0f);
