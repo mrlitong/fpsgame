@@ -41,4 +41,8 @@ CActorBase::CActorBase()
 		m_pTimes[i] = 0.0f;
 	}
 
+	m_pDummy->SetEnabled(1);
+	m_pObject->SetBody(NULL);
+	m_pObject->SetBody(m_pDummy);
+
 }
