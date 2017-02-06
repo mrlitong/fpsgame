@@ -57,6 +57,7 @@ CActorBase::CActorBase()
 
 	SetCollisionRadius(0.3f);
 	SetCollisionHeight(1.0f);
-
+	SetFriction(2.0f);
+	SetMinVelocity(2.0f);
 
 }
