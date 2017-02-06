@@ -55,4 +55,8 @@ CActorBase::CActorBase()
 	SetViewDirection(vec3(0.0f, 1.0f, 0.0f));
 	SetCollision(1);
 
+	SetCollisionRadius(0.3f);
+	SetCollisionHeight(1.0f);
+
+
 }
