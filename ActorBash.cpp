@@ -12,6 +12,14 @@
 
 using namespace MathLib;
 
+/*
+*/
+#define ACTOR_BASE_IFPS             (1.0f / 60.0f)
+#define ACTOR_BASE_CLAMP            89.9f
+#define ACTOR_BASE_COLLISIONS       4
+
+
+
 CActorBase::CActorBase()
 {
 	m_vUp = vec3(0.0f, 0.0f, 1.0f);
