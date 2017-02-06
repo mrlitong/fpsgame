@@ -44,5 +44,12 @@ CActorBase::CActorBase()
 	m_pDummy->SetEnabled(1);
 	m_pObject->SetBody(NULL);
 	m_pObject->SetBody(m_pDummy);
+	m_pShape->SetBody(NULL);
+	m_pShape->SetBody(m_pDummy);
+
+	m_pObject->SetWorldTransform(Get_Body_Transform());
+	m_pShape->SetRestitution(0.0f);
+	m_pShape->SetCollisionMask(2);
+
 
 }
