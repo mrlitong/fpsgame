@@ -51,5 +51,8 @@ CActorBase::CActorBase()
 	m_pShape->SetRestitution(0.0f);
 	m_pShape->SetCollisionMask(2);
 
+	SetEnabled(1);
+	SetViewDirection(vec3(0.0f, 1.0f, 0.0f));
+	SetCollision(1);
 
 }
