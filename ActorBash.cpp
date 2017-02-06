@@ -18,6 +18,8 @@ using namespace MathLib;
 #define ACTOR_BASE_CLAMP            89.9f
 #define ACTOR_BASE_COLLISIONS       4
 
+/*
+*/
 
 
 CActorBase::CActorBase()
