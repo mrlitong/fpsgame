@@ -1,6 +1,9 @@
 #include "Engine.h"
 #include "Game.h"
 #include "ObjectDummy.h"
+#include "BodyRigid.h"
+#include "BodyDummy.h"
+
 
 
 #ifdef MEMORY_INFO
@@ -25,4 +28,5 @@ CActorBase::CActorBase()
 		m_pStates[i] = 0;
 		m_pTimes[i] = 0.0f;
 	}
+
 }
