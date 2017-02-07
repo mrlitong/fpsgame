@@ -83,3 +83,7 @@ void CActorBase::SetEnabled(int enable)
 	m_nEnable = enable;
 	m_pDummy->SetEnabled(m_nEnable);
 }
+int CActorBase::IsEnabled() const
+{
+	return m_nEnable;
+}
