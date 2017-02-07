@@ -4,7 +4,11 @@
 #include "BodyRigid.h"
 #include "BodyDummy.h"
 
-
+#include "Physics.h"
+#include "ShapeCapsule.h"
+#include "ActorBase.h"
+#include "Visualizer.h"
+#include "sys/SysControl.h"
 
 #ifdef MEMORY_INFO
 #define new new(__FILE__, __LINE__) 
