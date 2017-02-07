@@ -89,5 +89,9 @@ int CActorBase::IsEnabled() const
 }
 void CActorBase::Update(float ifps)
 {
+	if (!m_nEnable)
+	{
+		return;
+	}
 
 }
