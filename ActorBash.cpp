@@ -93,5 +93,10 @@ void CActorBase::Update(float ifps)
 	{
 		return;
 	}
+	// impulse
+	vec3 impulse = vec3_zero;
 
+	// ortho basis
+	vec3 tangent, binormal;
+	OrthoBasis(m_vUp, tangent, binormal);
 }
