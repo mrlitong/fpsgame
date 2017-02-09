@@ -117,5 +117,16 @@ void CActorBase::Update(float ifps)
 	if (m_pStates[STATE_MOVE_LEFT]) impulse += y;
 	if (m_pStates[STATE_MOVE_RIGHT]) impulse -= y;
 	impulse.normalize();
+	// velocity
+	if (m_pStates[STATE_RUN]) impulse *= m_fMaxVelocity;
+	else impulse *= m_fMinVelocity;
+
+	// jump
+	if (m_pStates[STATE_JUMP] == STATE_BEGIN)
+	{
+		impulse += z * CMathCore::Sqrt(2.0f * 9.8f * m_fJumping) / (m_fAcceleration * ifps);
+	}
+
+
 
 }
