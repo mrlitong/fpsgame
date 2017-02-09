@@ -132,5 +132,8 @@ void CActorBase::Update(float ifps)
 	{
 		m_vVelocity = x * x_velocity + y * y_velocity + z * z_velocity;
 	}
+	// time
+	float time = ifps * g_Engine.pPhysics->GetScale();
+
 
 }
