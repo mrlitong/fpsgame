@@ -103,6 +103,9 @@ void CActorBase::Update(float ifps)
 	vec3 x = quat(m_vUp, -m_fPhiAngle) * binormal;
 	vec3 y = Normalize(Cross(m_vUp, x));
 	vec3 z = Normalize(Cross(x, y));
+	// handle states
+	Update_States(1, ifps);
+
 
 
 }
