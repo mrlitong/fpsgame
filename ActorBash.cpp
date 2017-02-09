@@ -106,6 +106,9 @@ void CActorBase::Update(float ifps)
 	// handle states
 	Update_States(1, ifps);
 
-
+	// old velocity
+	float x_velocity = Dot(x, m_vVelocity);
+	float y_velocity = Dot(y, m_vVelocity);
+	float z_velocity = Dot(z, m_vVelocity);
 
 }
