@@ -114,6 +114,8 @@ void CActorBase::Update(float ifps)
 	// movement
 	if (m_pStates[STATE_FORWARD]) impulse += x;
 	if (m_pStates[STATE_BACKWARD]) impulse -= x;
-
+	if (m_pStates[STATE_MOVE_LEFT]) impulse += y;
+	if (m_pStates[STATE_MOVE_RIGHT]) impulse -= y;
+	impulse.normalize();
 
 }
