@@ -111,4 +111,9 @@ void CActorBase::Update(float ifps)
 	float y_velocity = Dot(y, m_vVelocity);
 	float z_velocity = Dot(z, m_vVelocity);
 
+	// movement
+	if (m_pStates[STATE_FORWARD]) impulse += x;
+	if (m_pStates[STATE_BACKWARD]) impulse -= x;
+
+
 }
