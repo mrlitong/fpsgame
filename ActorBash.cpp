@@ -137,6 +137,10 @@ void CActorBase::Update(float ifps)
 	// target velocity
 	float target_velocity = Length(vec2(Dot(x, impulse), Dot(y, impulse)));
 
-	
+	// penetration tolerance
+	float penetration = g_Engine.pPhysics->GetPenetrationTolerance();
+	float penetration_2 = penetration * 2.0f;
+
+
 
 }
