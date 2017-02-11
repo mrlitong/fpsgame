@@ -164,6 +164,15 @@ void CActorBase::Update(float ifps)
 		// adaptive time step
 		float ifps = Min(time, ACTOR_BASE_IFPS);
 		time -= ifps;
+		// save old velocity
+		float old_velocity = Length(vec2(Dot(x, m_vVelocity), Dot(y, m_vVelocity)));
+
+		// integrate velocity
+		m_vVelocity += impulse * (m_fAcceleration * ifps);
+		m_vVelocity += g_Engine.pPhysics->GetGravity() * ifps;
+
+
+
 	}
 
 }
