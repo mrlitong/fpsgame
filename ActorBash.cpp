@@ -188,6 +188,8 @@ void CActorBase::Update(float ifps)
 				m_vVelocity = (x * Dot(x, m_vVelocity) + y * Dot(y, m_vVelocity)) * target_velocity / current_velocity + z * Dot(z, m_vVelocity);
 			}
 		}
+		// integrate position
+		//m_vPosition += Vec3(m_vVelocity * ifps);
 
 	}
 
