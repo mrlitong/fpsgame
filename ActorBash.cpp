@@ -141,6 +141,9 @@ void CActorBase::Update(float ifps)
 	float penetration = g_Engine.pPhysics->GetPenetrationTolerance();
 	float penetration_2 = penetration * 2.0f;
 
+	// frozen linear velocity
+	float frozen_velocity = g_Engine.pPhysics->GetFrozenLinearVelocity();
+
 
 
 }
