@@ -216,6 +216,11 @@ void CActorBase::Update(float ifps)
 						m_vPosition += Vec3(normalCollision * (Max(c.depth - penetration, 0.0f) * inum_contacts));
 						is_frozen = 0;
 					}
+					float normal_velocity = Dot(normalCollision, m_vVelocity);
+					if (normal_velocity < 0.0f)
+					{
+						m_vVelocity -= normalCollision * normal_velocity;
+					}
 
 				}
 
