@@ -202,7 +202,10 @@ void CActorBase::Update(float ifps)
 
 				if (m_vecContacts.Size() == 0) break;
 				float inum_contacts = 1.0f / CMathCore::Itof(m_vecContacts.Size());
+				for (int j = 0; j < m_vecContacts.Size(); j++)
+				{
 
+				}
 
 			}
 		}
