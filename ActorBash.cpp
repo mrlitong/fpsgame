@@ -190,7 +190,10 @@ void CActorBase::Update(float ifps)
 		}
 		// integrate position
 		//m_vPosition += Vec3(m_vVelocity * ifps);
+		if (GetCollision())
+		{
 
+		}
 	}
 
 }
