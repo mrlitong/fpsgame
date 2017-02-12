@@ -211,7 +211,11 @@ void CActorBase::Update(float ifps)
 					{
 						m_vPosition += Vec3(z * (Max(c.depth - penetration, 0.0f) * inum_contacts * Dot(z, normalCollision)));
 					}
-
+					else
+					{
+						m_vPosition += Vec3(normalCollision * (Max(c.depth - penetration, 0.0f) * inum_contacts));
+						is_frozen = 0;
+					}
 
 				}
 
