@@ -197,6 +197,9 @@ void CActorBase::Update(float ifps)
 			const Vec3 *caps = m_pShape->GetCaps();
 			for (int i = 0; i < ACTOR_BASE_COLLISIONS; i++)
 			{
+				m_pDummy->SetTransform(Get_Body_Transform());
+				m_pShape->GetCollision(m_vecContacts, 0.0f);
+
 
 			}
 		}
