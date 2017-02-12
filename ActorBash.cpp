@@ -204,7 +204,9 @@ void CActorBase::Update(float ifps)
 				float inum_contacts = 1.0f / CMathCore::Itof(m_vecContacts.Size());
 				for (int j = 0; j < m_vecContacts.Size(); j++)
 				{
+					const CShape::Contact &c = m_vecContacts[j];
 
+					vec3 normalCollision = c.normal;
 				}
 
 			}
