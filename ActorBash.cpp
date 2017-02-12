@@ -200,6 +200,7 @@ void CActorBase::Update(float ifps)
 				m_pDummy->SetTransform(Get_Body_Transform());
 				m_pShape->GetCollision(m_vecContacts, 0.0f);
 
+				if (m_vecContacts.Size() == 0) break;
 
 			}
 		}
