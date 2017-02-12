@@ -195,7 +195,10 @@ void CActorBase::Update(float ifps)
 			// get collision
 			vec3 tangent, binormal;
 			const Vec3 *caps = m_pShape->GetCaps();
+			for (int i = 0; i < ACTOR_BASE_COLLISIONS; i++)
+			{
 
+			}
 		}
 	}
 
