@@ -192,7 +192,8 @@ void CActorBase::Update(float ifps)
 		//m_vPosition += Vec3(m_vVelocity * ifps);
 		if (GetCollision())
 		{
-
+			// get collision
+			vec3 tangent, binormal;
 		}
 	}
 
