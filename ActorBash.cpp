@@ -56,7 +56,7 @@ CActorBase::CActorBase()
 	m_pShape->SetCollisionMask(2);
 
 	SetEnabled(1);
-	SetViewDirection(vec3(0.0f,1.0f,0.0f));
+	SetViewDirection(vec3(0.0f, 1.0f, 0.0f));
 	SetCollision(1);
 	SetCollisionRadius(0.3f);
 	SetCollisionHeight(1.0f);
@@ -159,7 +159,7 @@ void CActorBase::Update(float ifps)
 	}
 
 	// movement
-	do 
+	do
 	{
 		// adaptive time step
 		float ifps = Min(time, ACTOR_BASE_IFPS);
@@ -207,7 +207,7 @@ void CActorBase::Update(float ifps)
 					const CShape::Contact &c = m_vecContacts[j];
 
 					vec3 normalCollision = c.normal;
-					if (is_frozen && c.depth < penetration_2) 
+					if (is_frozen && c.depth < penetration_2)
 					{
 						m_vPosition += Vec3(z * (Max(c.depth - penetration, 0.0f) * inum_contacts * Dot(z, normalCollision)));
 					}
@@ -239,9 +239,12 @@ void CActorBase::Update(float ifps)
 				}
 			}
 		}
-		
-		m_vPosition += Vec3(m_vVelocity * ifps);
-	}
-	}
 
+		m_vPosition += Vec3(m_vVelocity * ifps);
+	} while (time > EPSILON);
+
+	// current position
+	m_pObject->SetWorldTransform(Get_Body_Transform());
+	m_WorldBoundBox.Set(m_BoundBox, Translate(m_vPosition));
+	m_WorldBoundSphere.Set(m_BoundSphere, Translate(m_vPosition));
 }
