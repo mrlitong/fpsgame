@@ -304,4 +304,5 @@ void CActorBase::SetCollisionRadius(float radius)
 		m_pDummy->SetPreserveTransform(Mat4(Translate(m_vUp * (radius - m_pShape->GetRadius()))) * m_pDummy->GetTransform());
 		m_pShape->SetRadius(radius);
 	}
+	Update_Bounds();
 }
