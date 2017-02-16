@@ -221,6 +221,10 @@ void CActorBase::Update(float ifps)
 					{
 						m_vVelocity -= normalCollision * normal_velocity;
 					}
+					if (friction > EPSILON)
+					{
+
+					}
 
 				}
 
