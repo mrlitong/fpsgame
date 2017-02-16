@@ -233,8 +233,10 @@ void CActorBase::Update(float ifps)
 							m_vVelocity -= binormal * binormal_velocity * friction_velocity;
 
 						}
-
 					}
+					if (Dot(c.normal, m_vUp) > 0.5f && Dot(vec3(c.point - caps[0]), m_vUp) < 0.0f) m_nGround = 1;
+					if (Dot(c.normal, m_vUp) < -0.5f && Dot(vec3(c.point - caps[1]), m_vUp) > 0.0f) m_nCeiling = 1;
+
 
 				}
 
