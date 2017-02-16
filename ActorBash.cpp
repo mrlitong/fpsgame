@@ -226,7 +226,10 @@ void CActorBase::Update(float ifps)
 						OrthoBasis(c.normal, tangent, binormal);
 						float tangent_velocity = Dot(tangent, m_vVelocity);
 						float binormal_velocity = Dot(binormal, m_vVelocity);
-						if (CMathCore::Abs(tangent_velocity) > EPSILON || CMathCore::Abs(binormal_velocity) > EPSILON) {
+						if (CMathCore::Abs(tangent_velocity) > EPSILON || CMathCore::Abs(binormal_velocity) > EPSILON)
+						{
+
+						}
 
 					}
 
