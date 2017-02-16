@@ -276,3 +276,9 @@ int CActorBase::GetIntersectionMask() const
 	return m_pShape->GetIntersectionMask();
 }
 
+/*
+*/
+void CActorBase::SetCollision(int c)
+{
+	m_nCollision = c;
+}
