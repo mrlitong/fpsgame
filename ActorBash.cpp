@@ -15,10 +15,6 @@
 #endif // MEMORY_INFO
 
 
-#ifdefined(__cplusplus)||defined(c_plusplus) //跨平台定义方法
-extern "C"{
-#endif
-
 using namespace MathLib;
 
 /*
