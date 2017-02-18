@@ -14,6 +14,11 @@
 #define new new(__FILE__, __LINE__) 
 #endif // MEMORY_INFO
 
+
+#ifdefined(__cplusplus)||defined(c_plusplus) //è·¨å¹³å°å®šä¹‰æ–¹æ³•
+extern "C"{
+#endif
+
 using namespace MathLib;
 
 /*
@@ -36,8 +41,8 @@ CActorBase::CActorBase()
 	m_nFlush = 0;
 	m_vPosition = Vec3_zero;
 	m_vVelocity = Vec3_zero;
-	m_fPhiAngle = 0.0f;			//ÇãĞ±½Ç		¶şÎ¬Æ½Ãæ×ø±êÏµÖĞ£¬Ö±ÏßÏòYÖÜÑÓÉìµÄ·½ÏòÓëXÖáÕıÏòÖ®¼äµÄ¼Ğ½Ç
-	m_fThetaAngle = 0.0f;			//·½Î»½Ç£¬Õı±±·½ÄÇÌõÏßÓëµ±Ç°ÏßÌõ°´ÕÕË³Ê±Õë×ß¹ıµÄ½Ç¶È
+	m_fPhiAngle = 0.0f;			//å€¾æ–œè§’		äºŒç»´å¹³é¢åæ ‡ç³»ä¸­ï¼Œç›´çº¿å‘Yå‘¨å»¶ä¼¸çš„æ–¹å‘ä¸Xè½´æ­£å‘ä¹‹é—´çš„å¤¹è§’
+	m_fThetaAngle = 0.0f;			//æ–¹ä½è§’ï¼Œæ­£åŒ—æ–¹é‚£æ¡çº¿ä¸å½“å‰çº¿æ¡æŒ‰ç…§é¡ºæ—¶é’ˆèµ°è¿‡çš„è§’åº¦
 
 	for (int i = 0; i < NUM_STATES; i++)
 	{
