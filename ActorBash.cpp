@@ -320,3 +320,8 @@ void CActorBase::SetCollisionHeight(float height)
 	}
 	Update_Bounds();
 }
+float CActorBase::GetCollisionHeight() const
+{
+	return m_pShape->GetHeight();
+}
+
