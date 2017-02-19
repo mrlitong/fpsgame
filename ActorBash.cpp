@@ -325,3 +325,12 @@ float CActorBase::GetCollisionHeight() const
 	return m_pShape->GetHeight();
 }
 
+void CActorBase::SetMinVelocity(float velocity)
+{
+	m_fMinVelocity = Max(velocity, 0.0f);
+}
+float CActorBase::GetMinVelocity() const
+{
+	return m_fMinVelocity;
+}
+
