@@ -15,3 +15,9 @@ using namespace MathLib;
 #ifdef MEMORY_INFO
 #define new new(__FILE__, __LINE__) 
 #endif // MEMORY_INFO
+
+/*
+*/
+#define ACTOR_BASE_IFPS             (1.0f / 60.0f)
+#define ACTOR_BASE_CLAMP            89.9f
+#define ACTOR_BASE_COLLISIONS       4
