@@ -2,3 +2,5 @@
 #include "Game.h"
 #include "ObjectDummy.h"
 #include "BodyRigid.h"
+#include "BodyDummy.h"
+#include "Physics.h"
