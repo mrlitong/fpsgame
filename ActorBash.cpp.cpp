@@ -55,5 +55,17 @@ CActorBase::CActorBase()
 	m_pShape->SetCollisionMask(2);
 
 
+	SetEnabled(1);
+	SetViewDirection(vec3(0.0f, 1.0f, 0.0f));
+	SetCollision(1);
+	SetCollisionRadius(0.3f);
+	SetCollisionHeight(1.0f);
+	SetFriction(2.0f);
+	SetMinVelocity(2.0f);
+	SetMaxVelocity(4.0f);
+	SetAcceleration(8.0f);
+	SetDamping(8.0f);
+	SetJumping(1.5f);
+
 
 }
