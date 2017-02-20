@@ -31,4 +31,11 @@ CActorBase::CActorBase()
 	m_pObject = new CObjectDummy();
 	m_pDummy = new CBodyDummy();
 	m_pShape = new CShapeCapsule(1.0f, 1.0f);
+
+	m_nFlush = 0;
+	m_vPosition = Vec3_zero;
+	m_vVelocity = Vec3_zero;
+	m_fPhiAngle = 0.0f;			//倾斜角		二维平面坐标系中，直线向Y周延伸的方向与X轴正向之间的夹角
+	m_fThetaAngle = 0.0f;			//方位角，正北方那条线与当前线条按照顺时针走过的角度
+
 }
