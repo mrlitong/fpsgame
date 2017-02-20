@@ -50,6 +50,9 @@ CActorBase::CActorBase()
 	m_pShape->SetBody(NULL);
 	m_pShape->SetBody(m_pDummy);
 
+	m_pObject->SetWorldTransform(Get_Body_Transform());
+	m_pShape->SetRestitution(0.0f);
+	m_pShape->SetCollisionMask(2);
 
 
 
