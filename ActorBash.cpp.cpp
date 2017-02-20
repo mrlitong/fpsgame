@@ -38,4 +38,13 @@ CActorBase::CActorBase()
 	m_fPhiAngle = 0.0f;			//倾斜角		二维平面坐标系中，直线向Y周延伸的方向与X轴正向之间的夹角
 	m_fThetaAngle = 0.0f;			//方位角，正北方那条线与当前线条按照顺时针走过的角度
 
+
+	for (int i = 0; i < NUM_STATES; i++)
+	{
+		m_pStates[i] = 0;
+		m_pTimes[i] = 0.0f;
+	}
+
+
+
 }
