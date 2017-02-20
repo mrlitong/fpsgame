@@ -8,3 +8,10 @@
 #include "ActorBase.h"
 #include "Visualizer.h"
 #include "sys/SysControl.h"
+
+
+using namespace MathLib;
+
+#ifdef MEMORY_INFO
+#define new new(__FILE__, __LINE__) 
+#endif // MEMORY_INFO
