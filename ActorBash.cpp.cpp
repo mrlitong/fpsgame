@@ -67,5 +67,8 @@ CActorBase::CActorBase()
 	SetDamping(8.0f);
 	SetJumping(1.5f);
 
-
+	SetGround(0);
+	SetCeiling(0);
 }
+
+
