@@ -103,4 +103,13 @@ void CActorBase::Update(float ifps)
 	// ortho basis
 	vec3 tangent, binormal;
 	OrthoBasis(m_vUp, tangent, binormal);
+
+	// current basis
+	vec3 x = quat(m_vUp, -m_fPhiAngle) * binormal;
+	vec3 y = Normalize(Cross(m_vUp, x));
+	vec3 z = Normalize(Cross(x, y));
+
+
+
+
 }
