@@ -27,7 +27,7 @@ using namespace MathLib;
 */
 CActorBase::CActorBase()
 {
-	m_vUp = vec3(0.0f, 0.0f, 1.0f);	
+	m_vUp = vec3(0.0f, 0.0f, 1.0f);
 	m_pObject = new CObjectDummy();
 	m_pDummy = new CBodyDummy();
 	m_pShape = new CShapeCapsule(1.0f, 1.0f);
@@ -109,7 +109,8 @@ void CActorBase::Update(float ifps)
 	vec3 y = Normalize(Cross(m_vUp, x));
 	vec3 z = Normalize(Cross(x, y));
 
-
+	handle states
+	Update_States(1, ifps);
 
 
 }
