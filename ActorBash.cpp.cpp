@@ -110,7 +110,7 @@ void CActorBase::Update(float ifps)
 	vec3 z = Normalize(Cross(x, y));
 
 	handle states
-	Update_States(1, ifps);
+		Update_States(1, ifps);
 
 	// old velocity
 	float x_velocity = Dot(x, m_vVelocity);
@@ -122,6 +122,11 @@ void CActorBase::Update(float ifps)
 	if (m_pStates[STATE_MOVE_LEFT]) impulse += y;
 	if (m_pStates[STATE_MOVE_RIGHT]) impulse -= y;
 	impulse.normalize();
+	//velocity
+	if (m_pStates[STATE_RUN])
+		impulse *= m_fMaxVelocity;
+	else
+		impulse *= m_fMinVelocity;
 
 
 }
