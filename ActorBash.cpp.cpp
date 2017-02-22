@@ -133,6 +133,12 @@ void CActorBase::Update(float ifps)
 		impulse += z * CMathCore::Sqrt(2.0f * 9.8f * m_fJumping) / (m_fAcceleration * ifps);
 	}
 
+	// rotate velocity
+	if (GetGround())
+	{
+		m_vVelocity = x * x_velocity + y * y_velocity + z * z_velocity;
+	}
+
 
 
 
