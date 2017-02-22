@@ -152,6 +152,13 @@ void CActorBase::Update(float ifps)
 	// frozen linear velocity
 	float frozen_velocity = g_Engine.pPhysics->GetFrozenLinearVelocity();
 
+	// friction
+	float friction = 0.0f;
+	if (target_velocity < EPSILON)
+	{
+		friction = m_fFriction;
+	}
+
 
 
 
