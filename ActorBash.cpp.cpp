@@ -142,6 +142,9 @@ void CActorBase::Update(float ifps)
 	// time
 	float time = ifps * g_Engine.pPhysics->GetScale();
 
+	// target velocity
+	float target_velocity = Length(vec2(Dot(x, impulse), Dot(y, impulse)));
+
 
 
 
