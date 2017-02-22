@@ -159,7 +159,12 @@ void CActorBase::Update(float ifps)
 		friction = m_fFriction;
 	}
 
-
+	//clear collision flags
+	if (GetCollision())
+	{
+		m_nGround = 0;
+		m_nCeiling = 0;
+	}
 
 
 
