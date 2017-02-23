@@ -204,6 +204,11 @@ void CActorBase::Update(float ifps)
 			is_frozen = 1;
 		}
 
+		// integrate position
+		//m_vPosition += Vec3(m_vVelocity * ifps);
+
+		// world collision
+
 
 
 
