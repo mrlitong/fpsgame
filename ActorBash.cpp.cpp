@@ -179,6 +179,14 @@ void CActorBase::Update(float ifps)
 		m_vVelocity += impulse * (m_fAcceleration * ifps);
 		m_vVelocity += g_Engine.pPhysics->GetGravity() * ifps;
 
+		// damping
+		float current_velocity = Length(vec2(Dot(x, m_vVelocity), Dot(y, m_vVelocity)));
+		if (target_velocity < EPSILON || current_velocity > target_velocity)
+		{
+			m_vVelocity = (x * Dot(x, m_vVelocity) + y * Dot(y, m_vVelocity)) * CMathCore::Exp(-m_fDamping * ifps) + z * Dot(z, m_vVelocity);
+		}
+
+
 
 
 	}
