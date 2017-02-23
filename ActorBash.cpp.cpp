@@ -186,6 +186,16 @@ void CActorBase::Update(float ifps)
 			m_vVelocity = (x * Dot(x, m_vVelocity) + y * Dot(y, m_vVelocity)) * CMathCore::Exp(-m_fDamping * ifps) + z * Dot(z, m_vVelocity);
 		}
 
+		// clamp maximum velocity
+		current_velocity = Length(vec2(Dot(x, m_vVelocity), Dot(y, m_vVelocity)));
+		if (current_velocity > old_velocity)
+		{
+			if (current_velocity > target_velocity)
+			{
+				m_vVelocity = (x * Dot(x, m_vVelocity) + y * Dot(y, m_vVelocity)) * target_velocity / current_velocity + z * Dot(z, m_vVelocity);
+			}
+		}
+
 
 
 
