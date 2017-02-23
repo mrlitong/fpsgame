@@ -165,7 +165,19 @@ void CActorBase::Update(float ifps)
 		m_nGround = 0;
 		m_nCeiling = 0;
 	}
+	// movement
+	do 
+	{
+		// adaptive time step
+		float ifps = Min(time, ACTOR_BASE_IFPS);
+		time -= ifps;
 
+		// save old velocity
+		float old_velocity = Length(vec2(Dot(x, m_vVelocity), Dot(y, m_vVelocity)));
+
+
+
+	}
 
 
 
