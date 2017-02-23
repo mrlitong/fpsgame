@@ -196,6 +196,14 @@ void CActorBase::Update(float ifps)
 			}
 		}
 
+		// frozen velocity
+		int is_frozen = 0;
+		if (current_velocity < frozen_velocity)
+		{
+			m_vVelocity = z * Dot(z, m_vVelocity);
+			is_frozen = 1;
+		}
+
 
 
 
