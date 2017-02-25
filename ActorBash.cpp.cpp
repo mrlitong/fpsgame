@@ -210,6 +210,9 @@ void CActorBase::Update(float ifps)
 		// world collision
 		if (GetCollision())
 		{
+			// get collision
+			vec3 tangent, binormal;
+			const Vec3 *caps = m_pShape->GetCaps();
 
 		}
 
