@@ -219,6 +219,19 @@ void CActorBase::Update(float ifps)
 				m_pShape->GetCollision(m_vecContacts, 0.0f);
 				if (m_vecContacts.Size() == 0) break;
 				float inum_contacts = 1.0f / CMathCore::Itof(m_vecContacts.Size());
+				for (int j = 0; j < m_vecContacts.Size(); j++)
+				{
+					const CShape::Contact &c = m_vecContacts[j];
+
+					vec3 normalCollision = c.normal;
+
+					if (is_frozen && c.depth < penetration_2) {
+						m_vPosition += Vec3(z * (Max(c.depth - penetration, 0.0f) * inum_contacts * Dot(z, normalCollision)));
+					}
+					else {
+						m_vPosition += Vec3(normalCollision * (Max(c.depth - penetration, 0.0f) * inum_contacts));
+						is_frozen = 0;
+					}
 
 			}
 		}
