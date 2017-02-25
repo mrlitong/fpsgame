@@ -166,7 +166,7 @@ void CActorBase::Update(float ifps)
 		m_nCeiling = 0;
 	}
 	// movement
-	do 
+	do
 	{
 		// adaptive time step
 		float ifps = Min(time, ACTOR_BASE_IFPS);
@@ -229,7 +229,7 @@ void CActorBase::Update(float ifps)
 					{
 						m_vPosition += Vec3(z * (Max(c.depth - penetration, 0.0f) * inum_contacts * Dot(z, normalCollision)));
 					}
-					else 
+					else
 					{
 						m_vPosition += Vec3(normalCollision * (Max(c.depth - penetration, 0.0f) * inum_contacts));
 						is_frozen = 0;
@@ -250,13 +250,18 @@ void CActorBase::Update(float ifps)
 							m_vVelocity -= binormal * binormal_velocity * friction_velocity;
 						}
 					}
-
+					if (Dot(c.normal, m_vUp) > 0.5f && Dot(vec3(c.point - caps[0]), m_vUp) < 0.0f) m_nGround = 1;
+					if (Dot(c.normal, m_vUp) < -0.5f && Dot(vec3(c.point - caps[1]), m_vUp) > 0.0f) m_nCeiling = 1;
+				}
 			}
+
+
+			m_vPosition += Vec3(m_vVelocity * ifps);
 		}
+		while (time > EPSILON);
 
-
+		// current position
+		m_pObject->SetWorldTransform(Get_Body_Transform());
+		m_WorldBoundBox.Set(m_BoundBox, Translate(m_vPosition));
+		m_WorldBoundSphere.Set(m_BoundSphere, Translate(m_vPosition));
 	}
-
-
-
-}
