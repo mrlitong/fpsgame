@@ -239,6 +239,17 @@ void CActorBase::Update(float ifps)
 					{
 						m_vVelocity -= normalCollision * normal_velocity;
 					}
+					if (friction > EPSILON)
+					{
+						OrthoBasis(c.normal, tangent, binormal);
+						float tangent_velocity = Dot(tangent, m_vVelocity);
+						float binormal_velocity = Dot(binormal, m_vVelocity);
+						if (CMathCore::Abs(tangent_velocity) > EPSILON || CMathCore::Abs(binormal_velocity) > EPSILON) {
+							float friction_velocity = Clamp(Max(-normal_velocity, 0.0f) * friction * CMathCore::RSqrt(tangent_velocity * tangent_velocity + binormal_velocity * binormal_velocity), -1.0f, 1.0f);
+							m_vVelocity -= tangent * tangent_velocity * friction_velocity;
+							m_vVelocity -= binormal * binormal_velocity * friction_velocity;
+						}
+					}
 
 			}
 		}
