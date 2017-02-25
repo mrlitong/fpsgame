@@ -213,7 +213,14 @@ void CActorBase::Update(float ifps)
 			// get collision
 			vec3 tangent, binormal;
 			const Vec3 *caps = m_pShape->GetCaps();
+			for (int i = 0; i < ACTOR_BASE_COLLISIONS; i++)
+			{
+				m_pDummy->SetTransform(Get_Body_Transform());
+				m_pShape->GetCollision(m_vecContacts, 0.0f);
+				if (m_vecContacts.Size() == 0) break;
+				float inum_contacts = 1.0f / CMathCore::Itof(m_vecContacts.Size());
 
+			}
 		}
 
 
