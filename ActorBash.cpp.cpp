@@ -312,3 +312,12 @@ int CActorBase::GetCollisionMask() const
 {
 	return m_pShape->GetCollisionMask();
 }
+void CActorBase::SetCollisionRadius(float radius)
+{
+	if (!Compare(m_pShape->GetRadius(), radius))
+	{
+		m_pDummy->SetPreserveTransform(Mat4(Translate(m_vUp * (radius - m_pShape->GetRadius()))) * m_pDummy->GetTransform());
+		m_pShape->SetRadius(radius);
+	}
+	Update_Bounds();
+}
