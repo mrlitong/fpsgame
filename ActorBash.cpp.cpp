@@ -287,3 +287,7 @@ void CActorBase::SetIntersectionMask(int mask)
 	m_pShape->SetIntersectionMask(mask);
 }
 
+int CActorBase::GetIntersectionMask() const
+{
+	return m_pShape->GetIntersectionMask();
+}
