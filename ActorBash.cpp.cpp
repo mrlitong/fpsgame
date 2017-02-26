@@ -279,3 +279,11 @@ void CActorBase::Update_Bounds()
 	m_WorldBoundBox.Set(m_BoundBox, Translate(m_vPosition));
 	m_WorldBoundSphere.Set(m_BoundSphere, Translate(m_vPosition));
 }
+
+/*
+*/
+void CActorBase::SetIntersectionMask(int mask)
+{
+	m_pShape->SetIntersectionMask(mask);
+}
+
