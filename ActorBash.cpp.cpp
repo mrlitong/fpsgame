@@ -308,3 +308,7 @@ void CActorBase::SetCollisionMask(int mask)
 	m_pShape->SetCollisionMask(mask);
 }
 
+int CActorBase::GetCollisionMask() const
+{
+	return m_pShape->GetCollisionMask();
+}
