@@ -298,3 +298,8 @@ void CActorBase::SetCollision(int c)
 {
 	m_nCollision = c;
 }
+
+int CActorBase::GetCollision() const
+{
+	return m_nCollision;
+}
