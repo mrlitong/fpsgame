@@ -351,3 +351,10 @@ float CActorBase::GetMinVelocity() const
 {
 	return m_fMinVelocity;
 }
+
+/*
+*/
+void CActorBase::SetMaxVelocity(float velocity)
+{
+	m_fMaxVelocity = Max(velocity, 0.0f);
+}
