@@ -321,3 +321,9 @@ void CActorBase::SetCollisionRadius(float radius)
 	}
 	Update_Bounds();
 }
+
+float CActorBase::GetCollisionRadius() const
+{
+	return m_pShape->GetRadius();
+}
+
