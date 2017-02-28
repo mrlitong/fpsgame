@@ -452,3 +452,15 @@ int CActorBase::GetNumContacts() const
 {
 	return m_vecContacts.Size();
 }
+
+const CShape::Contact &CActorBase::GetContact(int num) const
+{
+	return m_vecContacts[num];
+}
+
+/*
+*/
+void CActorBase::SetGround(int g)
+{
+	m_nGround = g;
+}
