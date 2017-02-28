@@ -387,3 +387,11 @@ float CActorBase::GetDamping() const
 {
 	return m_fDamping;
 }
+
+/*
+*/
+void CActorBase::SetJumping(float j)
+{
+	m_fJumping = Max(j, 0.0f);
+}
+
