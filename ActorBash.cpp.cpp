@@ -464,3 +464,20 @@ void CActorBase::SetGround(int g)
 {
 	m_nGround = g;
 }
+
+int CActorBase::GetGround() const
+{
+	return m_nGround;
+}
+
+/*
+*/
+void CActorBase::SetCeiling(int c)
+{
+	m_nCeiling = c;
+}
+
+int CActorBase::GetCeiling() const
+{
+	return m_nCeiling;
+}
