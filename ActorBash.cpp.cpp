@@ -394,4 +394,7 @@ void CActorBase::SetJumping(float j)
 {
 	m_fJumping = Max(j, 0.0f);
 }
-
+float CActorBase::GetJumping() const
+{
+	return m_fJumping;
+}
