@@ -370,3 +370,8 @@ void CActorBase::SetAcceleration(float accel)
 {
 	m_fAcceleration = Max(accel, 0.0f);
 }
+
+float CActorBase::GetAcceleration() const
+{
+	return m_fAcceleration;
+}
