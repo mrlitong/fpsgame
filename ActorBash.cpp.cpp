@@ -439,3 +439,16 @@ float CActorBase::GetStateTime(int state) const
 	assert(state >= 0 && state < NUM_STATES && "CPlayerActor::GetStateTime(): bad state number");
 	return m_pTimes[state];
 }
+
+/******************************************************************************\
+*
+* Contacts
+*
+\******************************************************************************/
+
+/*
+*/
+int CActorBase::GetNumContacts() const
+{
+	return m_vecContacts.Size();
+}
