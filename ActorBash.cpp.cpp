@@ -433,3 +433,9 @@ int CActorBase::GetState(int state) const
 	assert(state >= 0 && state < NUM_STATES && "CPlayerActor::GetState(): bad state number");
 	return m_pStates[state];
 }
+
+float CActorBase::GetStateTime(int state) const
+{
+	assert(state >= 0 && state < NUM_STATES && "CPlayerActor::GetStateTime(): bad state number");
+	return m_pTimes[state];
+}
