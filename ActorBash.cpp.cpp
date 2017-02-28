@@ -426,4 +426,10 @@ const vec3 &CActorBase::GetViewDirection() const
 *
 \******************************************************************************/
 
-
+/*
+*/
+int CActorBase::GetState(int state) const
+{
+	assert(state >= 0 && state < NUM_STATES && "CPlayerActor::GetState(): bad state number");
+	return m_pStates[state];
+}
