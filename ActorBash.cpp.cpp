@@ -382,3 +382,8 @@ void CActorBase::SetDamping(float d)
 {
 	m_fDamping = Max(d, 0.0f);
 }
+
+float CActorBase::GetDamping() const
+{
+	return m_fDamping;
+}
