@@ -398,3 +398,20 @@ float CActorBase::GetJumping() const
 {
 	return m_fJumping;
 }
+
+/*
+*/
+void CActorBase::SetViewDirection(const vec3 &d)
+{
+	m_vDirection = Normalize(d);
+
+	// ortho basis
+	vec3 tangent, binormal;
+	OrthoBasis(m_vUp, tangent, binormal);
+
+	// decompose direction
+	m_fPhiAngle = CMathCore::ATan2(Dot(m_vDirection, tangent), Dot(m_vDirection, binormal)) * RAD2DEG;
+	m_fThetaAngle = CMathCore::ACos(Clamp(Dot(m_vDirection, m_vUp), -1.0f, 1.0f)) * RAD2DEG - 90.0f;
+
+	m_pObject->SetWorldTransform(Get_Body_Transform());
+}
