@@ -415,3 +415,8 @@ void CActorBase::SetViewDirection(const vec3 &d)
 
 	m_pObject->SetWorldTransform(Get_Body_Transform());
 }
+
+const vec3 &CActorBase::GetViewDirection() const
+{
+	return m_vDirection;
+}
