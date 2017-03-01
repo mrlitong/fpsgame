@@ -599,3 +599,28 @@ const CWorldBoundSphere & CActorBase::GetWorldBoundSphere() const
 	return m_WorldBoundSphere;
 }
 
+void CActorBase::RenderVisualizer()
+{
+	m_pShape->RenderVisualizer(vec4(1.0f, 0.0f, 0.0f, 1.0f));
+	g_Engine.pVisualizer->RenderVector(m_pShape->GetCenter(), m_pShape->GetCenter() + m_vDirection, vec4(1.0f, 0.0f, 0.0f, 1.0f));
+}
+
+void CActorBase::SetFriction(float friction)
+{
+	m_fFriction = friction;
+}
+
+float CActorBase::GetFriction() const
+{
+	return m_fFriction;
+}
+
+void CActorBase::SetPosition(const MathLib::vec3& pos)
+{
+	m_vPosition = pos;
+}
+
+const MathLib::vec3& CActorBase::GetPosition() const
+{
+	return m_vPosition;
+}
