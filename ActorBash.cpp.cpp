@@ -481,3 +481,11 @@ int CActorBase::GetCeiling() const
 {
 	return m_nCeiling;
 }
+
+/*
+*/
+Mat4 CActorBase::Get_Body_Transform() const
+{
+	Vec3 center = m_vPosition + Vec3(m_vUp * (m_pShape->GetHHeight() + m_pShape->GetRadius()));
+	return SetTo(center, center + Vec3(m_vDirection - m_vUp * Dot(m_vDirection, m_vUp)), m_vUp) * Mat4(RotateX(-90.0f) * RotateZ(90.0f));
+}
