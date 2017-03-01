@@ -589,3 +589,13 @@ const CBoundSphere &CActorBase::GetBoundSphere() const
 	return m_BoundSphere;
 }
 
+const CWorldBoundBox & CActorBase::GetWorldBoundBox() const
+{
+	return m_WorldBoundBox;
+}
+
+const CWorldBoundSphere & CActorBase::GetWorldBoundSphere() const
+{
+	return m_WorldBoundSphere;
+}
+
