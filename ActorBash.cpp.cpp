@@ -542,6 +542,19 @@ void CActorBase::Update_States(int enabled, float ifps)
 			Update_State(g_pSysControl->GetState(CSysControl::STATE_FORWARD), STATE_FORWARD, 1, 1, ifps);
 			Update_State(g_pSysControl->GetState(CSysControl::STATE_BACKWARD), STATE_BACKWARD, 1, 1, ifps);
 		}
-	}
+		if (g_pSysControl->GetState(CSysControl::STATE_MOVE_LEFT) && g_pSysControl->GetState(CSysControl::STATE_MOVE_RIGHT))
+		{
+			Update_State(0, STATE_MOVE_LEFT, 1, 1, ifps);
+			Update_State(0, STATE_MOVE_RIGHT, 1, 1, ifps);
+		}
+		else
+		{
+			Update_State(g_pSysControl->GetState(CSysControl::STATE_MOVE_LEFT), STATE_MOVE_LEFT, 1, 1, ifps);
+			Update_State(g_pSysControl->GetState(CSysControl::STATE_MOVE_RIGHT), STATE_MOVE_RIGHT, 1, 1, ifps);
+		}
 
+		Update_State(g_pSysControl->GetState(CSysControl::STATE_CROUCH), STATE_CROUCH, 1, 1, ifps);
+		Update_State(g_pSysControl->GetState(CSysControl::STATE_JUMP), STATE_JUMP, m_nGround, 1, ifps);
+		Update_State(g_pSysControl->GetState(CSysControl::STATE_RUN), STATE_RUN, 1, 1, ifps);
+	}
 }
