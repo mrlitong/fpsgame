@@ -508,6 +508,21 @@ int CActorBase::Update_State(int condition, int state, int begin, int end, float
 		m_pStates[state] = STATE_END;
 		return STATE_END;
 	}
+	// begin to enabled
+	if ((condition && m_pStates[state] == STATE_BEGIN) || m_pStates[state] == STATE_ENABLED)
+	{
+		m_pStates[state] = STATE_ENABLED;
+		m_pTimes[state] += ifps;
+		return STATE_ENABLED;
+	}
 
+	// end to disabled
+	if (m_pStates[state] == STATE_END)
+	{
+		m_pStates[state] = STATE_DISABLED;
+		return STATE_DISABLED;
+	}
+
+	return STATE_DISABLED;
 
 }
