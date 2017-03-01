@@ -570,3 +570,22 @@ void CActorBase::Update_States(int enabled, float ifps)
 	}
 }
 
+
+/******************************************************************************\
+*
+* Bounds
+*
+\******************************************************************************/
+
+/*
+*/
+const CBoundBox &CActorBase::GetBoundBox() const
+{
+	return m_BoundBox;
+}
+
+const CBoundSphere &CActorBase::GetBoundSphere() const
+{
+	return m_BoundSphere;
+}
+
