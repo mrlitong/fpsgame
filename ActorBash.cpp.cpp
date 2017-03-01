@@ -489,3 +489,25 @@ Mat4 CActorBase::Get_Body_Transform() const
 	Vec3 center = m_vPosition + Vec3(m_vUp * (m_pShape->GetHHeight() + m_pShape->GetRadius()));
 	return SetTo(center, center + Vec3(m_vDirection - m_vUp * Dot(m_vDirection, m_vUp)), m_vUp) * Mat4(RotateX(-90.0f) * RotateZ(90.0f));
 }
+
+/*
+*/
+int CActorBase::Update_State(int condition, int state, int begin, int end, float ifps)
+{
+	// disabled to begin
+	if (condition && m_pStates[state] == STATE_DISABLED && begin)
+	{
+		m_pStates[state] = STATE_BEGIN;
+		m_pTimes[state] = 0.0f;
+		return STATE_BEGIN;
+	}
+
+	// enabled or begin to end
+	if (condition == 0 && (m_pStates[state] == STATE_ENABLED || m_pStates[state] == STATE_BEGIN) && end)
+	{
+		m_pStates[state] = STATE_END;
+		return STATE_END;
+	}
+
+
+}
