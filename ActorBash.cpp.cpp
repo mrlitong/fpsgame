@@ -526,3 +526,22 @@ int CActorBase::Update_State(int condition, int state, int begin, int end, float
 	return STATE_DISABLED;
 
 }
+
+void CActorBase::Update_States(int enabled, float ifps)
+{
+	// handle states
+	if (enabled)
+	{
+		if (g_pSysControl->GetState(CSysControl::STATE_FORWARD) && g_pSysControl->GetState(CSysControl::STATE_BACKWARD))
+		{
+			Update_State(0, STATE_FORWARD, 1, 1, ifps);
+			Update_State(0, STATE_BACKWARD, 1, 1, ifps);
+		}
+		else
+		{
+			Update_State(g_pSysControl->GetState(CSysControl::STATE_FORWARD), STATE_FORWARD, 1, 1, ifps);
+			Update_State(g_pSysControl->GetState(CSysControl::STATE_BACKWARD), STATE_BACKWARD, 1, 1, ifps);
+		}
+	}
+
+}
