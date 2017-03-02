@@ -27,3 +27,11 @@ int CGameMain::ShutDown()
 	delete m_pGameProcess;
 	return 1;
 }
+
+int CGameMain::Update()
+{
+	float ifps = g_Engine.pGame->GetIFps();
+	g_pSysControl->Update(ifps);
+	m_pGameProcess->Update();
+	return 1;
+}
