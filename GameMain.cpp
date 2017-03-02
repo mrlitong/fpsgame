@@ -35,3 +35,8 @@ int CGameMain::Update()
 	m_pGameProcess->Update();
 	return 1;
 }
+int CGameMain::Render()
+{
+	m_pGameProcess->Render();
+	return 1;
+}
