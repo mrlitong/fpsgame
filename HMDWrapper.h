@@ -1,0 +1,2 @@
+#ifndef __HMD_WRAPPER_H__
+#define __HMD_WRAPPER_H__
