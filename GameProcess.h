@@ -1,28 +1,8 @@
 #pragma once
-#include "GameProcess.h"
-#include "Engine.h"
-#include "World.h"
-#include "App.h"
-#include "ToolsCamera.h"
-#include "ControlsApp.h"
-#include "MathLib.h"
-#include "Game.h"
-#include "Editor.h"
-#include "Input.h"
-#include "BlueRayUtils.h"
-#include "World.h"
-#include "Object.h"
-#include "Action.h"
-#include "FPSRoleLocal.h"
-#include "StarControl.h"
-#include "RayControl.h"
-#include "CameraBase.h"
-#include "ActorBase.h"
-#include "sys/SysControl.h"
-#include "FileSystem.h"
-#include "RenderManager.h"
-#include "Texture.h"
-using namespace MathLib;
+#include "MessageBase.h"
+#include "SkillSystem.h"
+#include "RoleBase.h"
+#include "Vector.h"
 
 
 class CFPSRoleLocal;
