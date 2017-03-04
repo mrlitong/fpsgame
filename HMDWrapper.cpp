@@ -24,3 +24,12 @@ private:
 	vec3    m_vLocalUp;
 
 };
+
+CLocalHMDWrapper::CLocalHMDWrapper()
+{
+	m_nUseHMD = 1;
+	m_nHaveHMD = 0;
+	m_vLocalDirection = forward_vector;
+	m_vLocalUp = up_vector;
+}
+
