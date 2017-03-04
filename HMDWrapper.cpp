@@ -59,3 +59,9 @@ void CLocalHMDWrapper::Update()
 		m_vLocalUp = rotate * up;
 	}
 }
+
+void CLocalHMDWrapper::Shutdown()
+{
+	Interface::CDeviceInterface::GetInstance()->Destroy();
+}
+
