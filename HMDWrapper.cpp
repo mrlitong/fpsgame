@@ -70,3 +70,20 @@ void CLocalHMDWrapper::SetUseHMD(int u)
 	m_nUseHMD = u;
 }
 
+int CLocalHMDWrapper::GetUseHMD() const
+{
+	return m_nUseHMD && m_nHaveHMD;
+}
+
+const MathLib::vec3 & CLocalHMDWrapper::GetLocalDirection() const
+{
+	return m_vLocalDirection;
+}
+
+const MathLib::vec3 & CLocalHMDWrapper::GetLocalUp() const
+{
+	return m_vLocalUp;
+}
+
+CLocalHMDWrapper LocalHMDWrapper;
+CHMDWrapper *g_pHMD = &LocalHMDWrapper;
