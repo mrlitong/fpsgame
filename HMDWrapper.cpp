@@ -43,3 +43,19 @@ void CLocalHMDWrapper::Init()
 	m_nHaveHMD = Interface::CDeviceInterface::GetInstance()->InitEnv();
 }
 
+void CLocalHMDWrapper::Update()
+{
+	if (GetUseHMD())
+	{
+		Interface::SEulerAngles sData;
+		Interface::CDeviceInterface::GetInstance()->GetHMDSensorRotation(sData);
+		Interface::CDeviceInterface::GetInstance()->Run();
+
+		vec3 dir = forward_vector;
+		vec3 up = up_vector;
+		quat rotate(-sData.fPitch * RAD2DEG, sData.fRoll * RAD2DEG, sData.fYaw * RAD2DEG);
+
+		m_vLocalDirection = rotate * dir;
+		m_vLocalUp = rotate * up;
+	}
+}
