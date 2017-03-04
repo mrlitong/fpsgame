@@ -16,6 +16,11 @@ public:
 	virtual int                 GetUseHMD() const;
 	virtual const MathLib::vec3 &GetLocalDirection() const;
 	virtual const MathLib::vec3 &GetLocalUp() const;
+private:
 
+	int     m_nUseHMD;
+	int     m_nHaveHMD;
+	vec3    m_vLocalDirection;
+	vec3    m_vLocalUp;
 
-}
+};
