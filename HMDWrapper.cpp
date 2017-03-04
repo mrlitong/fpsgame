@@ -33,3 +33,13 @@ CLocalHMDWrapper::CLocalHMDWrapper()
 	m_vLocalUp = up_vector;
 }
 
+CLocalHMDWrapper::~CLocalHMDWrapper()
+{
+
+}
+
+void CLocalHMDWrapper::Init()
+{
+	m_nHaveHMD = Interface::CDeviceInterface::GetInstance()->InitEnv();
+}
+
