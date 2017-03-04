@@ -65,3 +65,8 @@ void CLocalHMDWrapper::Shutdown()
 	Interface::CDeviceInterface::GetInstance()->Destroy();
 }
 
+void CLocalHMDWrapper::SetUseHMD(int u)
+{
+	m_nUseHMD = u;
+}
+
