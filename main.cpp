@@ -7,3 +7,6 @@
 #include "direct.h"
 #include "HMDWrapper.h"
 
+#include "EngineConsole.h"
+#include "FileSystem.h"
+
