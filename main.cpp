@@ -31,5 +31,19 @@ int main(int argc, char* argv[])
 		video_resizable = 0;
 		video_vsync = 0;
 	}
+	else
+	{
+		//无头盔
+		render_stereo = 0;
+
+		//自定义窗口分辨率
+		video_mode = -1;
+		video_fullscreen = 0;
+		video_width = 1280;
+		video_height = 720;
+		video_resizable = 0;
+		video_vsync = 0;
+	}
+
 
 }
