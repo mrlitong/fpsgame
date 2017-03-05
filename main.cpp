@@ -3,3 +3,7 @@
 #include "GameMain.h"
 
 
+#include "Console.h"
+#include "direct.h"
+#include "HMDWrapper.h"
+
