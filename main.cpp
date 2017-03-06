@@ -72,6 +72,10 @@ int main(int argc, char* argv[])
 	//1.空 2.路径 3.空 4.空 5.参数个数？  6.一个指针数组指针,就是上面定义的那个  7.空 8.密码 9.一个类指针
 	//CEngine(CApp *pApp, const char *pAppPath, void *pExternalWindow, const char *pHomePath, int argc, char **argv, const char *pProject, const char *pPassword, CInterfaceBase *pInitInterface);
 
+	g_Engine.pEngine->SetUpdateInterface(pUpdate);
+	g_Engine.pEngine->SetShutdownInterface(pShutdown);	//如果注释掉，退出调试会弹错
+	g_Engine.pEngine->SetRenderInterface(pRender);	//渲染界面，注释掉貌似没有任何影响
+
 
 
 }
