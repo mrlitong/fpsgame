@@ -55,4 +55,9 @@ int main(int argc, char* argv[])
 	video_vsync = 0;		
 #endif
 
+	char pAppPath[260];		
+	getcwd(pAppPath, 260);
+	strcat(pAppPath, "\\");
+
+	CGameMain t_Game;
 }
