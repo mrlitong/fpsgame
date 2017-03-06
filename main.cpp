@@ -44,6 +44,15 @@ int main(int argc, char* argv[])
 		video_resizable = 0;
 		video_vsync = 0;
 	}
+#else
+	render_stereo = 0;
 
+	video_mode = -1;	
+	video_fullscreen = 0;	
+	video_width = 1280;		
+	video_height = 720;		
+	video_resizable = 0;	
+	video_vsync = 0;		
+#endif
 
 }
