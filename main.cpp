@@ -76,6 +76,16 @@ int main(int argc, char* argv[])
 	g_Engine.pEngine->SetShutdownInterface(pShutdown);	
 	g_Engine.pEngine->SetRenderInterface(pRender);	
 
+	while (g_Engine.pEngine->IsDone() == 0)	//isDone
+	{
+#ifdef USE_HMD
+		g_pHMD->Update();
+#endif
+		g_Engine.pEngine->DoUpdate();
+		g_Engine.pEngine->DoRender();
+		g_Engine.pEngine->DoSwap();
+	}
+
 
 
 }
