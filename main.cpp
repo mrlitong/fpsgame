@@ -86,6 +86,13 @@ int main(int argc, char* argv[])
 		g_Engine.pEngine->DoSwap();
 	}
 
+	delete g_Engine.pEngine;
+	g_Engine.pEngine = NULL;
 
+#ifdef USE_HMD
+	g_pHMD->Shutdown();
+#endif
+	//return 1; 
+	return 0;	
 
 }
