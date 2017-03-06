@@ -73,8 +73,8 @@ int main(int argc, char* argv[])
 	//CEngine(CApp *pApp, const char *pAppPath, void *pExternalWindow, const char *pHomePath, int argc, char **argv, const char *pProject, const char *pPassword, CInterfaceBase *pInitInterface);
 
 	g_Engine.pEngine->SetUpdateInterface(pUpdate);
-	g_Engine.pEngine->SetShutdownInterface(pShutdown);	//如果注释掉，退出调试会弹错
-	g_Engine.pEngine->SetRenderInterface(pRender);	//渲染界面，注释掉貌似没有任何影响
+	g_Engine.pEngine->SetShutdownInterface(pShutdown);	
+	g_Engine.pEngine->SetRenderInterface(pRender);	
 
 
 
