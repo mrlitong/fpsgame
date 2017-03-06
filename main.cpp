@@ -69,6 +69,9 @@ int main(int argc, char* argv[])
 	char *pArg[3] = { NULL, "-engine_config", "data/TestProject.cfg" };	
 	g_Engine.pEngine = new CEngine(NULL, pAppPath, NULL, NULL, 3, pArg, NULL, "1123581321", pInit);	
 
+	//1.空 2.路径 3.空 4.空 5.参数个数？  6.一个指针数组指针,就是上面定义的那个  7.空 8.密码 9.一个类指针
+	//CEngine(CApp *pApp, const char *pAppPath, void *pExternalWindow, const char *pHomePath, int argc, char **argv, const char *pProject, const char *pPassword, CInterfaceBase *pInitInterface);
+
 
 
 }
