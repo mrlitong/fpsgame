@@ -66,8 +66,9 @@ int main(int argc, char* argv[])
 	CInterfaceBase *pShutdown = MakeInterface(&t_Game, &CGameMain::ShutDown);
 	CInterfaceBase *pRender = MakeInterface(&t_Game, &CGameMain::Render);
 
-	char *pArg[3] = { NULL, "-engine_config", "data/TestProject.cfg" };	//【这个数组是做什么用的？】
-	g_Engine.pEngine = new CEngine(NULL, pAppPath, NULL, NULL, 3, pArg, NULL, "1123581321", pInit);	//这是CEngine类的初始化，以及赋值。
+	char *pArg[3] = { NULL, "-engine_config", "data/TestProject.cfg" };	
+	g_Engine.pEngine = new CEngine(NULL, pAppPath, NULL, NULL, 3, pArg, NULL, "1123581321", pInit);	
+
 
 
 }
