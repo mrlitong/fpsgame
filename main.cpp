@@ -60,4 +60,12 @@ int main(int argc, char* argv[])
 	strcat(pAppPath, "\\");
 
 	CGameMain t_Game;
+
+	CInterfaceBase *pInit = MakeInterface(&t_Game, &CGameMain::Init);
+	CInterfaceBase *pUpdate = MakeInterface(&t_Game, &CGameMain::Update);
+	CInterfaceBase *pShutdown = MakeInterface(&t_Game, &CGameMain::ShutDown);
+	CInterfaceBase *pRender = MakeInterface(&t_Game, &CGameMain::Render);
+
+
+
 }
