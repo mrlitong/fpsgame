@@ -46,3 +46,14 @@ void CMoveDummy::SetCollisionMask(int m)
 {
 	m_pShape->SetCollisionMask(m);
 }
+
+int CMoveDummy::GetCollisionMask() const
+{
+	return m_nCollisionMask;
+}
+
+void CMoveDummy::SetGround(int g)
+{
+	m_nGround = g;
+}
+
