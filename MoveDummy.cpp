@@ -24,3 +24,11 @@ CMoveDummy::CMoveDummy()		//¹¹Ôìº¯Êý
 	SetCollisionMask(1);
 	Clear();
 }
+
+CMoveDummy::~CMoveDummy()
+{
+	m_pDummy->SetObject(NULL);
+	SAFE_DELETE(m_pObject);
+	SAFE_DELETE(m_pDummy);
+}
+
