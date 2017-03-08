@@ -32,3 +32,7 @@ CMoveDummy::~CMoveDummy()
 	SAFE_DELETE(m_pDummy);
 }
 
+void CMoveDummy::SetCollision(int c)
+{
+	m_nCollision = c;
+}
