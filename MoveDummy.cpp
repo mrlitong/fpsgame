@@ -36,3 +36,9 @@ void CMoveDummy::SetCollision(int c)
 {
 	m_nCollision = c;
 }
+
+int CMoveDummy::GetCollision() const
+{
+	return m_nCollision;
+}
+
