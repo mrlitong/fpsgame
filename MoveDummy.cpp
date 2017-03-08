@@ -42,3 +42,7 @@ int CMoveDummy::GetCollision() const
 	return m_nCollision;
 }
 
+void CMoveDummy::SetCollisionMask(int m)
+{
+	m_pShape->SetCollisionMask(m);
+}
