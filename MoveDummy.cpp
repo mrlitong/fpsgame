@@ -109,3 +109,9 @@ void CMoveDummy::SetCollisionHeight(float height)
 
 	Update_Bounds();
 }
+float CMoveDummy::GetCollisionHeight() const
+{
+	return m_pShape->GetHeight();
+}
+
+
