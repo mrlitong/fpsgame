@@ -57,3 +57,7 @@ void CMoveDummy::SetGround(int g)
 	m_nGround = g;
 }
 
+int CMoveDummy::GetGround() const
+{
+	return m_nGround;
+}
