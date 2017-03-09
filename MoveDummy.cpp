@@ -98,3 +98,14 @@ float CMoveDummy::GetCollisionRadius() const
 {
 	return m_pShape->GetRadius();
 }
+
+void CMoveDummy::SetCollisionHeight(float height)
+{
+	if (!Compare(m_pShape->GetHeight(), height))
+	{
+		m_pDummy->SetPreserveTransform(Mat4(Translate(m_vUp * (height - m_pShape->GetHeight()) * 0.5f)) * m_pDummy->GetTransform());
+		m_pShape->SetHeight(height);
+	}
+
+	Update_Bounds();
+}
