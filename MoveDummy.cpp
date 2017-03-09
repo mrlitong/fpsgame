@@ -72,3 +72,7 @@ int CMoveDummy::GetCeiling() const
 	return m_nCeiling;
 }
 
+void CMoveDummy::SetPosition(const MathLib::vec3& p)
+{
+	m_vPosition = p;
+}
