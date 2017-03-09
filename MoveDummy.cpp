@@ -61,3 +61,14 @@ int CMoveDummy::GetGround() const
 {
 	return m_nGround;
 }
+
+void CMoveDummy::SetCeiling(int c)
+{
+	m_nCeiling = c;
+}
+
+int CMoveDummy::GetCeiling() const
+{
+	return m_nCeiling;
+}
+
