@@ -76,3 +76,8 @@ void CMoveDummy::SetPosition(const MathLib::vec3& p)
 {
 	m_vPosition = p;
 }
+
+const MathLib::vec3& CMoveDummy::GetPosition() const
+{
+	return m_vPosition;
+}
