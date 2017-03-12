@@ -145,3 +145,9 @@ void CMoveDummy::SetEnabled(int e)
 {
 	m_nEnabled = e;
 }
+
+int CMoveDummy::GetEnabled() const
+{
+	return m_nEnabled;
+}
+
