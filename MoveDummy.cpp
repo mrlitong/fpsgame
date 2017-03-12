@@ -132,3 +132,7 @@ float CMoveDummy::GetCollisionHeight() const
 {
 	return m_pShape->GetHeight();
 }
+void CMoveDummy::SetUp(const MathLib::vec3& u)
+{
+	m_vUp = u;
+}
