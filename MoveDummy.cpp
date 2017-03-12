@@ -128,3 +128,7 @@ void CMoveDummy::SetEnabled(int e)
 	m_nEnabled = e;
 }
 
+float CMoveDummy::GetCollisionHeight() const
+{
+	return m_pShape->GetHeight();
+}
