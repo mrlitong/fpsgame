@@ -151,3 +151,8 @@ int CMoveDummy::GetEnabled() const
 	return m_nEnabled;
 }
 
+void CMoveDummy::SetVelocity(const MathLib::vec3& v)
+{
+	m_vVelocity = v;
+}
+
