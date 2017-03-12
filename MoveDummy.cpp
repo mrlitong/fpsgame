@@ -136,3 +136,12 @@ void CMoveDummy::SetUp(const MathLib::vec3& u)
 {
 	m_vUp = u;
 }
+
+const MathLib::vec3& CMoveDummy::GetUp() const
+{
+	return m_vUp;
+}
+void CMoveDummy::SetEnabled(int e)
+{
+	m_nEnabled = e;
+}
