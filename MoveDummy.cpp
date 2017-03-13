@@ -156,3 +156,12 @@ void CMoveDummy::SetVelocity(const MathLib::vec3& v)
 	m_vVelocity = v;
 }
 
+const MathLib::vec3& CMoveDummy::GetVelocity() const
+{
+	return m_vVelocity;
+}
+
+void CMoveDummy::SetMaxVelocity(float v)
+{
+	m_fMaxVelocity = v;
+}
