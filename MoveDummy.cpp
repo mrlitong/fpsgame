@@ -178,4 +178,7 @@ float CMoveDummy::GetAcceleration() const
 {
 	return m_fAcceleration;
 }
-
+float CMoveDummy::GetMaxThrough() const
+{
+	return m_fMaxThrough;
+}
