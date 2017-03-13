@@ -198,6 +198,8 @@ void CMoveDummy::Clear()
 	m_pObject->SetBody(NULL);
 	m_pObject->SetBody(m_pDummy);
 
-
+	m_pShape->SetBody(NULL);
+	m_pShape->SetBody(m_pDummy);
+	m_pShape->SetExclusionMask(2);
 
 }
