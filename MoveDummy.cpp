@@ -182,3 +182,17 @@ float CMoveDummy::GetMaxThrough() const
 {
 	return m_fMaxThrough;
 }
+void CMoveDummy::Clear()
+{
+	SetVelocity(vec3_zero);
+	SetMaxVelocity(2.5f);
+	SetAcceleration(15.0f);
+	SetCollision(1);
+	SetCollisionMask(1);
+	SetGround(0);
+	SetCeiling(0);
+	SetPosition(vec3_zero);
+	SetUp(vec3(0.0f, 0.0f, 1.0f));
+	SetEnabled(1);
+
+}
