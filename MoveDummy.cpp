@@ -174,3 +174,7 @@ void CMoveDummy::SetAcceleration(float a)
 {
 	m_fAcceleration = a;
 }
+float CMoveDummy::GetAcceleration() const
+{
+	return m_fAcceleration;
+}
