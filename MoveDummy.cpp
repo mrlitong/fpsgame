@@ -194,5 +194,10 @@ void CMoveDummy::Clear()
 	SetPosition(vec3_zero);
 	SetUp(vec3(0.0f, 0.0f, 1.0f));
 	SetEnabled(1);
+	m_pDummy->SetEnabled(1);
+	m_pObject->SetBody(NULL);
+	m_pObject->SetBody(m_pDummy);
+
+
 
 }
