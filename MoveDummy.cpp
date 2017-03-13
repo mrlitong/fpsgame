@@ -202,4 +202,10 @@ void CMoveDummy::Clear()
 	m_pShape->SetBody(m_pDummy);
 	m_pShape->SetExclusionMask(2);
 
+	m_pObject->SetWorldTransform(Get_Body_Transform());
+
+
+
+
+
 }
