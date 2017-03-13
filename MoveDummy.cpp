@@ -204,7 +204,8 @@ void CMoveDummy::Clear()
 
 	m_pObject->SetWorldTransform(Get_Body_Transform());
 
-
+	SetCollisionRadius(0.5f);
+	SetCollisionHeight(1.0f);
 
 
 
