@@ -178,3 +178,4 @@ float CMoveDummy::GetAcceleration() const
 {
 	return m_fAcceleration;
 }
+
