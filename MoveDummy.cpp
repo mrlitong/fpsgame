@@ -169,3 +169,8 @@ float CMoveDummy::GetMaxVelocity() const
 {
 	return m_fMaxVelocity;
 }
+
+void CMoveDummy::SetAcceleration(float a)
+{
+	m_fAcceleration = a;
+}
