@@ -208,5 +208,8 @@ void CMoveDummy::Clear()
 	SetCollisionHeight(1.0f);
 
 
+	SetMaxThrough(0.4f);
+
+	m_vecContacts.Clear();
 
 }
