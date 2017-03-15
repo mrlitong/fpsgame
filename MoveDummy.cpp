@@ -230,4 +230,8 @@ int CMoveDummy::Update(float fIfps, const MathLib::vec3& vDirection, const MathL
 	// time
 	float time = fIfps;// * g_Engine.pPhysics->GetScale();
 
+	// penetration tolerance
+	float penetration = g_Engine.pPhysics->GetPenetrationTolerance();
+	float penetration_2 = penetration * 2.0f;
+
 }
