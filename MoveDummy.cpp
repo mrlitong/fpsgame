@@ -213,3 +213,7 @@ void CMoveDummy::Clear()
 	m_vecContacts.Clear();
 
 }
+int CMoveDummy::Update(float fIfps, const MathLib::vec3& vDirection)
+{
+	return Update(fIfps, vDirection, m_vPosition);
+}
