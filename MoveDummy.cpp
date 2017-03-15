@@ -233,5 +233,12 @@ int CMoveDummy::Update(float fIfps, const MathLib::vec3& vDirection, const MathL
 	// penetration tolerance
 	float penetration = g_Engine.pPhysics->GetPenetrationTolerance();
 	float penetration_2 = penetration * 2.0f;
+	// clear collision flags
+	if (GetCollision())
+	{
+		m_nGround = 0;
+		m_nCeiling = 0;
+	}
+
 
 }
