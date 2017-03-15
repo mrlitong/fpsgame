@@ -217,3 +217,9 @@ int CMoveDummy::Update(float fIfps, const MathLib::vec3& vDirection)
 {
 	return Update(fIfps, vDirection, m_vPosition);
 }
+int CMoveDummy::Update(float fIfps, const MathLib::vec3& vDirection, const MathLib::vec3& pos)
+{
+	SetPosition(pos);
+
+	vec3 vOldPosition = m_vPosition;
+}
