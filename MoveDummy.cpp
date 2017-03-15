@@ -242,4 +242,27 @@ int CMoveDummy::Update(float fIfps, const MathLib::vec3& vDirection, const MathL
 
 	// frozen linear velocity
 	float frozen_velocity = g_Engine.pPhysics->GetFrozenLinearVelocity();
+
+
+	// movement
+	do
+	{
+		// adaptive time step
+		float ifps = Min(time, MOVE_DUMMY_IFPS);
+		time -= ifps;
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+
+
 }
