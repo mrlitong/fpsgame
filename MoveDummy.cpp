@@ -222,4 +222,10 @@ int CMoveDummy::Update(float fIfps, const MathLib::vec3& vDirection, const MathL
 	SetPosition(pos);
 
 	vec3 vOldPosition = m_vPosition;
+
+	float fVVelocity = Dot(m_vVelocity, m_vUp);
+	float fHVelocity = CMathCore::Sqrt(CMathCore::Abs(m_vVelocity.length2() - fVVelocity*fVVelocity));
+
+
+
 }
