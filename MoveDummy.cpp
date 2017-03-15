@@ -226,6 +226,8 @@ int CMoveDummy::Update(float fIfps, const MathLib::vec3& vDirection, const MathL
 	float fVVelocity = Dot(m_vVelocity, m_vUp);
 	float fHVelocity = CMathCore::Sqrt(CMathCore::Abs(m_vVelocity.length2() - fVVelocity*fVVelocity));
 
-
+	m_vVelocity = m_vUp * fVVelocity + vDirection * fHVelocity;
+	// time
+	float time = fIfps;// * g_Engine.pPhysics->GetScale();
 
 }
