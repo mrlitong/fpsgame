@@ -240,5 +240,6 @@ int CMoveDummy::Update(float fIfps, const MathLib::vec3& vDirection, const MathL
 		m_nCeiling = 0;
 	}
 
-
+	// frozen linear velocity
+	float frozen_velocity = g_Engine.pPhysics->GetFrozenLinearVelocity();
 }
