@@ -250,13 +250,22 @@ int CMoveDummy::Update(float fIfps, const MathLib::vec3& vDirection, const MathL
 		// adaptive time step
 		float ifps = Min(time, MOVE_DUMMY_IFPS);
 		time -= ifps;
+		// integrate velocity
+		m_vVelocity += vDirection * (m_fAcceleration * ifps);
+		m_vVelocity += g_Engine.pPhysics->GetGravity() * ifps;
+
+		fVVelocity = Dot(m_vVelocity, m_vUp);
+		fHVelocity = CMathCore::Sqrt(m_vVelocity.length2() - fVVelocity*fVVelocity);
+
+		m_vVelocity = m_vUp * fVVelocity + vDirection * m_fMaxVelocity;
+
 
 
 
 
 
 	}
-
+	while (time > EPSILON);
 
 
 
