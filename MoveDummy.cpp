@@ -280,6 +280,17 @@ int CMoveDummy::Update(float fIfps, const MathLib::vec3& vDirection, const MathL
 	{
 		m_vPosition = vOldPosition;
 	}
+	// current position
+	m_pObject->SetWorldTransform(Get_Body_Transform());
 
+	for (int j = 0; j < m_vecContacts.Size(); j++)
+	{
+		const CShape::Contact &c = m_vecContacts[j];
+		if (Dot(vDirection, c.normal) < -0.9f)
+		{
+			return 0;
+		}
+	}
 
+	return 1;
 }
