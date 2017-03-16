@@ -294,3 +294,10 @@ int CMoveDummy::Update(float fIfps, const MathLib::vec3& vDirection, const MathL
 
 	return 1;
 }
+void CMoveDummy::Update_Bounds()
+{
+	float radius = m_pShape->GetRadius();
+	float hheight = m_pShape->GetHHeight();
+	m_BoundBox.Set(vec3(-radius, -radius, 0.0f), vec3(radius, radius, (radius + hheight) * 2.0f));
+	m_BoundSphere.Set(vec3(0.0f, 0.0f, radius + hheight), radius + hheight);
+}
