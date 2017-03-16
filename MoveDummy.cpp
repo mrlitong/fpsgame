@@ -280,9 +280,6 @@ int CMoveDummy::Update(float fIfps, const MathLib::vec3& vDirection, const MathL
 	{
 		m_vPosition = vOldPosition;
 	}
-}
-
-
 
 
 }
