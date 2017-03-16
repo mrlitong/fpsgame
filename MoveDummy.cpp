@@ -301,3 +301,9 @@ void CMoveDummy::Update_Bounds()
 	m_BoundBox.Set(vec3(-radius, -radius, 0.0f), vec3(radius, radius, (radius + hheight) * 2.0f));
 	m_BoundSphere.Set(vec3(0.0f, 0.0f, radius + hheight), radius + hheight);
 }
+
+MathLib::Mat4 CMoveDummy::Get_Body_Transform() const
+{
+	Vec3 center = m_vPosition + Vec3(m_vUp * (m_pShape->GetHHeight() + m_pShape->GetRadius()));
+	return Translate(center);
+}
