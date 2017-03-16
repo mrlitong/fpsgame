@@ -266,8 +266,13 @@ int CMoveDummy::Update(float fIfps, const MathLib::vec3& vDirection, const MathL
 
 	}
 	while (time > EPSILON);
+	if (GetCollision())
+	{
+		int nSurface = -1;
+	}
 
-
+	Vec3 vStart = m_vPosition + vDirection * GetCollisionRadius() + Vec3(m_vUp * (m_pShape->GetHHeight() + m_pShape->GetRadius()));
+	Vec3 vEnd = vOldPosition + Vec3(m_vUp * (m_pShape->GetHHeight() + m_pShape->GetRadius()));
 
 
 
