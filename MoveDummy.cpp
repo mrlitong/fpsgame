@@ -274,7 +274,13 @@ int CMoveDummy::Update(float fIfps, const MathLib::vec3& vDirection, const MathL
 	Vec3 vStart = m_vPosition + vDirection * GetCollisionRadius() + Vec3(m_vUp * (m_pShape->GetHHeight() + m_pShape->GetRadius()));
 	Vec3 vEnd = vOldPosition + Vec3(m_vUp * (m_pShape->GetHHeight() + m_pShape->GetRadius()));
 
+	CBRObject *p = g_Engine.pWorld->GetIntersection(vStart, vEnd, 2, nSurface);
 
+	if (p != NULL)
+	{
+		m_vPosition = vOldPosition;
+	}
+}
 
 
 
