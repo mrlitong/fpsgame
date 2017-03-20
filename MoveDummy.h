@@ -19,6 +19,8 @@ public:
 	void	SetCollision(int c);
 	int		GetCollision() const;
 
+	void	SetCollisionMask(int m);
+	int		GetCollisionMask() const;
 private:
 
 }
