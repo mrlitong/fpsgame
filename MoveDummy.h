@@ -21,6 +21,9 @@ public:
 
 	void	SetCollisionMask(int m);
 	int		GetCollisionMask() const;
+	void	SetGround(int g);
+	int		GetGround() const;
+
 private:
 
 }
