@@ -6,3 +6,6 @@
 #include "Bounds.h"
 #include "Vector.h"
 #include "Shape.h"
+
+class   CObjectDummy;
+class   CBodyDummy;
