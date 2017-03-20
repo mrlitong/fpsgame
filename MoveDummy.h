@@ -25,6 +25,9 @@ public:
 	int		GetGround() const;
 	void	SetCeiling(int c);
 	int		GetCeiling() const;
+	void	SetPosition(const MathLib::vec3& p);
+	const MathLib::vec3&    GetPosition() const;
+
 private:
 
 }
