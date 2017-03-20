@@ -16,6 +16,9 @@ public:
 
 	CMoveDummy();
 	~CMoveDummy();
+	void	SetCollision(int c);
+	int		GetCollision() const;
+
 private:
 
 }
