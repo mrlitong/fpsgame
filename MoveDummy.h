@@ -23,7 +23,8 @@ public:
 	int		GetCollisionMask() const;
 	void	SetGround(int g);
 	int		GetGround() const;
-
+	void	SetCeiling(int c);
+	int		GetCeiling() const;
 private:
 
 }
