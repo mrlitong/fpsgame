@@ -9,3 +9,13 @@
 
 class   CObjectDummy;
 class   CBodyDummy;
+
+class CMoveDummy
+{
+public:
+
+	CMoveDummy();
+	~CMoveDummy();
+private:
+
+}
