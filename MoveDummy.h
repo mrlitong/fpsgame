@@ -29,6 +29,11 @@ public:
 	void	SetPosition(const MathLib::vec3& p);
 	const MathLib::vec3&    GetPosition() const;
 
+	void	SetCollisionRadius(float radius);
+	float	GetCollisionRadius() const;
+
+
+
 private:
 
 }
