@@ -60,5 +60,6 @@ public:
 
 
 private:
-
+	void			Update_Bounds();
+	MathLib::Mat4	Get_Body_Transform() const;
 }
