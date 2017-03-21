@@ -41,7 +41,22 @@ public:
 	void	SetEnabled(int e);
 	int		GetEnabled() const;
 
+	void                    SetVelocity(const MathLib::vec3& v);
+	const MathLib::vec3&    GetVelocity() const;
 
+	void	SetMaxVelocity(float v);
+	float	GetMaxVelocity() const;
+
+	void	SetAcceleration(float a);
+	float	GetAcceleration() const;
+
+	void	SetMaxThrough(float d);
+	float	GetMaxThrough() const;
+
+	void	Clear();
+
+	int		Update(float fIfps, const MathLib::vec3& vDirection);
+	int		Update(float fIfps, const MathLib::vec3& vDirection, const MathLib::vec3& pos);
 
 
 private:
