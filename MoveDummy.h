@@ -9,6 +9,7 @@
 
 class   CObjectDummy;
 class   CBodyDummy;
+class   CShapeCapsule;
 
 class CMoveDummy
 {
