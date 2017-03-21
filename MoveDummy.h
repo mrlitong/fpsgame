@@ -32,6 +32,13 @@ public:
 	void	SetCollisionRadius(float radius);
 	float	GetCollisionRadius() const;
 
+	void	SetCollisionHeight(float height);
+	float	GetCollisionHeight() const;
+
+	void                    SetUp(const MathLib::vec3& u);
+	const MathLib::vec3&    GetUp() const;
+
+
 
 
 private:
