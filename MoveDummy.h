@@ -62,4 +62,27 @@ public:
 private:
 	void			Update_Bounds();
 	MathLib::Mat4	Get_Body_Transform() const;
-}
+
+private:
+
+	int                         m_nCollision;
+	int                         m_nCollisionMask;
+	int                         m_nGround;
+	int                         m_nCeiling;
+	CObjectDummy*               m_pObject;      // dummy object
+	CBodyDummy*                 m_pDummy;       // dummy body
+	CShapeCapsule*              m_pShape;       // collision shape
+	MathLib::vec3               m_vPosition;
+	MathLib::vec3               m_vUp;
+	int                         m_nEnabled;
+	MathLib::vec3               m_vVelocity;
+	float                       m_fMaxVelocity;
+	float                       m_fAcceleration;
+	float                       m_fMaxThrough;
+
+	CBoundBox                   m_BoundBox;
+	CBoundSphere                m_BoundSphere;
+	CVector<CShape::Contact>    m_vecContacts;
+	//};
+
+#endif
