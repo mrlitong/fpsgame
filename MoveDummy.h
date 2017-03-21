@@ -38,8 +38,9 @@ public:
 	void                    SetUp(const MathLib::vec3& u);
 	const MathLib::vec3&    GetUp() const;
 
-	void                    SetEnabled(int e);
-	int                     GetEnabled() const;
+	void	SetEnabled(int e);
+	int		GetEnabled() const;
+
 
 
 
