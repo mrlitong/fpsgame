@@ -17,3 +17,15 @@ CRayControl::~CRayControl(void)
 {
 	g_Engine.pGame->RemoveNode(m_pStarNormal);
 }
+
+int CRayControl::Init()
+{
+	m_pStarNormal = (CObjectParticles*)g_Engine.pGame->LoadNode("data/StarControl/ray_line.node");
+
+	if (!m_pStarNormal)
+		return 0;
+
+	m_pStarNormal->GetTracker(TRACKER_CUSTOM)->SetTrackValue(0, 0, vec4(1.0f, 1.0f, 1.0f, 0.5f));
+
+	return 1;
+}
