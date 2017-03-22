@@ -34,3 +34,8 @@ void CRayControl::Update(const mat4& matTransform, const vec3 & vOffset)
 	m_pStarNormal->SetWorldTransform(matTransform*Translate(vOffset));
 }
 
+int CRayControl::isEnable()
+{
+	return m_pStarNormal->IsEnabled();
+}
+
