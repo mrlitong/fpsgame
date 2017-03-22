@@ -83,6 +83,6 @@ private:
 	CBoundBox                   m_BoundBox;
 	CBoundSphere                m_BoundSphere;
 	CVector<CShape::Contact>    m_vecContacts;
-	//};
+};
 
 #endif
