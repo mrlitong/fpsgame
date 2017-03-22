@@ -43,3 +43,8 @@ void CRayControl::SetEnable(int nEnable)
 {
 	m_pStarNormal->SetEnabled(nEnable);
 }
+
+void CRayControl::SetColor(const vec4& vColor)
+{
+	m_pStarNormal->SetObjectColor(vColor);
+}
