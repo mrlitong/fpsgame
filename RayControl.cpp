@@ -29,3 +29,8 @@ int CRayControl::Init()
 
 	return 1;
 }
+void CRayControl::Update(const mat4& matTransform, const vec3 & vOffset)
+{
+	m_pStarNormal->SetWorldTransform(matTransform*Translate(vOffset));
+}
+
