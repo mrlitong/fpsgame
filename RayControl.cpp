@@ -13,3 +13,7 @@ CRayControl::CRayControl(void)
 	Init();
 }
 
+CRayControl::~CRayControl(void)
+{
+	g_Engine.pGame->RemoveNode(m_pStarNormal);
+}
