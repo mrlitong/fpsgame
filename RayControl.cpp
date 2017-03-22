@@ -39,3 +39,7 @@ int CRayControl::isEnable()
 	return m_pStarNormal->IsEnabled();
 }
 
+void CRayControl::SetEnable(int nEnable)
+{
+	m_pStarNormal->SetEnabled(nEnable);
+}
