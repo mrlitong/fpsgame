@@ -18,7 +18,8 @@ class CRoleBase
 public:
 	CRoleBase(void);
 	virtual ~CRoleBase(void);
-
+	virtual int	Init(int nRoleID, const char* strCharFile);
+	virtual void	Update(float ifps);
 
 private:
 }
