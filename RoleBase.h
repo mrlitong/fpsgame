@@ -24,5 +24,8 @@ public:
 	int		GetRoleID() { return m_nRoleID; }
 	void		SetRoleID(int nID) { m_nRoleID = nID; }
 
+	CAction*	PlayAction(const char* szName, int nLoop = 0, float fCorrectingTime = 1.0f);
+	CAction*	OrceAction(const char* szName, int nLoop = 0, float fCorrectingTime = 1.0f);
+
 private:
 }
