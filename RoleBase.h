@@ -21,5 +21,8 @@ public:
 	virtual int	Init(int nRoleID, const char* strCharFile);
 	virtual void	Update(float ifps);
 
+	int		GetRoleID() { return m_nRoleID; }
+	void		SetRoleID(int nID) { m_nRoleID = nID; }
+
 private:
 }
