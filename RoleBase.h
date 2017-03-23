@@ -16,6 +16,9 @@ class CNode;
 class CRoleBase
 {
 public:
+	CRoleBase(void);
+	virtual ~CRoleBase(void);
+
 
 private:
 }
