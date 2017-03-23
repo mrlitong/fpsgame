@@ -6,3 +6,9 @@ class CCreature;
 class CAction;
 class CInterfaceBase;
 class CNavigationFinder;
+
+
+struct _ActionCallback_KeyFrame;
+struct _ActionCallback_Complete;
+using namespace MathLib;
+class CNode;
