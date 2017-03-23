@@ -12,3 +12,10 @@ struct _ActionCallback_KeyFrame;
 struct _ActionCallback_Complete;
 using namespace MathLib;
 class CNode;
+
+class CRoleBase
+{
+public:
+
+private:
+}
