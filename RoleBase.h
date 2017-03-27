@@ -33,6 +33,7 @@ public:
 	virtual int	MoveToPath(const vec3& vPosition);
 	virtual void	StopMove();
 	virtual void	StopMove(const vec3& vPosition);
+	int		IsMoveing() { return m_nMoveing; }
 
 
 private:
