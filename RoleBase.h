@@ -59,6 +59,11 @@ protected:
 	vec3				 m_vStartPathPosition;
 	vec3				 m_vDestPathPosition;
 
+	int			     m_nUpdateMove;
+protected:
+	CInterfaceBase*	m_pActionComplete;
+	int				OnActionMsg(void* pVoid);
+	virtual void		OnKeyFrame(_ActionCallback_KeyFrame* pKeyInfo);
+	virtual void		OnActionComplete(_ActionCallback_Complete* pActInfo);
 
-private:
 }
