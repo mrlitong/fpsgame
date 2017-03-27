@@ -39,6 +39,10 @@ public:
 
 	float	GetRoleRadius();
 	float	GetRoleHeight();
-
+protected:
+	void		UpdateMove(float ifps);
+	vec3		TestRoleZ(vec3& vPosition);
+	CNode*	GetAssemblyNode(const CUtilStr& strAssembly);
+	CNode*	GetAssemblyNode(int nAssembly);
 private:
 }
