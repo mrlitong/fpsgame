@@ -55,6 +55,10 @@ protected:
 	int				 m_nMoveToType;
 	float			 m_fMoveSpeed;
 	int				 m_nNowPathPoint;
+	vec3				 m_vNowPathPosition;
+	vec3				 m_vStartPathPosition;
+	vec3				 m_vDestPathPosition;
+
 
 private:
 }
