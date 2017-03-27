@@ -31,7 +31,8 @@ public:
 	void		SetDirectionTo(const vec3& vDirection, int nOrce = 0);
 	virtual int	MoveTo(const vec3& vPosition);
 	virtual int	MoveToPath(const vec3& vPosition);
-
+	virtual void	StopMove();
+	virtual void	StopMove(const vec3& vPosition);
 
 
 private:
