@@ -26,6 +26,9 @@ public:
 
 	CAction*	PlayAction(const char* szName, int nLoop = 0, float fCorrectingTime = 1.0f);
 	CAction*	OrceAction(const char* szName, int nLoop = 0, float fCorrectingTime = 1.0f);
+	void		SetPosition(const vec3& vPosition, int nOrce = 0);
+	void		SetDirection(const vec3& vDirection, int nOrce = 0);
+
 
 private:
 }
