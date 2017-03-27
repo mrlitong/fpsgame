@@ -44,5 +44,11 @@ protected:
 	vec3		TestRoleZ(vec3& vPosition);
 	CNode*	GetAssemblyNode(const CUtilStr& strAssembly);
 	CNode*	GetAssemblyNode(int nAssembly);
+
+	CCreature*	m_pCreature;
+	int			m_nRoleID;
+	int			m_nOrceDirection;
+
+
 private:
 }
