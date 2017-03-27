@@ -37,5 +37,8 @@ public:
 	vec3		GetDirection();
 	vec3		GetPosition();
 
+	float	GetRoleRadius();
+	float	GetRoleHeight();
+
 private:
 }
