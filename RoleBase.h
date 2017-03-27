@@ -34,7 +34,8 @@ public:
 	virtual void	StopMove();
 	virtual void	StopMove(const vec3& vPosition);
 	int		IsMoveing() { return m_nMoveing; }
-
+	vec3		GetDirection();
+	vec3		GetPosition();
 
 private:
 }
