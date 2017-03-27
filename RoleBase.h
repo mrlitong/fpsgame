@@ -49,6 +49,12 @@ protected:
 	int			m_nRoleID;
 	int			m_nOrceDirection;
 
+	CAngleYaw	m_AngleYaw;
+	CNavigationFinder* m_pPathFind;
+	int				 m_nMoveing;
+	int				 m_nMoveToType;
+	float			 m_fMoveSpeed;
+	int				 m_nNowPathPoint;
 
 private:
 }
