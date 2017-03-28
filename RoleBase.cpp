@@ -20,3 +20,9 @@ CRoleBase::CRoleBase(void)
 	m_nUpdateMove = 1;
 }
 
+CRoleBase::~CRoleBase(void)
+{
+	SAFE_DELETE(m_pActionComplete);
+	SAFE_DELETE(m_pCreature);
+	SAFE_DELETE(m_pPathFind);
+}
