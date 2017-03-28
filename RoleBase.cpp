@@ -9,3 +9,14 @@
 #include "Object.h"
 #include "Avatar.h"
 
+CRoleBase::CRoleBase(void)
+{
+	m_pCreature = NULL;
+	m_pActionComplete = NULL;
+	m_nOrceDirection = 0;
+	m_nMoveing = 0;
+	m_fMoveSpeed = 6.0f;
+	m_nMoveToType = 0;
+	m_nUpdateMove = 1;
+}
+
