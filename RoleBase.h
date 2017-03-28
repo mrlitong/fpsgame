@@ -65,5 +65,4 @@ protected:
 	int				OnActionMsg(void* pVoid);
 	virtual void		OnKeyFrame(_ActionCallback_KeyFrame* pKeyInfo);
 	virtual void		OnActionComplete(_ActionCallback_Complete* pActInfo);
-
-}
+};
