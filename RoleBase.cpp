@@ -1,0 +1,11 @@
+#include "RoleBase.h"
+#include "Creature.h"
+#include "interface.h"
+#include "Action.h"
+#include "Utils.h"
+#include "NavigationFinder.h"
+#include "Engine.h"
+#include "World.h"
+#include "Object.h"
+#include "Avatar.h"
+
