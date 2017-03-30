@@ -26,3 +26,10 @@ CRoleBase::~CRoleBase(void)
 	SAFE_DELETE(m_pCreature);
 	SAFE_DELETE(m_pPathFind);
 }
+
+//³õÊ¼»¯½ÇÉ«
+int CRoleBase::Init(int nRoleID, const char* strCharFile)
+{
+	if (m_pCreature)return 1;
+
+}
