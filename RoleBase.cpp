@@ -114,3 +114,14 @@ CAction* CRoleBase::PlayAction(const char* szName, int nLoop, float fCorrectingT
 
 	return NULL;
 }
+CAction* CRoleBase::OrceAction(const char* szName, int nLoop, float fCorrectingTime /*= 1.0f*/)
+{
+	if (NULL == m_pCreature)return NULL;
+
+	if (1 == m_pCreature->OrceAction(szName, nLoop, fCorrectingTime))
+	{
+		return m_pCreature->GetNowAction();
+	}
+
+	return NULL;
+}
