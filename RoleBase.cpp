@@ -85,3 +85,8 @@ int CRoleBase::OnActionMsg(void* pVoid)
 
 	return 1;
 }
+//¹Ø¼üÖ¡»Øµ÷
+void CRoleBase::OnKeyFrame(_ActionCallback_KeyFrame* pKeyInfo)
+{
+
+}
