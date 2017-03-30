@@ -65,3 +65,23 @@ void CRoleBase::Update(float ifps)
 
 	m_pCreature->Update();
 }
+
+
+int CRoleBase::OnActionMsg(void* pVoid)
+{
+	_ActionCallback* pInfo = (_ActionCallback*)pVoid;
+
+	switch (pInfo->nMsgID)
+	{
+	case 0:
+	{
+		OnKeyFrame((_ActionCallback_KeyFrame*)pVoid);
+	}break;
+	case 1:
+	{
+		OnActionComplete((_ActionCallback_Complete*)pVoid);
+	}break;
+	}
+
+	return 1;
+}
