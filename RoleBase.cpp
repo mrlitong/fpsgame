@@ -103,3 +103,14 @@ void CRoleBase::OnActionComplete(_ActionCallback_Complete* pActInfo)
 		m_pCreature->PlayAction("stand");
 	}
 }
+CAction* CRoleBase::PlayAction(const char* szName, int nLoop, float fCorrectingTime /*= 1.0f*/)
+{
+	if (NULL == m_pCreature)return NULL;
+
+	if (1 == m_pCreature->PlayAction(szName, nLoop, fCorrectingTime))
+	{
+		return m_pCreature->GetNowAction();
+	}
+
+	return NULL;
+}
