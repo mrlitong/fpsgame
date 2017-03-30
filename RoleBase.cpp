@@ -89,4 +89,17 @@ int CRoleBase::OnActionMsg(void* pVoid)
 void CRoleBase::OnKeyFrame(_ActionCallback_KeyFrame* pKeyInfo)
 {
 
+}//动作完成回调
+void CRoleBase::OnActionComplete(_ActionCallback_Complete* pActInfo)
+{
+	if (NULL == m_pCreature)return;
+
+	if (m_nMoveing)
+	{
+		m_pCreature->PlayAction("run");
+	}
+	else
+	{
+		m_pCreature->PlayAction("stand");
+	}
 }
