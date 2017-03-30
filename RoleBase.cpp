@@ -51,3 +51,17 @@ int CRoleBase::Init(int nRoleID, const char* strCharFile)
 
 	return 1;
 }
+
+void CRoleBase::Update(float ifps)
+{
+	if (NULL == m_pCreature)return;
+
+	if (m_nUpdateMove)
+	{
+		m_AngleYaw.Update(ifps);
+		UpdateMove(ifps);
+		m_pCreature->SetDirection(m_AngleYaw.GetForwardDirection(), m_nOrceDirection);
+	}
+
+	m_pCreature->Update();
+}
