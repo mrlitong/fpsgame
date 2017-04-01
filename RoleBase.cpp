@@ -183,3 +183,8 @@ int CRoleBase::MoveToPath(const vec3& vPosition)
 	return 0;
 
 }
+void CRoleBase::StopMove()
+{
+	m_nMoveing = 0;
+	m_pCreature->PlayAction("stand", 1);
+}
