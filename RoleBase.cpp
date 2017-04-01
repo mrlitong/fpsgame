@@ -188,3 +188,10 @@ void CRoleBase::StopMove()
 	m_nMoveing = 0;
 	m_pCreature->PlayAction("stand", 1);
 }
+
+void CRoleBase::StopMove(const vec3& vPosition)
+{
+	m_nMoveing = 0;
+	SetPosition(vPosition, 1);
+	m_pCreature->PlayAction("stand", 1);
+}
