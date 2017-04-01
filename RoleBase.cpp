@@ -125,3 +125,18 @@ CAction* CRoleBase::OrceAction(const char* szName, int nLoop, float fCorrectingT
 
 	return NULL;
 }
+void CRoleBase::SetPosition(const vec3& vPosition, int nOrce /*= 0*/)
+{
+	if (NULL == m_pCreature)return;
+
+	m_pCreature->SetPosition(vPosition, nOrce);
+}
+
+void CRoleBase::SetDirection(const vec3& vDirection, int nOrce /*= 0*/)
+{
+	if (NULL == m_pCreature)return;
+	if (m_pCreature->GetNowAction()->GetLockMove() && !nOrce)return;
+
+	m_nOrceDirection = nOrce;
+	m_AngleYaw.SetDirection(vDirection);
+}
