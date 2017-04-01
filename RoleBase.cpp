@@ -195,3 +195,10 @@ void CRoleBase::StopMove(const vec3& vPosition)
 	SetPosition(vPosition, 1);
 	m_pCreature->PlayAction("stand", 1);
 }
+
+void CRoleBase::UpdateMove(float ifps)
+{
+	if (!m_nMoveing)return;
+	vec3 vDir = vec3(0.0f, 1.0f, 0.0f);
+
+}
