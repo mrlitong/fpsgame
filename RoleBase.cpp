@@ -140,3 +140,11 @@ void CRoleBase::SetDirection(const vec3& vDirection, int nOrce /*= 0*/)
 	m_nOrceDirection = nOrce;
 	m_AngleYaw.SetDirection(vDirection);
 }
+void CRoleBase::SetDirectionTo(const vec3& vDirection, int nOrce /*= 0*/)
+{
+	if (NULL == m_pCreature)return;
+	if (m_pCreature->GetNowAction()->GetLockMove() && !nOrce)return;
+
+	m_nOrceDirection = nOrce;
+	m_AngleYaw.SetDestDirection(vDirection);
+}
