@@ -162,3 +162,24 @@ int CRoleBase::MoveTo(const vec3& vPosition)
 
 	return 1;
 }
+
+int CRoleBase::MoveToPath(const vec3& vPosition)
+{
+	if (NULL == m_pCreature)return -1;
+	if (m_pCreature->GetNowAction()->GetLockMove())return -1;
+
+	m_pPathFind->Create(m_pCreature->GetPosition(), vPosition, 0);
+
+	if (m_pPathFind->GetReached() || m_pPathFind->GetNumPoints() >= 2)
+	{
+		m_nMoveing = 1;
+		m_nMoveToType = 1;
+		m_nNowPathPoint = 0;
+		m_vNowPathPosition = m_pCreature->GetPosition();
+		m_pCreature->PlayAction("run", 1);
+		return 1;
+	}
+
+	return 0;
+
+}
