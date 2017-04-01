@@ -148,3 +148,17 @@ void CRoleBase::SetDirectionTo(const vec3& vDirection, int nOrce /*= 0*/)
 	m_nOrceDirection = nOrce;
 	m_AngleYaw.SetDestDirection(vDirection);
 }
+
+int CRoleBase::MoveTo(const vec3& vPosition)
+{
+	if (NULL == m_pCreature)return -1;
+	if (m_pCreature->GetNowAction()->GetLockMove())return -1;
+
+	m_vStartPathPosition = m_vNowPathPosition = m_pCreature->GetPosition();
+	m_nMoveing = 1;
+	m_nMoveToType = 0;
+	m_vDestPathPosition = vPosition;
+	m_pCreature->PlayAction("run", 1);
+
+	return 1;
+}
