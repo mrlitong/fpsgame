@@ -6,3 +6,8 @@
 class CBRObject;
 using namespace MathLib;
 
+class CStarControl : public CSingleton < CStarControl >
+{
+public:
+
+}
