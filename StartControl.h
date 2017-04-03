@@ -9,5 +9,7 @@ using namespace MathLib;
 class CStarControl : public CSingleton < CStarControl >
 {
 public:
+	CStarControl(void);
+	~CStarControl(void);
 
 }
