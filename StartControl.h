@@ -26,4 +26,4 @@ protected:
 	float				m_fViewDistance;
 	int					m_nClickState;
 	float				m_fClickScale;
-}
+};
