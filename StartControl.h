@@ -20,4 +20,10 @@ public:
 	void		SetEnable(int nEnable);
 	void		SetViewDistance(float fViewDistance) { m_fViewDistance = fViewDistance; }
 	void		SetColor(const vec4& vColor);
+protected:
+	CBRObject*			m_pStarNormal;
+	CBRObject*			m_pStarClick;
+	float				m_fViewDistance;
+	int					m_nClickState;
+	float				m_fClickScale;
 }
