@@ -27,3 +27,18 @@ int CStarControl::Init()
 {
 	return Load("data/StarControl/Star_mesh.node", "data/StarControl/Star_click.node");
 }
+
+void CStarControl::Update(const vec3& vPos, const vec3& vDir)
+{
+	m_fClickScale += m_nClickState * g_Engine.pGame->GetIFps() * 5.5f;
+	if (m_fClickScale <= 0.8f)
+	{
+		m_nClickState = 1;
+	}
+	else if (m_fClickScale >= 1.0f)
+	{
+		m_fClickScale = 1.0f;
+		m_nClickState = 0;
+	}
+
+}
