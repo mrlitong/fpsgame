@@ -84,3 +84,8 @@ int CStarControl::Load(const char* strNormal, const char* strClick)
 
 	return 0;
 }
+
+int CStarControl::isEnable()
+{
+	return m_pStarClick->IsEnabled();
+}
