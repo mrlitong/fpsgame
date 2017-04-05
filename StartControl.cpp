@@ -40,5 +40,7 @@ void CStarControl::Update(const vec3& vPos, const vec3& vDir)
 		m_fClickScale = 1.0f;
 		m_nClickState = 0;
 	}
-
+	float fViewDistance = m_fViewDistance;
+	mat4 matStar = Translate(vPos + vDir * fViewDistance);
+	CPlayer* pPlayer = g_Engine.pGame->GetPlayer();
 }
