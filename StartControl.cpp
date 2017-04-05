@@ -43,4 +43,14 @@ void CStarControl::Update(const vec3& vPos, const vec3& vDir)
 	float fViewDistance = m_fViewDistance;
 	mat4 matStar = Translate(vPos + vDir * fViewDistance);
 	CPlayer* pPlayer = g_Engine.pGame->GetPlayer();
+	if (pPlayer)
+	{
+		vec3 x = pPlayer->GetModelview().getRow3(0);
+		vec3 y = pPlayer->GetModelview().getRow3(1);
+		vec3 z = pPlayer->GetModelview().getRow3(2);
+
+		matStar.setColumn3(0, x);
+		matStar.setColumn3(1, -z);
+		matStar.setColumn3(2, y);
+	}
 }
