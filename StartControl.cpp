@@ -66,3 +66,21 @@ void CStarControl::Click()
 {
 	m_nClickState = -1;
 }
+int CStarControl::Load(const char* strNormal, const char* strClick)
+{
+	if (m_pStarClick && m_pStarNormal)
+	{
+		g_Engine.pGame->RemoveNode(m_pStarNormal);
+		g_Engine.pGame->RemoveNode(m_pStarClick);
+	}
+
+	m_pStarNormal = (CBRObject*)g_Engine.pGame->LoadNode(strNormal);
+	m_pStarClick = (CBRObject*)g_Engine.pGame->LoadNode(strClick);
+
+	if (m_pStarClick && m_pStarNormal)
+	{
+		return 1;
+	}
+
+	return 0;
+}
