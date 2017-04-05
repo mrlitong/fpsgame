@@ -62,3 +62,7 @@ void CStarControl::Update(const vec3& vPos, const vec3& vDir)
 	m_pStarNormal->SetWorldTransform(matStar * Scale(s, 1.0f, s));
 	m_pStarClick->SetWorldTransform(matStar * Scale(m_fClickScale, 1.0f, m_fClickScale) * Scale(s, 1.0f, s));
 }
+void CStarControl::Click()
+{
+	m_nClickState = -1;
+}
