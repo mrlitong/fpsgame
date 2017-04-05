@@ -2,11 +2,10 @@
 #include "MathLib.h"
 #include "Singleton.h"
 
-
 class CBRObject;
 using namespace MathLib;
 
-class CStarControl : public CSingleton < CStarControl >
+class CStarControl : public CSingleton<CStarControl>
 {
 public:
 	CStarControl(void);
@@ -19,7 +18,7 @@ public:
 	int		isEnable();
 	void		SetEnable(int nEnable);
 	void		SetViewDistance(float fViewDistance) { m_fViewDistance = fViewDistance; }
-	void		SetColor(const vec4& vColor);
+	void		SetColor(const vec4& vColor);		//°æ‘ı√¥ªπ”–4Œ¨£ø°ø
 protected:
 	CBRObject*			m_pStarNormal;
 	CBRObject*			m_pStarClick;
@@ -27,3 +26,4 @@ protected:
 	int					m_nClickState;
 	float				m_fClickScale;
 };
+
