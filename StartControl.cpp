@@ -89,3 +89,12 @@ int CStarControl::isEnable()
 {
 	return m_pStarClick->IsEnabled();
 }
+void CStarControl::SetEnable(int nEnable)
+{
+	m_pStarClick->SetEnabled(nEnable);
+	m_pStarNormal->SetEnabled(nEnable);
+}
+void CStarControl::SetColor(const vec4& vColor)
+{
+	m_pStarNormal->SetObjectColor(vColor);
+}
