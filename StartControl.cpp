@@ -53,4 +53,12 @@ void CStarControl::Update(const vec3& vPos, const vec3& vDir)
 		matStar.setColumn3(1, -z);
 		matStar.setColumn3(2, y);
 	}
+	vec4 pos = vec4(1.0f, 0.0f, 0.0f, 1.0f);
+	float s = CCommon::CalcAxisScale(g_Engine.pGame->GetPlayer()->GetModelview(), g_Engine.pGame->GetPlayer()->GetFov(),
+		vec4(matStar.getColumn3(3), 1.0f),
+		200.0f,
+		CMathCore::Itof(g_Engine.pApp->GetHeight()));
+
+	m_pStarNormal->SetWorldTransform(matStar * Scale(s, 1.0f, s));
+	m_pStarClick->SetWorldTransform(matStar * Scale(m_fClickScale, 1.0f, m_fClickScale) * Scale(s, 1.0f, s));
 }
