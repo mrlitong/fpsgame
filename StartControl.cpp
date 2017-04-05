@@ -16,3 +16,9 @@ CStarControl::CStarControl(void)
 	m_fClickScale = 1.0f;
 	Init();
 }
+
+CStarControl::~CStarControl(void)
+{
+	g_Engine.pGame->RemoveNode(m_pStarNormal);
+	g_Engine.pGame->RemoveNode(m_pStarClick);
+}
