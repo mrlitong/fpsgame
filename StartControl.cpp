@@ -22,3 +22,8 @@ CStarControl::~CStarControl(void)
 	g_Engine.pGame->RemoveNode(m_pStarNormal);
 	g_Engine.pGame->RemoveNode(m_pStarClick);
 }
+
+int CStarControl::Init()
+{
+	return Load("data/StarControl/Star_mesh.node", "data/StarControl/Star_click.node");
+}
