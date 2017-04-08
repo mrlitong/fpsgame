@@ -11,3 +11,8 @@ CSkillSystem::CSkillSystem(CGameProcess*	pGameProcess)
 	AddListen(BR_PARTICLE_HIT, MakeMessageFunc(this, &CSkillSystem::OnParticleHit));
 }
 
+CSkillSystem::~CSkillSystem(void)
+{
+	CBulletSystem::ReleaseInstance();
+}
+
