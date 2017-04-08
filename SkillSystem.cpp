@@ -16,3 +16,8 @@ CSkillSystem::~CSkillSystem(void)
 	CBulletSystem::ReleaseInstance();
 }
 
+int CSkillSystem::OnSkillCallback(void* pVoid)
+{
+	_BulletCallback* pBase = (_BulletCallback*)pVoid;
+
+}
