@@ -77,3 +77,14 @@ void CSkillSystem::Reset()
 {
 	CBulletSystem::GetInstance()->Reset();
 }
+int CSkillSystem::OnParticleHit(void* v1, void* v2, void* v3)
+{
+	CObjectParticles* pPar = (CObjectParticles*)v1;
+	CBRObject* pHitObject = (CBRObject*)v2;
+
+	int nContact = *(int*)v3;
+	int nParID = atoi(pPar->GetName());
+	int nObjID = atoi(pHitObject->GetName());
+
+	return 1;
+}
