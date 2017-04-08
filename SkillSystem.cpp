@@ -72,3 +72,8 @@ void CSkillSystem::Update(float ifps)
 {
 	CBulletSystem::GetInstance()->Update();
 }
+
+void CSkillSystem::Reset()
+{
+	CBulletSystem::GetInstance()->Reset();
+}
