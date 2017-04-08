@@ -67,3 +67,8 @@ int CSkillSystem::OnSkillCallback(void* pVoid)
 
 	return 1;
 }
+
+void CSkillSystem::Update(float ifps)
+{
+	CBulletSystem::GetInstance()->Update();
+}
