@@ -23,6 +23,9 @@ public:
 	void        SetEnable(int nEnable);
 	int         IsEnable();
 
+	void        SetNormalColor(const MathLib::vec4& vColor);
+	const MathLib::vec4& GetNormalColor() const;
+
 
 
 }
