@@ -30,5 +30,13 @@ public:
 	const MathLib::vec4& GetClickColor() const;
 
 
+	//屏幕空间比例 从0到1的值
+	void        SetNormalScale(float fScale);
+	float       GetNormalScale() const;
+
+	void        SetClickScale(float fScale);
+	float       GetClickScale() const;
+
+
 
 }
