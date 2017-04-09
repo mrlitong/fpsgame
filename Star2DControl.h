@@ -6,3 +6,7 @@
 class CBRObject;
 class CTextureImage;
 
+class CStar2DControl : public CSingleton < CStar2DControl >
+{
+
+}
