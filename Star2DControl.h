@@ -26,6 +26,9 @@ public:
 	void        SetNormalColor(const MathLib::vec4& vColor);
 	const MathLib::vec4& GetNormalColor() const;
 
+	void        SetClickColor(const MathLib::vec4& vColor);
+	const MathLib::vec4& GetClickColor() const;
+
 
 
 }
