@@ -37,6 +37,13 @@ public:
 	void        SetClickScale(float fScale);
 	float       GetClickScale() const;
 
+protected:
+
+	CUtilStr        m_strNormalName;
+	CUtilStr        m_strClickName;
+	CTextureImage   *m_pNormalTex;
+	CTextureImage   *m_pClickTex;
+
 
 
 }
