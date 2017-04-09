@@ -43,7 +43,11 @@ protected:
 	CUtilStr        m_strClickName;
 	CTextureImage   *m_pNormalTex;
 	CTextureImage   *m_pClickTex;
-
-
-
-}
+	int             m_nEnabled;
+	int             m_nClickState;
+	float           m_fClickScale;
+	MathLib::vec4   m_vNormalColor;
+	MathLib::vec4   m_vClickColor;
+	float           m_fNormalTexScale;
+	float           m_fClickTexScale;
+};
