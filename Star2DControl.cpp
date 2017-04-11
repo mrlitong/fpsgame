@@ -16,3 +16,9 @@ CStar2DControl::CStar2DControl(void)
 	m_fClickTexScale = 0.1f;
 	Init();
 }
+
+CStar2DControl::~CStar2DControl(void)
+{
+	g_Engine.pGui->ReleaseTexture(m_pNormalTex);
+	g_Engine.pGui->ReleaseTexture(m_pClickTex);
+}
