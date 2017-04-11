@@ -200,5 +200,22 @@ void CRoleBase::UpdateMove(float ifps)
 {
 	if (!m_nMoveing)return;
 	vec3 vDir = vec3(0.0f, 1.0f, 0.0f);
+	if (m_nMoveToType == 0)
+	{
+		vDir = (m_vDestPathPosition - m_vStartPathPosition).normalize();
+		m_vNowPathPosition += vDir * m_fMoveSpeed * ifps;
+		MathLib::vec3 d = (m_vDestPathPosition - m_vNowPathPosition);
+		d.z = 0.0f;
+		int bTest = MathLib::Dot(d.normalize(), vec3(vDir.x, vDir.y, 0.0f)) < 0.0f;
+		if (bTest || vDir.z >= 0.95f)
+		{
+			if (bTest && d.length() > 0.10f)
+			{
+				m_vNowPathPosition = m_vDestPathPosition;
+			}
+
+			StopMove();
+		}
+	}
 
 }
