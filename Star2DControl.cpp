@@ -65,6 +65,30 @@ void CStar2DControl::Update()
 		float y1 = CenterY + height / 2.0f;
 		g_Engine.pGui->RenderTexture(tex, vec4(x0, y0, x1, y1), m_vNormalColor);
 	}
+	if (m_pClickTex && m_pClickTex->GetTexture())
+	{
+		CTexture *tex = m_pClickTex->GetTexture();
+		float width = CMathCore::Itof(tex->GetWidth());
+		float height = CMathCore::Itof(tex->GetHeight());
+
+		if (m_fClickTexScale != 0.0f)
+		{
+			float aspect = height / width;
+			width = g_Engine.pGui->GetWidth() * m_fClickTexScale;
+			height = width * aspect;
+		}
+
+		width *= m_fClickScale;
+		height *= m_fClickScale;
+
+		float CenterX = g_Engine.pGui->GetWidth() / 2.0f;
+		float CenterY = g_Engine.pGui->GetHeight() / 2.0f;
+		float x0 = CenterX - width / 2.0f;
+		float y0 = CenterY - height / 2.0f;
+		float x1 = CenterX + width / 2.0f;
+		float y1 = CenterY + height / 2.0f;
+		g_Engine.pGui->RenderTexture(tex, vec4(x0, y0, x1, y1), m_vClickColor);
+	}
 
 }
 
