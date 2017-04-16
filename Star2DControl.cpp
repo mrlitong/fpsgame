@@ -117,3 +117,7 @@ int CStar2DControl::IsEnable()
 {
 	return m_nEnabled;
 }
+void CStar2DControl::SetEnable(int nEnable)
+{
+	m_nEnabled = nEnable;
+}
