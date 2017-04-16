@@ -91,4 +91,8 @@ void CStar2DControl::Update()
 	}
 
 }
+void CStar2DControl::Click()
+{
+	m_nClickState = -1;
+}
 
