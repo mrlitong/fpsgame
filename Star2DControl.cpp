@@ -113,4 +113,7 @@ int CStar2DControl::Load(const char* strNormal, const char* strClick)
 
 	return 0;
 }
-
+int CStar2DControl::IsEnable()
+{
+	return m_nEnabled;
+}
