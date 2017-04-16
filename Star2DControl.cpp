@@ -22,3 +22,9 @@ CStar2DControl::~CStar2DControl(void)
 	g_Engine.pGui->ReleaseTexture(m_pNormalTex);
 	g_Engine.pGui->ReleaseTexture(m_pClickTex);
 }
+
+int CStar2DControl::Init()
+{
+	return Load(NORMAL_NAME, CLICK_NAME);
+}
+
