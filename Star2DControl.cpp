@@ -27,4 +27,12 @@ int CStar2DControl::Init()
 {
 	return Load(NORMAL_NAME, CLICK_NAME);
 }
+void CStar2DControl::Update()
+{
+	if (!IsEnable())
+	{
+		return;
+	}
+
+}
 
