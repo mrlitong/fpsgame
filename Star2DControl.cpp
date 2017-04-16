@@ -95,4 +95,22 @@ void CStar2DControl::Click()
 {
 	m_nClickState = -1;
 }
+int CStar2DControl::Load(const char* strNormal, const char* strClick)
+{
+	if (m_strNormalName != strNormal)
+	{
+		m_strNormalName = strNormal;
+		g_Engine.pGui->ReleaseTexture(m_pNormalTex);
+		m_pNormalTex = g_Engine.pGui->CreateTexture(strNormal);
+	}
+
+	if (m_strClickName != strClick)
+	{
+		m_strClickName = strClick;
+		g_Engine.pGui->ReleaseTexture(m_pClickTex);
+		m_pClickTex = g_Engine.pGui->CreateTexture(strClick);
+	}
+
+	return 0;
+}
 
