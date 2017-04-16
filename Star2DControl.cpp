@@ -121,3 +121,17 @@ void CStar2DControl::SetEnable(int nEnable)
 {
 	m_nEnabled = nEnable;
 }
+void CStar2DControl::SetNormalColor(const vec4& vColor)
+{
+	m_vNormalColor = vColor;
+}
+
+const MathLib::vec4& CStar2DControl::GetNormalColor() const
+{
+	return m_vNormalColor;
+}
+
+void CStar2DControl::SetClickColor(const vec4& vColor)
+{
+	m_vClickColor = vColor;
+}
