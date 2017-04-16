@@ -135,3 +135,27 @@ void CStar2DControl::SetClickColor(const vec4& vColor)
 {
 	m_vClickColor = vColor;
 }
+const MathLib::vec4& CStar2DControl::GetClickColor() const
+{
+	return m_vClickColor;
+}
+
+void CStar2DControl::SetNormalScale(float fScale)
+{
+	m_fNormalTexScale = fScale;
+}
+
+float CStar2DControl::GetNormalScale() const
+{
+	return m_fNormalTexScale;
+}
+
+void CStar2DControl::SetClickScale(float fScale)
+{
+	m_fClickTexScale = fScale;
+}
+
+float CStar2DControl::GetClickScale() const
+{
+	return m_fClickTexScale;
+}
