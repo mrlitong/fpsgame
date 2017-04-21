@@ -71,7 +71,6 @@ CActorBase::CActorBase()
 	SetCeiling(0);
 }
 
-
 CActorBase::~CActorBase()
 {
 	m_pDummy->SetObject(NULL);
