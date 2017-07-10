@@ -18,9 +18,10 @@ using namespace MathLib;
 #endif // MEMORY_INFO
 
 /*
+Test high performance.
 */
-#define ACTOR_BASE_IFPS             (1.0f / 60.0f)
-#define ACTOR_BASE_CLAMP            89.9f
+#define ACTOR_BASE_IFPS             (1.0f / 120.0f)
+#define ACTOR_BASE_CLAMP            15.0f
 #define ACTOR_BASE_COLLISIONS       4
 
 
