@@ -37,7 +37,7 @@ CActorBase::CActorBase()
 	m_nFlush = 0;
 	m_vPosition = Vec3_zero;
 	m_vVelocity = Vec3_zero;
-	m_fPhiAngle = 0.0f;			//倾斜角		二维平面坐标系中，直线向Y周延伸的方向与X轴正向之间的夹角
+	m_fPhiAngle = 0.0f;				//倾斜角		二维平面坐标系中，直线向Y周延伸的方向与X轴正向之间的夹角
 	m_fThetaAngle = 0.0f;			//方位角，正北方那条线与当前线条按照顺时针走过的角度
 
 
@@ -59,16 +59,21 @@ CActorBase::CActorBase()
 
 	SetEnabled(1);
 	SetViewDirection(vec3(0.0f, 1.0f, 0.0f));
+
 	SetCollision(1);
 	SetCollisionRadius(0.3f);
 	SetCollisionHeight(1.0f);
-	SetFriction(2.0f);
+
+	
+
 	SetMinVelocity(2.0f);
 	SetMaxVelocity(4.0f);
+
 	SetAcceleration(8.0f);
 	SetDamping(8.0f);
 	SetJumping(1.5f);
 
+	SetFriction(2.0f);
 	SetGround(0);
 	SetCeiling(0);
 }
