@@ -93,7 +93,8 @@ void CStar2DControl::Update()
 }
 void CStar2DControl::Click()
 {
-	m_nClickState = -1;
+	if(m_nClickState != -1)
+		m_nClickState = -1;
 }
 int CStar2DControl::Load(const char* strNormal, const char* strClick)
 {
