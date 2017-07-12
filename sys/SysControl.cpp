@@ -10,7 +10,7 @@
 #include "WidgetLabel.h"
 
 
-//解决跨平台字符集兼容问题
+
 #ifdef _WIN32
 #pragma execution_character_set("utf-8")
 #endif
@@ -23,35 +23,33 @@ public:
 	CSysControlLocal();
 	virtual ~CSysControlLocal();
 
-	virtual void Init();	//角色要初始化，着色器要初始化，
+	virtual void Init();
 	virtual void Update(float ifps);
 	virtual void Shutdown();
 
-	virtual int GetState(int state);		//鼠标状态，键盘状态，人物状态，子弹状态等等。
+	virtual int GetState(int state);
 	virtual int ClearState(int state);
 
 	virtual float GetMouseDX();
 	virtual float GetMouseDY();
 
-	virtual void SetMouseGrab(int g);		//设置是否显示鼠标
-	virtual int GetMouseGrab();			//获取鼠标状态，是显示呢还是不显示的状态。
+	virtual void SetMouseGrab(int g);
+	virtual int GetMouseGrab();
 
 
-	virtual void SetControlMode(ControlMode mode);			//控制模式
-	virtual ControlMode GetControlMode() const;				//获取控制模式
+	virtual void SetControlMode(ControlMode mode);
+	virtual ControlMode GetControlMode() const;
 
 private:
 	void Update_Mouse(float ifps);
 	void Update_Keyboard(float ifps);
 	void Update_XPad360(float ifps);
 
-
-	CControlsApp        *m_pControlsApp;		//控制游戏中移动
 	CControlsXPad360    *m_pControlsXPad360;
-	ControlMode         m_nControlMode;			//控制模式
+	ControlMode         m_nControlMode;	
 
-	int                 m_nOldMouseX;			//上一个鼠标坐标X
-	int                 m_nOldMouseY;			//上一个鼠标坐标Y
+	int                 m_nOldMouseX;
+	int                 m_nOldMouseY;
 
 	CObjectGui          *m_pTest3DUI;
 	CWidgetLabel        *m_pTestMessageLabel;
@@ -90,21 +88,21 @@ void CSysControlLocal::Init()
 
 	m_pTest3DUI->SetScreenSize(800, 400);
 	m_pTest3DUI->SetControlDistance(1000.0f);
-	m_pTest3DUI->CreateMaterial("gui_base");	 //show in game	
+	m_pTest3DUI->CreateMaterial("gui_base");
 
 
 	m_pTest3DUI->SetWorldTransform(Translate(0.0f, 0.0f, 2.0f) * MakeRotationFromZY(vec3(0.0f, -1.0f, 0.0f), vec3(0.0f, 0.0f, 1.0f)));
 
-	m_pTestMessageLabel = new CWidgetLabel(m_pTest3DUI->GetGui());	//初始化文字标签
+	m_pTestMessageLabel = new CWidgetLabel(m_pTest3DUI->GetGui());
 	m_pTest3DUI->GetGui()->AddChild(m_pTestMessageLabel, CGui::ALIGN_CENTER);
 	m_pTestMessageLabel->SetFontColor(vec4(0.0f, 0.0f, 0.0f, 1.0f));
 
-	m_pTestMessageLabel = new CWidgetLabel(m_pTest3DUI->GetGui());	//初始化文字标签
+	m_pTestMessageLabel = new CWidgetLabel(m_pTest3DUI->GetGui());
 	m_pTest3DUI->GetGui()->AddChild(m_pTestMessageLabel, CGui::ALIGN_CENTER);
 	m_pTestMessageLabel->SetFontColor(vec4(0.0f, 0.0f, 0.0f, 1.0f));
 
-	m_pTestMessageLabel->SetFontSize(80);		//设置字体大小
-	m_pTestMessageLabel->SetFontOutline(1);		//设置字体轮廓
+	m_pTestMessageLabel->SetFontSize(80);
+	m_pTestMessageLabel->SetFontOutline(1);
 	m_pTestMessageLabel->SetText("两个黄鹂鸣翠柳\n一行白鹭上青天\n窗含西岭千秋雪\n门泊东吴万里船");
 
 
@@ -195,7 +193,7 @@ void CSysControlLocal::Update_Mouse(float ifps)
 	m_nOldMouseY = g_Engine.pApp->GetMouseY();
 }
 
-void CSysControlLocal::Update_Keyboard(float ifps)		//键盘按键响应wsad
+void CSysControlLocal::Update_Keyboard(float ifps)
 {
 
 
@@ -217,7 +215,7 @@ void CSysControlLocal::Update_Keyboard(float ifps)		//键盘按键响应wsad
 		m_pControlsApp->SetState(CControls::STATE_MOVE_LEFT, 0);
 	else if (g_Engine.pInput->IsKeyUp('d'))
 		m_pControlsApp->SetState(CControls::STATE_MOVE_RIGHT, 0);
-	if (g_Engine.pInput->IsKeyDown(' '))		//空格跳跃
+	if (g_Engine.pInput->IsKeyDown(' '))
 		m_pControlsApp->SetState(CControls::STATE_JUMP, 1);
 	else
 		m_pControlsApp->SetState(CControls::STATE_JUMP, 0);
@@ -271,8 +269,6 @@ void CSysControlLocal::Update_XPad360(float ifps)
 			m_pControlsApp->SetState(CControls::STATE_JUMP, 1);
 		else
 			m_pControlsApp->SetState(CControls::STATE_JUMP, 0);
-		//update jump
-		// LT RT
 		if (m_pControlsXPad360->GetRightTrigger() > fPadThreshold || m_pControlsXPad360->GetLeftTrigger() > fPadThreshold)
 		{
 			m_pControlsApp->SetState(CControls::STATE_FIRE, 1);
