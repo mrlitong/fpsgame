@@ -33,6 +33,18 @@ void cmpsort(double *a, int n);
 void rollsort(double *a, int n);
 //------------------------------------------------------------
 
+int sgn(double x);
 
+int sign(double x);
+//------------------------------------------------------------
 
+class complex
+{
+	friend complex exp(const complex &);
+	friend complex log(const complex &);
+	friend complex sin(const complex &);
+	friend complex cos(const complex &);
+	friend double arg(const complex &);
+	friend double abs(const complex &);
+}
 #endif
