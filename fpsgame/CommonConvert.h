@@ -16,7 +16,9 @@ struct OutputCB
 
 class ColladaException
 {
+private:
 	std::string msg;
+public:
 	ColladaException(const std::string& msg) :msg(msg)
 	{
 
