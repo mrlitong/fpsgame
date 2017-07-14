@@ -51,6 +51,9 @@
     <ClInclude Include="FPSRoleLocal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MathLib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HMDWrapper.cpp">

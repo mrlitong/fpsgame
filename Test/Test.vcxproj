@@ -28,6 +28,7 @@
     <ClInclude Include="GameProcess.h" />
     <ClInclude Include="HMDWrapper.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="MathLib.h" />
     <ClInclude Include="MoveDummy.h" />
     <ClInclude Include="RayControl.h" />
     <ClInclude Include="RoleBase.h" />
