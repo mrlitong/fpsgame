@@ -1,6 +1,6 @@
 #pragma once
-#include "MathLib.h"	//外部依赖
-#include "UtilStr.h"	//外部依赖
+#include "MathLib.h"
+#include "UtilStr.h"
 
 class CCreature;
 class CAction;
