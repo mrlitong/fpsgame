@@ -1,6 +1,9 @@
 #pragma once
 
+#include <exception>
 #include <string>
+#include <memory>
+#include <vector>
 
 
 #ifndef INCLUDED_COMMONCONVERT
@@ -12,9 +15,10 @@ struct OutputCB
 	{
 
 	}
+	virtual void operator() (const char* data, unsigned int length) = 0;
 };
 
-class ColladaException
+class ColladaException : public std::exception
 {
 private:
 	std::string msg;
@@ -28,6 +32,24 @@ public:
 	{
 
 	}
+};
+
+
+class FColladaDocument
+{
+public:
+	void LoadFromText(const char* text);
+
+	/** Returns the FCDocument that was loaded. */
+	FCDocument* GetDocument() const { return document.get(); }
+
+	/** Returns the \<extra\> data from the \<COLLADA\> element. */
+	FCDExtra* GetExtra() const { return extra.get(); }
+
+private:
+	void ReadExtras(xmlNode* colladaNode);
+	std::unique_ptr<FCDocument> document;
+	std::unique_ptr<FCDExtra> extra;
 };
 
 
