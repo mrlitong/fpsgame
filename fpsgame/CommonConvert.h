@@ -34,6 +34,13 @@ public:
 	}
 };
 
+class FocolladaErrorHandler
+{
+public:
+	FocolladaErrorHandler(std::string& xmlErrors);
+	~FocolladaErrorHandler();
+};
+
 
 class FColladaDocument
 {
