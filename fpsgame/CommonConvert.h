@@ -34,15 +34,28 @@ public:
 
 	}
 };
-
+/**
+* Standard error handler - logs FCollada messages using Log(), and also
+* maintains a list of XML parser errors.
+*/
 class FoclladaErrorHandler
 {
+
+private:
+	void OnError(FUError::Level errorLevel, uint32 errorCode, uint32 lineNumber);
+	std::string& xmlErrors;
+
+	void operator=(FColladaErrorHandler);
+
 public:
 	FoclladaErrorHandler(std::string& xmlErrors);
 	~FoclladaErrorHandler();
 };
 
-
+/**
+* Standard document loader. Based on FCDocument::LoadFromText, but allows
+* access to \<extra\> nodes at the document level (i.e. directly in \<COLLADA\>).
+*/
 class FColladaDocument
 {
 public:
