@@ -7,7 +7,7 @@
 #include <memory>
 #include <vector>
 
-
+class Skeleton;
 
 
 struct OutputCB
@@ -35,11 +35,11 @@ public:
 	}
 };
 
-class FocolladaErrorHandler
+class FoclladaErrorHandler
 {
 public:
-	FocolladaErrorHandler(std::string& xmlErrors);
-	~FocolladaErrorHandler();
+	FoclladaErrorHandler(std::string& xmlErrors);
+	~FoclladaErrorHandler();
 };
 
 
