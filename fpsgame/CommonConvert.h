@@ -1,4 +1,6 @@
 #pragma once
+#ifndef INCLUDED_COMMONCONVERT
+#define INCLUDED_COMMONCONVERT
 
 #include <exception>
 #include <string>
@@ -6,8 +8,7 @@
 #include <vector>
 
 
-#ifndef INCLUDED_COMMONCONVERT
-#define INCLUDED_COMMONCONVERT
+
 
 struct OutputCB
 {
