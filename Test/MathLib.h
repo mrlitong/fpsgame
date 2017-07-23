@@ -7,6 +7,8 @@
 //Make some change to check if new branch is created.
 
 #include <iostream>
+#include <cmath>
+#include <iomanip>
 
 using namespace std;
 
@@ -38,6 +40,10 @@ int sgn(double x);
 int sign(double x);
 //------------------------------------------------------------
 
+#define FORMAT_STD 1
+#define FORMAT_EXP 0
+#define MATHLIB_PI 3.14159265
+
 class complex
 {
 	friend complex exp(const complex &);
@@ -46,5 +52,8 @@ class complex
 	friend complex cos(const complex &);
 	friend double arg(const complex &);
 	friend double abs(const complex &);
+
+
+
 }
 #endif
