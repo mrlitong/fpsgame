@@ -46,6 +46,14 @@ int sign(double x);
 
 class complex
 {
+protected:
+	double real;
+	double imag;
+	double len;
+	double arg;
+public:
+
+
 	friend complex exp(const complex &);
 	friend complex log(const complex &);
 	friend complex sin(const complex &);
