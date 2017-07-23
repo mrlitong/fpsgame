@@ -52,6 +52,51 @@ protected:
 	double len;
 	double arg;
 public:
+	complex(double r = 0, double i = 0, int format = FORMAT_STD);
+
+	void set(double r = 0, double i = 0, int format = FORMAT_STD);
+	void output(int format = FORMAT_STD);
+	void input(int format = FORMAT_STD);
+
+	friend void set(complex &c, double r = 0, double i = 0, int format = FORMAT_STD);
+	friend void output(complex &c, int format = FORMAT_STD);
+	friend void input(complex &c, int format = FORMAT_STD);
+	friend ostream & operator <<(ostream &out, complex &c);
+	friend istream & operator <<(istream &in, complex &c);
+
+	double getreal();
+	double getimag();
+	double getlen();
+	double getarg();
+
+	operator double() { return sgn(real)*len; }
+	complex operator ~();
+	complex operator !();
+	complex operator -();
+	complex operator +();
+
+	friend complex operator +(const complex &, const complex &);
+	friend complex operator -(const complex &, const complex &);
+	friend complex operator *(const complex &, const complex &);
+	friend complex operator /(const complex &, const complex &);
+	friend complex operator &(const complex &, const complex &);
+	friend complex operator |(const complex &, const complex &);
+	friend complex operator ^(const complex &, const double);
+
+	friend complex operator +=(complex &, const complex &);
+	friend complex operator -=(complex &, const complex &);
+	friend complex operator *=(complex &, const complex &);
+	friend complex operator /=(complex &, const complex &);
+	friend complex operator &=(complex &, const complex &);
+	friend complex operator |=(complex &, const complex &);
+	friend complex operator ^=(complex &, const double);
+
+	friend int operator ==(const complex &, const complex &);
+	friend int operator !=(const complex &, const complex &);
+	friend int operator <(const complex &, const complex &);
+	friend int operator <=(const complex &, const complex &);
+	friend int operator >(const complex &, const complex &);
+	friend int operator >=(const complex &, const complex &);
 
 
 	friend complex exp(const complex &);
@@ -60,8 +105,6 @@ public:
 	friend complex cos(const complex &);
 	friend double arg(const complex &);
 	friend double abs(const complex &);
-
-
-
+	z
 }
-#endif
+#endif		//_MATHLIB_
