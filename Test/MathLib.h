@@ -105,6 +105,5 @@ public:
 	friend complex cos(const complex &);
 	friend double arg(const complex &);
 	friend double abs(const complex &);
-	z
 }
 #endif		//_MATHLIB_
