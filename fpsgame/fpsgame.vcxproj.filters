@@ -39,6 +39,9 @@
     <ClInclude Include="CommonConvert.h">
       <Filter>collada</Filter>
     </ClInclude>
+    <ClInclude Include="StdSketetons.h">
+      <Filter>collada</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="fpsgame.cpp">

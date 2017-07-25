@@ -20,8 +20,16 @@ public:
 	*/
 	int GetBoneCount() const;
 
+	int GetBoneID(const std::string& name) const;
+	int GetRealBoneID(const std::string& name) const;
 
 
+
+	static void LoadSkeletonDataFromXml(const char* xmlData, size_t xmlLength, std::string& xmlErrors);
+
+	std::unique_ptr<Skeleton_impl> m;
+private:
+	Skeleton(Skeleton&);
 };
 
-#endif
+#endif	// INCLUDED_STDSKELETONS
