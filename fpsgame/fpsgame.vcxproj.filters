@@ -39,7 +39,7 @@
     <ClInclude Include="CommonConvert.h">
       <Filter>collada</Filter>
     </ClInclude>
-    <ClInclude Include="StdSketetons.h">
+    <ClInclude Include="StdSkeletons.h">
       <Filter>collada</Filter>
     </ClInclude>
   </ItemGroup>

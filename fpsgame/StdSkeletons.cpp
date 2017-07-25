@@ -45,3 +45,10 @@ const Skeleton* Skeleton::FindSkeleton(const std::string& name)
 
 Skeleton::Skeleton() : m(new Skeleton_impl) { }
 Skeleton::~Skeleton() { }
+
+struct Skeleton_impl
+{
+	std::string title;
+	std::vector<Bone> bones;
+	const Skeleton* target;
+};
