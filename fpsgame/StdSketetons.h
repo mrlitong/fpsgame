@@ -20,6 +20,12 @@ public:
 	*/
 	int GetBoneCount() const;
 
+	static const Skeleton* FindSkeleton(const std::string& rootBoneName);
+	/**
+	* Tries to find a skeleton that matches the given root bone name.
+	* Returns NULL if there is no match.
+	*/
+
 	int GetBoneID(const std::string& name) const;
 	int GetRealBoneID(const std::string& name) const;
 
