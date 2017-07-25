@@ -13,7 +13,10 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="test">
+    <Filter Include="collada">
+      <UniqueIdentifier>{abee9234-4b94-4843-836d-d40518b2c879}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="collada\test">
       <UniqueIdentifier>{cc9883a9-9946-41c7-b231-e94392d0b4fd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -34,12 +37,18 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="CommonConvert.h">
-      <Filter>test</Filter>
+      <Filter>collada</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="fpsgame.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StdSkeletons.cpp">
+      <Filter>collada</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonConvert.cpp">
+      <Filter>collada</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -54,5 +63,10 @@
     <Image Include="fpsgame.ico">
       <Filter>资源文件</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tests.py">
+      <Filter>collada\test</Filter>
+    </None>
   </ItemGroup>
 </Project>
