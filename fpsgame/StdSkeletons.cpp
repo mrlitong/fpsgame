@@ -1,10 +1,10 @@
 #include "precompiled.h"
-
+#include "StdSkeletons.h"
 
 #include "libxml/parser.h"
 #include "libxml/xmlerror.h"
 
-#include "StdSkeletons.h"
+
 
 #include "CommonConvert.h"
 
@@ -38,6 +38,10 @@ namespace
 	};
 }
 
+const Skeleton* Skeleton::FindSkeleton(const std::string& name)
+{
+	return g_MappedSkeletons[name];
+}
 
 Skeleton::Skeleton() : m(new Skeleton_impl) { }
 Skeleton::~Skeleton() { }
