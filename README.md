@@ -1,7 +1,6 @@
-A simple FPS fight game implemented by an internal(non-open source) game engine,aims to show how to take game development by game engine.
-----
-![](https://github.com/mrlitong/FPS-GAME-CPP/blob/master/demoImage/FPSGAME1.jpg)  
-![](https://github.com/mrlitong/FPS-GAME-CPP/blob/master/demoImage/FPSGAME2.jpg)  
-![](https://github.com/mrlitong/FPS-GAME-CPP/blob/master/demoImage/FPSGAME3.jpg)  
-![](https://github.com/mrlitong/FPS-GAME-CPP/blob/master/demoImage/FPSGAME4.jpg)  
+fpsgame
+====
+
+A simple FPS fight game based on 0 A.D..which is an open-source game engine and a free software also.You can get more information on this [link](https://play0ad.com/).
+
 
