@@ -4,7 +4,6 @@
 
 /Test.VC.VC.opendb
 /Test.VC.db
-*.suo
 *.vs
 *.pdb
 *.log
