@@ -19,6 +19,9 @@
     <Filter Include="collada\test">
       <UniqueIdentifier>{cc9883a9-9946-41c7-b231-e94392d0b4fd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="graphics">
+      <UniqueIdentifier>{de8d7c05-42fb-47d6-aca6-5a3414bd7e34}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -42,6 +45,30 @@
     <ClInclude Include="StdSkeletons.h">
       <Filter>collada</Filter>
     </ClInclude>
+    <ClInclude Include="Dll.h">
+      <Filter>collada</Filter>
+    </ClInclude>
+    <ClInclude Include="Math.h">
+      <Filter>collada</Filter>
+    </ClInclude>
+    <ClInclude Include="XMLFix.h">
+      <Filter>collada</Filter>
+    </ClInclude>
+    <ClInclude Include="PMDConvert.h">
+      <Filter>collada</Filter>
+    </ClInclude>
+    <ClInclude Include="precompiled.h">
+      <Filter>collada</Filter>
+    </ClInclude>
+    <ClInclude Include="PSAConvert.h">
+      <Filter>collada</Filter>
+    </ClInclude>
+    <ClInclude Include="Decompose.h">
+      <Filter>collada</Filter>
+    </ClInclude>
+    <ClInclude Include="GeomReindex.h">
+      <Filter>collada</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="fpsgame.cpp">
@@ -51,6 +78,30 @@
       <Filter>collada</Filter>
     </ClCompile>
     <ClCompile Include="CommonConvert.cpp">
+      <Filter>collada</Filter>
+    </ClCompile>
+    <ClCompile Include="Dll.cpp">
+      <Filter>collada</Filter>
+    </ClCompile>
+    <ClCompile Include="Math.cpp">
+      <Filter>collada</Filter>
+    </ClCompile>
+    <ClCompile Include="XMLFix.cpp">
+      <Filter>collada</Filter>
+    </ClCompile>
+    <ClCompile Include="PMDConvert.cpp">
+      <Filter>collada</Filter>
+    </ClCompile>
+    <ClCompile Include="precompiled.cpp">
+      <Filter>collada</Filter>
+    </ClCompile>
+    <ClCompile Include="PSAConvert.cpp">
+      <Filter>collada</Filter>
+    </ClCompile>
+    <ClCompile Include="Decompose.cpp">
+      <Filter>collada</Filter>
+    </ClCompile>
+    <ClCompile Include="GeomReindex.cpp">
       <Filter>collada</Filter>
     </ClCompile>
   </ItemGroup>

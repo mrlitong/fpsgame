@@ -139,16 +139,32 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommonConvert.h" />
+    <ClInclude Include="Decompose.h" />
+    <ClInclude Include="Dll.h" />
     <ClInclude Include="fpsgame.h" />
+    <ClInclude Include="GeomReindex.h" />
+    <ClInclude Include="Math.h" />
+    <ClInclude Include="PMDConvert.h" />
+    <ClInclude Include="precompiled.h" />
+    <ClInclude Include="PSAConvert.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="StdSkeletons.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="XMLFix.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CommonConvert.cpp" />
+    <ClCompile Include="Decompose.cpp" />
+    <ClCompile Include="Dll.cpp" />
     <ClCompile Include="fpsgame.cpp" />
+    <ClCompile Include="GeomReindex.cpp" />
+    <ClCompile Include="Math.cpp" />
+    <ClCompile Include="PMDConvert.cpp" />
+    <ClCompile Include="precompiled.cpp" />
+    <ClCompile Include="PSAConvert.cpp" />
     <ClCompile Include="StdSkeletons.cpp" />
+    <ClCompile Include="XMLFix.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="fpsgame.rc" />
