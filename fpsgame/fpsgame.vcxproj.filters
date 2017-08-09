@@ -22,6 +22,9 @@
     <Filter Include="graphics">
       <UniqueIdentifier>{de8d7c05-42fb-47d6-aca6-5a3414bd7e34}</UniqueIdentifier>
     </Filter>
+    <Filter Include="graphics\scripting">
+      <UniqueIdentifier>{74e91a02-110c-4db8-bbbb-7c35c75b4d92}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -69,6 +72,9 @@
     <ClInclude Include="GeomReindex.h">
       <Filter>collada</Filter>
     </ClInclude>
+    <ClInclude Include="JSInterfaace_GameView.h">
+      <Filter>graphics\scripting</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="fpsgame.cpp">
@@ -103,6 +109,9 @@
     </ClCompile>
     <ClCompile Include="GeomReindex.cpp">
       <Filter>collada</Filter>
+    </ClCompile>
+    <ClCompile Include="JSInterface_GameView.cpp">
+      <Filter>graphics\scripting</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

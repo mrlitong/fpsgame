@@ -143,6 +143,7 @@
     <ClInclude Include="Dll.h" />
     <ClInclude Include="fpsgame.h" />
     <ClInclude Include="GeomReindex.h" />
+    <ClInclude Include="JSInterfaace_GameView.h" />
     <ClInclude Include="Math.h" />
     <ClInclude Include="PMDConvert.h" />
     <ClInclude Include="precompiled.h" />
@@ -159,6 +160,7 @@
     <ClCompile Include="Dll.cpp" />
     <ClCompile Include="fpsgame.cpp" />
     <ClCompile Include="GeomReindex.cpp" />
+    <ClCompile Include="JSInterface_GameView.cpp" />
     <ClCompile Include="Math.cpp" />
     <ClCompile Include="PMDConvert.cpp" />
     <ClCompile Include="precompiled.cpp" />
