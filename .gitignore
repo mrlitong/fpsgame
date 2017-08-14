@@ -10,3 +10,5 @@
 *.tlog
 *.idb
 x64/*
+*.suo
+*.ipch
