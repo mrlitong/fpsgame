@@ -25,6 +25,9 @@
     <Filter Include="graphics\scripting">
       <UniqueIdentifier>{74e91a02-110c-4db8-bbbb-7c35c75b4d92}</UniqueIdentifier>
     </Filter>
+    <Filter Include="graphics\tests">
+      <UniqueIdentifier>{54655364-4c34-485e-97c6-5b0f7350a110}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -75,6 +78,12 @@
     <ClInclude Include="JSInterfaace_GameView.h">
       <Filter>graphics\scripting</Filter>
     </ClInclude>
+    <ClInclude Include="test_Color.h">
+      <Filter>graphics\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="fpsgame.cpp">
@@ -112,6 +121,9 @@
     </ClCompile>
     <ClCompile Include="JSInterface_GameView.cpp">
       <Filter>graphics\scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>graphics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

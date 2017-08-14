@@ -138,6 +138,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="CommonConvert.h" />
     <ClInclude Include="Decompose.h" />
     <ClInclude Include="Dll.h" />
@@ -152,9 +153,11 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="StdSkeletons.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="test_Color.h" />
     <ClInclude Include="XMLFix.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CommonConvert.cpp" />
     <ClCompile Include="Decompose.cpp" />
     <ClCompile Include="Dll.cpp" />
