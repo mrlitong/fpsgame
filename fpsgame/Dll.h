@@ -46,6 +46,6 @@ EXPORT void set_logger(LogFn logger, void* cb_data);
 EXPORT int set_skeleton_definitions(const char* xml, int length);
 EXPORT int convert_dae_to_pmd(const char* dae, OutputFn pmd_writer, void* cb_data);
 EXPORT int convert_dae_to_psa(const char* dae, OutputFn psa_writer, void* cb_data);
-
+EXPORT void poll_logger(void* cb_data);
 #endif /* INCLUDED_COLLADA_DLL */
 #pragma once

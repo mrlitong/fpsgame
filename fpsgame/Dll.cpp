@@ -47,6 +47,15 @@ EXPORT void set_logger(LogFn logger, void* cb_data)
 	}
 }
 
+EXPORT void poll_logger()
+{
+	if (!g_Logger)
+	{
+		g_Logger = NULL;
+		g_LoggerCBData;
+	}
+}
+
 void Log(int severity, const char* msg, ...)
 {
 	char buffer[1024];
