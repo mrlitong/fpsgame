@@ -135,15 +135,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CommonConvert.h" />
     <ClInclude Include="Decompose.h" />
     <ClInclude Include="Dll.h" />
     <ClInclude Include="fpsgame.h" />
     <ClInclude Include="GeomReindex.h" />
+    <ClInclude Include="graphics\CinemaManager.h" />
+    <ClInclude Include="graphics\CinimaPath.h" />
+    <ClInclude Include="graphics\ColladaManager.h" />
+    <ClInclude Include="graphics\Color.h" />
+    <ClInclude Include="graphics\SColor.h" />
     <ClInclude Include="JSInterfaace_GameView.h" />
     <ClInclude Include="Math.h" />
     <ClInclude Include="PMDConvert.h" />
@@ -163,6 +165,9 @@
     <ClCompile Include="Dll.cpp" />
     <ClCompile Include="fpsgame.cpp" />
     <ClCompile Include="GeomReindex.cpp" />
+    <ClCompile Include="graphics\CinemaManager.cpp" />
+    <ClCompile Include="graphics\CinimaPath.cpp" />
+    <ClCompile Include="graphics\ColladaManager.cpp" />
     <ClCompile Include="JSInterface_GameView.cpp" />
     <ClCompile Include="Math.cpp" />
     <ClCompile Include="PMDConvert.cpp" />
