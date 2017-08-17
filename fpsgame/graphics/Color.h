@@ -1,7 +1,8 @@
 #ifndef INCLUDED_COLOR
 #define INCLUDED_COLOR
 
-// #include "SColor.h"
+=
+=#include "SColor.h"
 #include "maths/Vector3D.h"
 #include "maths/Vector4D.h"
 
