@@ -1,19 +1,19 @@
 /* Copyright (C) 2016 Wildfire Games.
-* This file is part of 0 A.D.
-*
-* 0 A.D. is free software: you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation, either version 2 of the License, or
-* (at your option) any later version.
-*
-* 0 A.D. is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-* GNU General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License
-* along with 0 A.D.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ * This file is part of 0 A.D.
+ *
+ * 0 A.D. is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * 0 A.D. is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with 0 A.D.  If not, see <http://www.gnu.org/licenses/>.
+ */
 
 #include "precompiled.h"
 
@@ -27,10 +27,10 @@
 #include "UnitAnimation.h"
 
 CUnit::CUnit(CObjectEntry* object, CObjectManager& objectManager,
-	const std::set<CStr>& actorSelections, uint32_t seed)
-	: m_Object(object), m_Model(object->m_Model->Clone()),
-	m_ID(INVALID_ENTITY), m_ActorSelections(actorSelections),
-	m_ObjectManager(objectManager), m_Seed(seed)
+			 const std::set<CStr>& actorSelections, uint32_t seed)
+: m_Object(object), m_Model(object->m_Model->Clone()),
+  m_ID(INVALID_ENTITY), m_ActorSelections(actorSelections),
+  m_ObjectManager(objectManager), m_Seed(seed)
 {
 	if (m_Model->ToCModel())
 		m_Animation = new CUnitAnimation(m_ID, m_Model->ToCModel(), m_Object);
@@ -48,7 +48,7 @@ CUnit* CUnit::Create(const CStrW& actorName, uint32_t seed, const std::set<CStr>
 {
 	CObjectBase* base = objectManager.FindObjectBase(actorName);
 
-	if (!base)
+	if (! base)
 		return NULL;
 
 	std::set<CStr> actorSelections = base->CalculateRandomVariation(seed, selections);
@@ -58,7 +58,7 @@ CUnit* CUnit::Create(const CStrW& actorName, uint32_t seed, const std::set<CStr>
 
 	CObjectEntry* obj = objectManager.FindObjectVariation(base, selectionsVec);
 
-	if (!obj)
+	if (! obj)
 		return NULL;
 
 	return new CUnit(obj, objectManager, actorSelections, seed);
@@ -115,7 +115,7 @@ void CUnit::ReloadObject()
 	// made might define some additional props that require a random variant choice). Also, FindObjectVariation
 	// expects the selectors passed to it to be complete.
 	// see http://trac.wildfiregames.com/ticket/979
-
+	
 	// Use the entity ID as randomization seed (same as when the unit was first created)
 	std::set<CStr> remainingSelections = m_Object->m_Base->CalculateRandomRemainingSelections(m_Seed, selections);
 	if (!remainingSelections.empty())
@@ -136,7 +136,7 @@ void CUnit::ReloadObject()
 			newModel->ToCModel()->CopyAnimationFrom(m_Model->ToCModel());
 
 			// Copy flags that belong to this model instance (not those defined by the actor XML)
-			int instanceFlags = (MODELFLAG_SILHOUETTE_DISPLAY | MODELFLAG_SILHOUETTE_OCCLUDER | MODELFLAG_IGNORE_LOS) & m_Model->ToCModel()->GetFlags();
+			int instanceFlags = (MODELFLAG_SILHOUETTE_DISPLAY|MODELFLAG_SILHOUETTE_OCCLUDER|MODELFLAG_IGNORE_LOS) & m_Model->ToCModel()->GetFlags();
 			newModel->ToCModel()->AddFlagsRec(instanceFlags);
 		}
 
