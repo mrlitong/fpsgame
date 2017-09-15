@@ -17,7 +17,7 @@
 #ifndef IDC_STATIC
 #define IDC_STATIC				-1
 #endif
-// 新对象的下一组默认值
+// 
 //
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
