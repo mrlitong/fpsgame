@@ -1,2 +1,0 @@
-﻿  fpsgame.cpp
-c:\users\39078\documents\gitrepos\fpsgame\fpsgame\fpsgame.cpp(1): fatal error C1083: Cannot open precompiled header file: 'Debug\fpsgame.pch': No such file or directory
