@@ -28,6 +28,63 @@
     <Filter Include="graphics\tests">
       <UniqueIdentifier>{54655364-4c34-485e-97c6-5b0f7350a110}</UniqueIdentifier>
     </Filter>
+    <Filter Include="gui">
+      <UniqueIdentifier>{0ca696ac-f0d0-4171-8a8c-722351d463b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{b0d38194-5cc6-4f03-bab1-e436cfa0fd54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\adts">
+      <UniqueIdentifier>{dbe81d61-49f6-48b9-91e7-f45d58e2c3b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\allocators">
+      <UniqueIdentifier>{7ea3a6ba-c352-46eb-8234-aba4346ce511}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\external_libraries">
+      <UniqueIdentifier>{c89ac26a-3d53-4dab-8755-aee918e48aa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\file">
+      <UniqueIdentifier>{dafd4f8a-32d4-404a-92ac-1c9c96b64c79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\pch">
+      <UniqueIdentifier>{5dbe1526-1d67-4405-9c10-77ec92ffd96f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\posix">
+      <UniqueIdentifier>{c7dc3e63-daec-413f-b91e-d1e492831457}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\res">
+      <UniqueIdentifier>{50b6342b-c11d-4971-826d-06d86cda2539}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\sysdep">
+      <UniqueIdentifier>{815de4b5-0e93-41a6-95ad-8069acd1df48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\tests">
+      <UniqueIdentifier>{b405d419-7412-4598-aae5-e49116bd52dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\tex">
+      <UniqueIdentifier>{7256d413-6847-4e9f-9817-2bba5598ec67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\allocators\tests">
+      <UniqueIdentifier>{d01071a0-e27f-4638-8d56-251d1daae15e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\file\archive">
+      <UniqueIdentifier>{815e3ac6-a571-49d3-b17b-b5372bdffbb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\file\common">
+      <UniqueIdentifier>{208439fd-e1da-45fc-bb0c-ea4c761dc30f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\file\disabled_tests">
+      <UniqueIdentifier>{7d76f80e-37e3-4119-ac7d-0cae0bdae87e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\file\io">
+      <UniqueIdentifier>{11f25438-9f84-46a6-817f-231e3fae645f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\file\vfs">
+      <UniqueIdentifier>{be147866-aae3-49cf-a6fa-d19924453d85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\file\vfs\tests">
+      <UniqueIdentifier>{e4590d21-7475-4f42-ad53-5c7eac4cff90}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -255,6 +312,279 @@
     <ClInclude Include="graphics\UnitManager.h">
       <Filter>graphics</Filter>
     </ClInclude>
+    <ClInclude Include="gui\alignment.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\app_hooks.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\base32.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\bits.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\byte_order.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\code_annotation.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\code_generation.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\config.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\config2.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\debug.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\debug_stl.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\fnv_hash.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\frequency_filter.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\input.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\lib.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\lib_api.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\module_init.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\ogl.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\os_path.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\path.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\pointer_typedefs.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\precompiled.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\rand.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\regex.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\secure_crt.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\self_test.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\status.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\svn_revision.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\timer.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\types.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\utf8.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\adts\bit_buf.h">
+      <Filter>gui\adts</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\adts\cache_adt.h">
+      <Filter>gui\adts</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\adts\dyn_hash_tbl.h">
+      <Filter>gui\adts</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\adts\ring_buf.h">
+      <Filter>gui\adts</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\allocators\aligned_allocator.h">
+      <Filter>gui\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\allocators\allocator_adapters.h">
+      <Filter>gui\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\allocators\allocator_checker.h">
+      <Filter>gui\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\allocators\allocator_policies.h">
+      <Filter>gui\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\allocators\arena.h">
+      <Filter>gui\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\allocators\dynarray.h">
+      <Filter>gui\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\allocators\freelist.h">
+      <Filter>gui\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\allocators\headerless.h">
+      <Filter>gui\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\allocators\overrun_protector.h">
+      <Filter>gui\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\allocators\page_aligned.h">
+      <Filter>gui\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\allocators\pool.h">
+      <Filter>gui\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\allocators\shared_ptr.h">
+      <Filter>gui\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\allocators\unique_range.h">
+      <Filter>gui\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\allocators\tests\test_allocators.h">
+      <Filter>gui\allocators\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\allocators\tests\test_headerless.h">
+      <Filter>gui\allocators\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\external_libraries\curl.h">
+      <Filter>gui\external_libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\external_libraries\dbghelp.h">
+      <Filter>gui\external_libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\external_libraries\dbghelp_funcs.h">
+      <Filter>gui\external_libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\external_libraries\enet.h">
+      <Filter>gui\external_libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\external_libraries\glext_funcs.h">
+      <Filter>gui\external_libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\external_libraries\icu.h">
+      <Filter>gui\external_libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\external_libraries\libsdl.h">
+      <Filter>gui\external_libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\external_libraries\libsdl_fwd.h">
+      <Filter>gui\external_libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\external_libraries\openal.h">
+      <Filter>gui\external_libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\external_libraries\opengl.h">
+      <Filter>gui\external_libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\external_libraries\openmp.h">
+      <Filter>gui\external_libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\external_libraries\png.h">
+      <Filter>gui\external_libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\external_libraries\powrprof.h">
+      <Filter>gui\external_libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\external_libraries\suppress_boost_warnings.h">
+      <Filter>gui\external_libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\external_libraries\tinygettext.h">
+      <Filter>gui\external_libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\external_libraries\vorbis.h">
+      <Filter>gui\external_libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\external_libraries\wxwidgets.h">
+      <Filter>gui\external_libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\external_libraries\zlib.h">
+      <Filter>gui\external_libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\file.h">
+      <Filter>gui\file</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\file_system.h">
+      <Filter>gui\file</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\archive\archive.h">
+      <Filter>gui\file\archive</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\archive\archive_zip.h">
+      <Filter>gui\file\archive</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\archive\codec.h">
+      <Filter>gui\file\archive</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\archive\codec_zlib.h">
+      <Filter>gui\file\archive</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\archive\stream.h">
+      <Filter>gui\file\archive</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\common\file_loader.h">
+      <Filter>gui\file\common</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\common\file_stats.h">
+      <Filter>gui\file\common</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\common\real_directory.h">
+      <Filter>gui\file\common</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\common\trace.h">
+      <Filter>gui\file\common</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\disabled_tests\test_file_cache.h">
+      <Filter>gui\file\disabled_tests</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\disabled_tests\test_path.h">
+      <Filter>gui\file\disabled_tests</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\io\io.h">
+      <Filter>gui\file\io</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\io\write_buffer.h">
+      <Filter>gui\file\io</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\vfs\file_cache.h">
+      <Filter>gui\file\vfs</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\vfs\vfs.h">
+      <Filter>gui\file\vfs</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\vfs\vfs_lookup.h">
+      <Filter>gui\file\vfs</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\vfs\vfs_path.h">
+      <Filter>gui\file\vfs</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\vfs\vfs_populate.h">
+      <Filter>gui\file\vfs</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\vfs\vfs_tree.h">
+      <Filter>gui\file\vfs</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\vfs\vfs_util.h">
+      <Filter>gui\file\vfs</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\file\vfs\tests\test_vfs_tree.h">
+      <Filter>gui\file\vfs\tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="fpsgame.cpp">
@@ -451,6 +781,156 @@
     </ClCompile>
     <ClCompile Include="graphics\UnitManager.cpp">
       <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\app_hooks.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\base32.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\bits.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\byte_order.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\debug.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\debug_stl.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\fnv_hash.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\frequency_filter.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\input.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\lib.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\module_init.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\ogl.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\path.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\rand.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\regex.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\secure_crt.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\status.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\svn_revision.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\timer.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\utf8.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\wsecure_crt.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\allocators\arena.cpp">
+      <Filter>gui\allocators</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\allocators\dynarray.cpp">
+      <Filter>gui\allocators</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\allocators\freelist.cpp">
+      <Filter>gui\allocators</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\allocators\headerless.cpp">
+      <Filter>gui\allocators</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\allocators\page_aligned.cpp">
+      <Filter>gui\allocators</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\allocators\pool.cpp">
+      <Filter>gui\allocators</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\allocators\shared_ptr.cpp">
+      <Filter>gui\allocators</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\allocators\unique_range.cpp">
+      <Filter>gui\allocators</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\external_libraries\dbghelp.cpp">
+      <Filter>gui\external_libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\file\file.cpp">
+      <Filter>gui\file</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\file\file_system.cpp">
+      <Filter>gui\file</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\file\archive\archive.cpp">
+      <Filter>gui\file\archive</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\file\archive\archive_zip.cpp">
+      <Filter>gui\file\archive</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\file\archive\codec.cpp">
+      <Filter>gui\file\archive</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\file\archive\codec_zlib.cpp">
+      <Filter>gui\file\archive</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\file\archive\stream.cpp">
+      <Filter>gui\file\archive</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\file\common\file_loader.cpp">
+      <Filter>gui\file\common</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\file\common\file_stats.cpp">
+      <Filter>gui\file\common</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\file\common\real_directory.cpp">
+      <Filter>gui\file\common</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\file\common\trace.cpp">
+      <Filter>gui\file\common</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\file\io\io.cpp">
+      <Filter>gui\file\io</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\file\io\write_buffer.cpp">
+      <Filter>gui\file\io</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\file\vfs\file_cache.cpp">
+      <Filter>gui\file\vfs</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\file\vfs\vfs.cpp">
+      <Filter>gui\file\vfs</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\file\vfs\vfs_lookup.cpp">
+      <Filter>gui\file\vfs</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\file\vfs\vfs_path.cpp">
+      <Filter>gui\file\vfs</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\file\vfs\vfs_populate.cpp">
+      <Filter>gui\file\vfs</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\file\vfs\vfs_tree.cpp">
+      <Filter>gui\file\vfs</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\file\vfs\vfs_util.cpp">
+      <Filter>gui\file\vfs</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
