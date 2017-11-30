@@ -31,13 +31,13 @@ protected:
 	CAnimationBlendRotate*		m_pFire[2];
 	CAnimationBlendDual*		m_pRun[2];
 
-	int						m_nFire;
-	float					m_fAniCoolingTime;//ºó×øÁ¦¶¯»­ÀäÈ´Ê±¼ä
-	float					m_fAniNowCoolingTime;
-	float					m_fSudCoolingTime;//¿ªÇ¹ÉùÒôÀäÈ´Ê±¼ä
-	float					m_fSudNowCoolingTime;
-	float					m_fEmitCoolingTime;//·¢Éä×Óµ¯ÀäÈ´Ê±¼ä
-	float					m_fEmitNowCoolingTime;
+	int						m_nFire;//å¼€æª
+	float					m_fAniCoolingTime;//åååŠ›åŠ¨ç”»å†·å´æ—¶é—´
+	float					m_fAniNowCoolingTime;//åååŠ›åŠ¨ç”»å·²å†·å´æ—¶é—´
+	float					m_fSudCoolingTime;//å¼€æªå£°éŸ³å†·å´æ—¶é—´
+	float					m_fSudNowCoolingTime;//å¼€æªå£°éŸ³å·²å†·å´æ—¶é—´
+	float					m_fEmitCoolingTime;//å‘å°„å­å¼¹å†·å´æ—¶é—´
+	float					m_fEmitNowCoolingTime;//å‘å°„å­å¼¹å·²å†·å´æ—¶é—´
 
 	CUtilStr					m_strMuzzleBone;
 	int						m_nMuzzleBone;
