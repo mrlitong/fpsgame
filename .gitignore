@@ -1,4 +1,6 @@
-﻿/Test.VC.VC.opendb
+*.filters
+
+/Test.VC.VC.opendb
 
 /Test.VC.db
 
